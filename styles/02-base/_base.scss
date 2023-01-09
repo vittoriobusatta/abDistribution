@@ -60,3 +60,11 @@ html {
   font-family: $newKansas;
   font-weight: $weight_bold;
 }
+
+.content {
+  display: inline-flex;
+  width: 100%;
+  & h1 {
+    white-space: nowrap;
+  }
+}

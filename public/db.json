@@ -1,0 +1,30 @@
+[
+  {
+    "bodymist": {
+      "brave": {
+        "name": "Brave",
+        "description": "",
+        "ingredient": "",
+        "image": "/public/bodymist/Brave.png"
+      },
+      "creative": {
+        "name": "Creative",
+        "description": "",
+        "ingredient": "",
+        "image": "/public/bodymist/Creative.jpg"
+      },
+      "dynamic" : {
+        "name": "Dynamic",
+        "description": "",
+        "ingredient": "",
+        "image": "/public/bodymist/Dynamic.jpg"
+      },
+      "loyal" : {
+        "name": "Loyal",
+        "description": "",
+        "ingredient": "",
+        "image": "/public/bodymist/Loyal.jpg"
+      }
+    }
+  }
+]
