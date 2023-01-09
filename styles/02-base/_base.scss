@@ -18,7 +18,6 @@
 @supports (padding: env(safe-area-inset-top)) {
   body {
     font-size: 1.6rem;
-    overflow: hidden;
   }
 }
 
@@ -50,6 +49,7 @@ html {
 
 .hidden {
   overflow: hidden;
+  height: fit-content;
 }
 
 .opacity {

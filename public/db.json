@@ -2,28 +2,62 @@
   {
     "bodymist": {
       "brave": {
-        "name": "Brave",
+        "id" : "1",
+        "name": "brave",
         "description": "",
         "ingredient": "",
-        "image": "/public/bodymist/Brave.png"
+        "background": "linear-gradient(270deg, #e43d12 0%, #932f18 100%)",
+        "image": "/bodymist/Brave.png"
       },
       "creative": {
-        "name": "Creative",
+        "id" : "2",
+        "name": "creative",
         "description": "",
         "ingredient": "",
-        "image": "/public/bodymist/Creative.jpg"
+        "background": "linear-gradient(270deg, #f4e228 0%, #d5d600 50%, #9ab538 100%)",
+        "image": "/bodymist/Creative.png"
       },
       "dynamic" : {
-        "name": "Dynamic",
+        "id" : "3",
+        "name": "dynamic",
         "description": "",
         "ingredient": "",
-        "image": "/public/bodymist/Dynamic.jpg"
+        "background": "linear-gradient(270deg, #d93e2a 0%, #c21a40 50.52%, #8c3388 100%)",
+        "image": "/bodymist/Dynamic.png"
       },
       "loyal" : {
-        "name": "Loyal",
+        "id" : "4",
+        "name": "loyal",
         "description": "",
         "ingredient": "",
-        "image": "/public/bodymist/Loyal.jpg"
+        "background": "linear-gradient(270deg, #03aed7 0%, #1b6182 100%)",
+        "image": "/bodymist/Loyal.png"
+      }
+    },
+    "ambiancemist": {
+      "sandalwood": {
+        "name": "Sandalwood",
+        "description": "",
+        "ingredient": "",
+        "image": "/ambiancemist/"
+      },
+      "cachemere": {
+        "name": "Cachemere",
+        "description": "",
+        "ingredient": "",
+        "image": "/ambiancemist/"
+      },
+      "rainbow" : {
+        "name": "Rainbow",
+        "description": "",
+        "ingredient": "",
+        "image": "/ambiancemist/"
+      },
+      "blackrose" : {
+        "name": "Blackrose",
+        "description": "",
+        "ingredient": "",
+        "image": "/ambiancemist/"
       }
     }
   }
