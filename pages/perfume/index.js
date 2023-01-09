@@ -22,10 +22,12 @@ export async function getStaticProps() {
 
 function BodyMist({ newArray }) {
   const [isAnimating, setIsAnimating] = useState(false);
+  const [previewIsOpen, setPreviewIsOpen] = useState(false);
   const cards = useRef([]);
   const previewItem = useRef([]);
   const imageRef = useRef([]);
   const titleRef = useRef([]);
+  const imagePreview = useRef([]);
   const overlayInner = useRef(null);
 
   const handleMouseEnter = (index) => {
@@ -53,6 +55,7 @@ function BodyMist({ newArray }) {
   }, []);
 
   const openPreview = (index) => {
+    setPreviewIsOpen(true);
     gsap
       .timeline({
         defaults: {
@@ -62,6 +65,7 @@ function BodyMist({ newArray }) {
         onStart: () => {
           setIsAnimating(true);
           gsap.set(titleRef.current, { yPercent: 150, skewY: 10 });
+          // gsap.set(previewItem.current, { opacity: 0 });
         },
         onComplete: () => setIsAnimating(false),
       })
@@ -86,6 +90,58 @@ function BodyMist({ newArray }) {
           ease: "power4.out",
         },
         "-=0.4"
+      )
+      .to(imagePreview.current[index], {
+        duration: 0.8,
+        opacity: 1,
+        ease: "power4.out",
+      });
+  };
+
+  const closePreview = () => {
+    gsap
+      .timeline({
+        defaults: {
+          duration: 1,
+          ease: "power4",
+        },
+        onStart: () => {
+          setIsAnimating(true);
+        },
+        onComplete: () => {
+          setIsAnimating(false);
+          setPreviewIsOpen(false);
+        },
+      })
+      .to(titleRef.current, {
+        yPercent: 150,
+        duration: 0.8,
+        opacity: 1,
+        ease: "power4.out",
+      })
+      .to(
+        previewItem.current,
+        {
+          opacity: 0,
+        },
+        "-=0.4"
+      )
+      .to(
+        imagePreview.current,
+        {
+          opacity: 0,
+          ease: "power4.out",
+        },
+
+        "-=0.4"
+      )
+      .to(
+        overlayInner.current,
+        {
+          xPercent: -100,
+          ease: "power2",
+        },
+        "-=0.6"
       );
   };
 
@@ -120,14 +176,30 @@ function BodyMist({ newArray }) {
         {newArray.map((item, index) => {
           return (
             <div
-              className={"preview_item " + item.name}
+              className={
+                previewIsOpen
+                  ? "preview_item active " + item.name
+                  : "preview_item " + item.name
+              }
               key={item.id}
               ref={(el) => (previewItem.current[index] = el)}
             >
-              <div className="hidden">
-                <h1 ref={(el) => (titleRef.current[index] = el)}>
-                  {item.name}
-                </h1>
+              <div className="preview_item_content">
+                <div className="hidden preview_item_title">
+                  <h1 ref={(el) => (titleRef.current[index] = el)}>
+                    {item.name}
+                  </h1>
+                </div>
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  width={100}
+                  height={100}
+                  ref={(el) => (imagePreview.current[index] = el)}
+                />
+                <button className="close_btn" onClick={closePreview}>
+                  Close
+                </button>
               </div>
             </div>
           );

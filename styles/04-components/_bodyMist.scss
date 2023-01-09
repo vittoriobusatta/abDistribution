@@ -47,9 +47,11 @@
 .preview_item {
   opacity: 0;
   pointer-events: none;
-  padding-top: 20vh;
   display: grid;
   grid-area: 1 / 1 / -1 / -1;
+  &.active {
+    pointer-events: auto;
+  }
   & h1 {
     font-size: 20vw;
     text-align: center;
@@ -89,6 +91,27 @@
   }
 }
 
+.preview_item_content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  & img {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+  }
+}
+
+.preview_item_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .content_overlay {
   position: fixed;
   top: calc(50% - 75vmax);
@@ -107,4 +130,11 @@
   height: 100%;
   position: relative;
   background-color: #272421;
+}
+
+.close_btn {
+  height: 40px;
+  background: none;
+  cursor: pointer;
+  color: #fff;
 }
