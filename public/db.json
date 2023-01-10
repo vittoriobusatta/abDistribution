@@ -4,7 +4,7 @@
       "brave": {
         "id": "1",
         "name": "brave",
-        "description": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
+        "description": "Cette brume corporelle vous donnera le courage de vous lancer dans de nouvelles aventures et de surmonter vos peurs.",
         "ingredient": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
         "color": "#DF3C13",
         "secondarycolor": "#993018",
@@ -14,7 +14,7 @@
       "creative": {
         "id": "2",
         "name": "creative",
-        "description": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
+        "description": "Laissez votre créativité s'envoler avec cette brume corporelle qui vous aidera à trouver l'inspiration et à laisser libre cours à votre imagination.",
         "ingredient": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
         "color": "#EFE021",
         "secondarycolor": "#9EB735",
@@ -24,7 +24,7 @@
       "dynamic": {
         "id": "3",
         "name": "dynamic",
-        "description": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
+        "description": "Cette brume corporelle vous donnera l'énergie et la motivation nécessaires pour affronter votre journée avec dynamisme.",
         "ingredient": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
         "color": "#DB211C",
         "secondarycolor": "#9B317F",
@@ -34,7 +34,7 @@
       "loyal": {
         "id": "4",
         "name": "loyal",
-        "description": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
+        "description": "Faites preuve de loyauté envers vous-même avec cette brume corporelle. Elle vous aidera à vous sentir bien dans votre corps et dans votre esprit.",
         "ingredient": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
         "color": "#05AAD2",
         "secondarycolor": "#136B8C",
