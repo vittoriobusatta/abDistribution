@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import Image from "next/image";
 import gsap from "gsap";
-import LogoUltraCompact from "../../utils/icons";
+import {LogoUltraCompact} from "../../utils/icons";
 
 export async function getStaticProps() {
   const data = fs.readFileSync(path.join(process.cwd(), "/public/db.json"));
