@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import Image from "next/image";
 import gsap from "gsap";
+import LogoUltraCompact from "../../utils/icons";
 
 export async function getStaticProps() {
   const data = fs.readFileSync(path.join(process.cwd(), "/public/db.json"));
@@ -34,6 +35,7 @@ function BodyMist({ newArray }) {
     gsap.to(imageRef.current[index], {
       filter: "brightness(150%)",
       duration: 0.5,
+      ease: "power4.out",
     });
   };
 
@@ -41,6 +43,7 @@ function BodyMist({ newArray }) {
     gsap.to(imageRef.current[index], {
       filter: "brightness(100%)",
       duration: 0.5,
+      ease: "power4.out",
     });
   };
 
@@ -65,7 +68,6 @@ function BodyMist({ newArray }) {
         onStart: () => {
           setIsAnimating(true);
           gsap.set(titleRef.current, { yPercent: 150, skewY: 10 });
-          // gsap.set(previewItem.current, { opacity: 0 });
         },
         onComplete: () => setIsAnimating(false),
       })
@@ -113,27 +115,28 @@ function BodyMist({ newArray }) {
           setPreviewIsOpen(false);
         },
       })
-      .to(titleRef.current, {
-        yPercent: 150,
-        duration: 0.8,
-        opacity: 1,
+      .to(imagePreview.current, {
+        opacity: 0,
         ease: "power4.out",
+        duration: 1.4,
       })
+      .to(
+        titleRef.current,
+        {
+          yPercent: 150,
+          duration: 1.4,
+          opacity: 1,
+          skewY: 10,
+          ease: "power4.out",
+        },
+        "-=0.8"
+      )
       .to(
         previewItem.current,
         {
           opacity: 0,
         },
-        "-=0.4"
-      )
-      .to(
-        imagePreview.current,
-        {
-          opacity: 0,
-          ease: "power4.out",
-        },
-
-        "-=0.4"
+        "-=0.8"
       )
       .to(
         overlayInner.current,
@@ -141,7 +144,7 @@ function BodyMist({ newArray }) {
           xPercent: -100,
           ease: "power2",
         },
-        "-=0.6"
+        "-=0.8"
       );
   };
 
@@ -185,21 +188,45 @@ function BodyMist({ newArray }) {
               ref={(el) => (previewItem.current[index] = el)}
             >
               <div className="preview_item_content">
-                <div className="hidden preview_item_title">
-                  <h1 ref={(el) => (titleRef.current[index] = el)}>
-                    {item.name}
-                  </h1>
+                <div className="preview_item_head">
+                  <button className="close_btn" onClick={closePreview}>
+                    Retour
+                  </button>
+                  <LogoUltraCompact color={item.color} />
                 </div>
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  width={100}
-                  height={100}
-                  ref={(el) => (imagePreview.current[index] = el)}
-                />
-                <button className="close_btn" onClick={closePreview}>
-                  Close
-                </button>
+                <div className="preview_item_product">
+                  <div className="hidden preview_item_title">
+                    <h1
+                      style={{
+                        background: item.background,
+                        backgroundClip: "text",
+                        WebkitBackgroundClip: "text",
+                        color: "transparent",
+                      }}
+                      ref={(el) => (titleRef.current[index] = el)}
+                    >
+                      {item.name}
+                    </h1>
+                  </div>
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={100}
+                    height={100}
+                    ref={(el) => (imagePreview.current[index] = el)}
+                  />
+                </div>
+
+                <div className="preview_item_information">
+                  <div className="preview_item_description">
+                    <h2 style={{ color: item.secondarycolor }}>Description</h2>
+                    <p>{item.description}</p>
+                  </div>
+                  <div className="preview_item_ingredient">
+                    <h2 style={{ color: item.color }}>Ingrédients</h2>
+                    <p>{item.ingredient}</p>
+                  </div>
+                </div>
               </div>
             </div>
           );

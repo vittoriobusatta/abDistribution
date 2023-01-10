@@ -2,34 +2,42 @@
   {
     "bodymist": {
       "brave": {
-        "id" : "1",
+        "id": "1",
         "name": "brave",
-        "description": "",
-        "ingredient": "",
+        "description": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
+        "ingredient": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
+        "color": "#DF3C13",
+        "secondarycolor": "#993018",
         "background": "linear-gradient(270deg, #e43d12 0%, #932f18 100%)",
         "image": "/bodymist/Brave.png"
       },
       "creative": {
-        "id" : "2",
+        "id": "2",
         "name": "creative",
-        "description": "",
-        "ingredient": "",
+        "description": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
+        "ingredient": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
+        "color": "#EFE021",
+        "secondarycolor": "#9EB735",
         "background": "linear-gradient(270deg, #f4e228 0%, #d5d600 50%, #9ab538 100%)",
         "image": "/bodymist/Creative.png"
       },
-      "dynamic" : {
-        "id" : "3",
+      "dynamic": {
+        "id": "3",
         "name": "dynamic",
-        "description": "",
-        "ingredient": "",
+        "description": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
+        "ingredient": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
+        "color": "#DB211C",
+        "secondarycolor": "#9B317F",
         "background": "linear-gradient(270deg, #d93e2a 0%, #c21a40 50.52%, #8c3388 100%)",
         "image": "/bodymist/Dynamic.png"
       },
-      "loyal" : {
-        "id" : "4",
+      "loyal": {
+        "id": "4",
         "name": "loyal",
-        "description": "",
-        "ingredient": "",
+        "description": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
+        "ingredient": "Lorem ipsum dolor sit amet consectetur. Aliquam enim felis elit bibendum tortor elit. Egestas sed diam tellus habitant. ",
+        "color": "#05AAD2",
+        "secondarycolor": "#136B8C",
         "background": "linear-gradient(270deg, #03aed7 0%, #1b6182 100%)",
         "image": "/bodymist/Loyal.png"
       }
@@ -47,13 +55,13 @@
         "ingredient": "",
         "image": "/ambiancemist/"
       },
-      "rainbow" : {
+      "rainbow": {
         "name": "Rainbow",
         "description": "",
         "ingredient": "",
         "image": "/ambiancemist/"
       },
-      "blackrose" : {
+      "blackrose": {
         "name": "Blackrose",
         "description": "",
         "ingredient": "",
