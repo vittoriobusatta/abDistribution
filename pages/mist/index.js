@@ -36,29 +36,9 @@ function AmbianceMist({ newArray }) {
 
   const overlayInner = useRef(null);
 
-  const handleMouseEnter = (index) => {
-    gsap.to(imageRef.current[index], {
-      filter: "brightness(110%)",
-      duration: 0.5,
-      ease: "power4.out",
-    });
-  };
-
-  const handleMouseLeave = (index) => {
-    gsap.to(imageRef.current[index], {
-      filter: "brightness(100%)",
-      duration: 0.5,
-      ease: "power4.out",
-    });
-  };
-
   useEffect(() => {
     gsap.set(overlayInner.current, {
       xPercent: -100,
-    });
-    cards.current.forEach((card, index) => {
-      card.addEventListener("mouseenter", () => handleMouseEnter(index));
-      card.addEventListener("mouseleave", () => handleMouseLeave(index));
     });
   }, []);
 
@@ -224,6 +204,7 @@ function AmbianceMist({ newArray }) {
                 height={200}
                 ref={(el) => (imageRef.current[index] = el)}
                 priority
+                as="image"
               />
             </div>
           );
@@ -284,11 +265,12 @@ function AmbianceMist({ newArray }) {
                       height={100}
                       ref={(el) => (imagePreview.current[index] = el)}
                       priority
+                      as="image"
                     />
                   </div>
                 </div>
 
-                <div className="preview_item_information">
+                <div className="preview_item_information_mist">
                   <div className="preview_item_description">
                     <div className="hidden">
                       <h2

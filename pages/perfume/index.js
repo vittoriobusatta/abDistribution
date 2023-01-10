@@ -36,29 +36,9 @@ function BodyMist({ newArray }) {
 
   const overlayInner = useRef(null);
 
-  const handleMouseEnter = (index) => {
-    gsap.to(imageRef.current[index], {
-      filter: "brightness(150%)",
-      duration: 0.5,
-      ease: "power4.out",
-    });
-  };
-
-  const handleMouseLeave = (index) => {
-    gsap.to(imageRef.current[index], {
-      filter: "brightness(100%)",
-      duration: 0.5,
-      ease: "power4.out",
-    });
-  };
-
   useEffect(() => {
     gsap.set(overlayInner.current, {
       xPercent: -100,
-    });
-    cards.current.forEach((card, index) => {
-      card.addEventListener("mouseenter", () => handleMouseEnter(index));
-      card.addEventListener("mouseleave", () => handleMouseLeave(index));
     });
   }, []);
 
@@ -89,6 +69,7 @@ function BodyMist({ newArray }) {
       })
       .to(overlayInner.current, {
         xPercent: 0,
+        duration: 2
       })
       .to(
         previewItem.current[index],
@@ -116,7 +97,7 @@ function BodyMist({ newArray }) {
           opacity: 1,
           ease: "power4.out",
         },
-        "-=0.4"
+        "-=0.6"
       )
       .to(
         descriptionParagraph.current[index],
@@ -127,7 +108,7 @@ function BodyMist({ newArray }) {
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
           ease: "power4.out",
         },
-        "-=0.4"
+        "-=0.8"
       )
       .to(
         ingredientTitle.current[index],
@@ -136,7 +117,7 @@ function BodyMist({ newArray }) {
           opacity: 1,
           ease: "power4.out",
         },
-        "-=0.8"
+        "-=0.6"
       )
       .to(
         ingredientParagraph.current[index],
@@ -224,6 +205,7 @@ function BodyMist({ newArray }) {
                 height={200}
                 ref={(el) => (imageRef.current[index] = el)}
                 priority
+                as="image"
               />
             </div>
           );
@@ -284,6 +266,7 @@ function BodyMist({ newArray }) {
                       height={100}
                       ref={(el) => (imagePreview.current[index] = el)}
                       priority
+                      as="image"
                     />
                   </div>
                 </div>
