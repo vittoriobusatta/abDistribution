@@ -151,11 +151,15 @@ function BodyMist({ newArray }) {
         },
         "-=0.8"
       )
-      .to(imagePreview.current[index], {
-        duration: 0.8,
-        opacity: 1,
-        ease: "power4.out",
-      });
+      .to(
+        imagePreview.current[index],
+        {
+          duration: 0.4,
+          opacity: 1,
+          ease: "power4.out",
+        },
+        "-=0.8"
+      );
   };
 
   const closePreview = () => {
