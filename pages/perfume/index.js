@@ -230,8 +230,8 @@ function BodyMist({ newArray }) {
               <div className="preview_item_content">
                 <div className="preview_item_head">
                   <button className="close_btn" onClick={closePreview}>
-                    <ArrowBack color={item.color} />
-                    <span>Retour</span>
+                    <ArrowBack color={item.secondarycolor} />
+                    {/* <span>Retour</span> */}
                   </button>
                   <LogoUltraCompact color={item.color} />
                 </div>
