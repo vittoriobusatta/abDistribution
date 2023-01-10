@@ -254,7 +254,17 @@ function BodyMist({ newArray }) {
               <div className="preview_item_content">
                 <div className="preview_item_head">
                   <button className="close_btn" onClick={closePreview}>
-                    Retour
+                    <svg
+                      width="24"
+                      height="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      fill="#fff"
+                    >
+                      <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z" />
+                    </svg>
+                    <span>Retour</span>
                   </button>
                   <LogoUltraCompact color={item.color} />
                 </div>
