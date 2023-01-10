@@ -74,6 +74,7 @@ function BodyMist({ newArray }) {
         onStart: () => {
           setIsAnimating(true);
           gsap.set(titleRef.current, { yPercent: 150, skewY: 10 });
+          gsap.set(imagePreview.current[index], { xPercent: 10 });
           gsap.set(descriptionTitle.current[index], { yPercent: 100 });
           gsap.set(ingredientTitle.current[index], { yPercent: 100 });
           gsap.set(descriptionParagraph.current[index], {
@@ -155,8 +156,9 @@ function BodyMist({ newArray }) {
         imagePreview.current[index],
         {
           duration: 0.4,
+          xPercent: 0,
           opacity: 1,
-          ease: "power4.out",
+          ease: "ease",
         },
         "-=0.8"
       );
@@ -270,13 +272,15 @@ function BodyMist({ newArray }) {
                       {item.name}
                     </h1>
                   </div>
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={100}
-                    height={100}
-                    ref={(el) => (imagePreview.current[index] = el)}
-                  />
+                  <div className="hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      width={100}
+                      height={100}
+                      ref={(el) => (imagePreview.current[index] = el)}
+                    />
+                  </div>
                 </div>
 
                 <div className="preview_item_information">
