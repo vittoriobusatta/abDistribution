@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import Image from "next/image";
 import gsap from "gsap";
-import LogoUltraCompact from "../../utils/icons";
+import { ArrowBack, LogoUltraCompact } from "../../utils/icons";
 
 export async function getStaticProps() {
   const data = fs.readFileSync(path.join(process.cwd(), "/public/db.json"));
@@ -230,20 +230,7 @@ function BodyMist({ newArray }) {
               <div className="preview_item_content">
                 <div className="preview_item_head">
                   <button className="close_btn" onClick={closePreview}>
-                    <svg
-                      height="20"
-                      viewBox="0 0 68 44"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M28.4823 40.604C28.654 40.4001 28.7372 40.136 28.7133 39.8705C28.6895 39.605 28.5606 39.36 28.3553 39.1899L10.4202 24.3333H66C66.5523 24.3333 67 23.8856 67 23.3333V20.6667C67 20.1144 66.5523 19.6667 66 19.6667H10.4177L28.3579 4.80747C28.5634 4.63726 28.6923 4.39196 28.716 4.12617C28.7398 3.86038 28.6562 3.59614 28.4841 3.39224L26.7641 1.35491C26.4098 0.935226 25.7833 0.879859 25.3609 1.2309L1.36088 21.1749C1.13262 21.3646 1.00041 21.6458 1 21.9426C0.999592 22.2394 1.13103 22.521 1.35876 22.7113L25.3588 42.7673C25.7815 43.1206 26.4102 43.0654 26.765 42.644L28.4823 40.604Z"
-                        fill={item.color}
-                        stroke={item.color}
-                        stroke-width="1"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
+                    <ArrowBack color={item.color} />
                     <span>Retour</span>
                   </button>
                   <LogoUltraCompact color={item.color} />
