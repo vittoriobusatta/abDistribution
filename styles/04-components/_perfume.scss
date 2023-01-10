@@ -1,8 +1,9 @@
 .container {
   width: 100%;
   height: fit-content;
-  background-color: #fff;
+  background-color: #272421;
   min-height: 100vh;
+  padding-bottom: 40px;
 }
 
 .card_container {
@@ -12,7 +13,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  row-gap: 20px;
+  row-gap: 40px;
   column-gap: 20px;
   padding: 0 26px;
   display: grid;
