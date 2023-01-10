@@ -10,18 +10,21 @@ export async function getStaticProps() {
 
   const appData = JSON.parse(data);
 
-  let newArray = Object.entries(appData[0].bodymist).map(
+  let newArray = Object.entries(appData[0].bodymist.products).map(
     ([key, value]) => value
   );
+
+  let productArray = appData[0].bodymist;
 
   return {
     props: {
       newArray,
+      productArray,
     },
   };
 }
 
-function BodyMist({ newArray }) {
+function BodyMist({ newArray, productArray }) {
   const [previewIsOpen, setPreviewIsOpen] = useState(false);
   const cards = useRef([]);
   const previewItem = useRef([]);
@@ -138,7 +141,7 @@ function BodyMist({ newArray }) {
           opacity: 1,
           ease: "ease",
         },
-        "-=0.8"
+        "-=0.9"
       );
   };
 
@@ -188,25 +191,49 @@ function BodyMist({ newArray }) {
 
   return (
     <section className="container">
+      <div className="landing">
+        <div className="landing_inner">
+          <h1>
+            <span>Brumes</span>
+            <span> Corporelles</span>
+          </h1>
+          <div className="landing_content">
+            <div className="landing_informations">
+              <h3>Catégorie</h3>
+              <p>{productArray.category}</p>
+            </div>
+            <div className="landing_informations">
+              <h3>Origine</h3>
+              <p>{productArray.origine}</p>
+            </div>
+            <div className="landing_informations">
+              <h3>Marque</h3>
+              <p>{productArray.brand}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="card_container">
         {newArray.map((item, index) => {
           return (
-            <div
-              className={"card " + item.name}
-              key={item.id}
-              ref={(el) => (cards.current[index] = el)}
-              style={{ background: item.background }}
-              onClick={() => openPreview(index)}
-            >
-              <Image
-                src={item.image}
-                alt={item.name}
-                width={200}
-                height={200}
-                ref={(el) => (imageRef.current[index] = el)}
-                priority
-                as="image"
-              />
+            <div className="card_content" key={item.id}>
+              <div
+                className={"card " + item.name}
+                ref={(el) => (cards.current[index] = el)}
+                style={{ background: item.background }}
+                onClick={() => openPreview(index)}
+              >
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  width={200}
+                  height={200}
+                  ref={(el) => (imageRef.current[index] = el)}
+                  priority
+                  as="image"
+                />
+              </div>
             </div>
           );
         })}
