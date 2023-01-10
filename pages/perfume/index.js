@@ -22,7 +22,6 @@ export async function getStaticProps() {
 }
 
 function BodyMist({ newArray }) {
-  const [isAnimating, setIsAnimating] = useState(false);
   const [previewIsOpen, setPreviewIsOpen] = useState(false);
   const cards = useRef([]);
   const previewItem = useRef([]);
@@ -72,7 +71,6 @@ function BodyMist({ newArray }) {
           ease: "expo",
         },
         onStart: () => {
-          setIsAnimating(true);
           gsap.set(titleRef.current, { yPercent: 150, skewY: 10 });
           gsap.set(imagePreview.current[index], { xPercent: 10 });
           gsap.set(descriptionTitle.current[index], { yPercent: 100 });
@@ -88,7 +86,6 @@ function BodyMist({ newArray }) {
             clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
           });
         },
-        onComplete: () => setIsAnimating(false),
       })
       .to(overlayInner.current, {
         xPercent: 0,
@@ -171,11 +168,7 @@ function BodyMist({ newArray }) {
           duration: 1,
           ease: "power4",
         },
-        onStart: () => {
-          setIsAnimating(true);
-        },
         onComplete: () => {
-          setIsAnimating(false);
           setPreviewIsOpen(false);
         },
       })
@@ -230,6 +223,7 @@ function BodyMist({ newArray }) {
                 width={200}
                 height={200}
                 ref={(el) => (imageRef.current[index] = el)}
+                priority
               />
             </div>
           );
@@ -258,8 +252,8 @@ function BodyMist({ newArray }) {
                       width="24"
                       height="24"
                       xmlns="http://www.w3.org/2000/svg"
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       fill="#fff"
                     >
                       <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z" />
@@ -289,6 +283,7 @@ function BodyMist({ newArray }) {
                       width={100}
                       height={100}
                       ref={(el) => (imagePreview.current[index] = el)}
+                      priority
                     />
                   </div>
                 </div>
