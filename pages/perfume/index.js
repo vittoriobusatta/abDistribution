@@ -29,6 +29,12 @@ function BodyMist({ newArray }) {
   const imageRef = useRef([]);
   const titleRef = useRef([]);
   const imagePreview = useRef([]);
+
+  const descriptionTitle = useRef([]);
+  const descriptionParagraph = useRef([]);
+  const ingredientTitle = useRef([]);
+  const ingredientParagraph = useRef([]);
+
   const overlayInner = useRef(null);
 
   const handleMouseEnter = (index) => {
@@ -68,6 +74,18 @@ function BodyMist({ newArray }) {
         onStart: () => {
           setIsAnimating(true);
           gsap.set(titleRef.current, { yPercent: 150, skewY: 10 });
+          gsap.set(descriptionTitle.current[index], { yPercent: 100 });
+          gsap.set(ingredientTitle.current[index], { yPercent: 100 });
+          gsap.set(descriptionParagraph.current[index], {
+            yPercent: 10,
+            skewY: 2,
+            clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+          });
+          gsap.set(ingredientParagraph.current[index], {
+            yPercent: 10,
+            skewY: 2,
+            clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+          });
         },
         onComplete: () => setIsAnimating(false),
       })
@@ -92,6 +110,46 @@ function BodyMist({ newArray }) {
           ease: "power4.out",
         },
         "-=0.4"
+      )
+      .to(
+        descriptionTitle.current[index],
+        {
+          yPercent: 0,
+          opacity: 1,
+          ease: "power4.out",
+        },
+        "-=0.4"
+      )
+      .to(
+        descriptionParagraph.current[index],
+        {
+          yPercent: 0,
+          opacity: 1,
+          skewY: 0,
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+          ease: "power4.out",
+        },
+        "-=0.4"
+      )
+      .to(
+        ingredientTitle.current[index],
+        {
+          yPercent: 0,
+          opacity: 1,
+          ease: "power4.out",
+        },
+        "-=0.8"
+      )
+      .to(
+        ingredientParagraph.current[index],
+        {
+          yPercent: 0,
+          opacity: 1,
+          skewY: 0,
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+          ease: "power4.out",
+        },
+        "-=0.8"
       )
       .to(imagePreview.current[index], {
         duration: 0.8,
@@ -219,12 +277,30 @@ function BodyMist({ newArray }) {
 
                 <div className="preview_item_information">
                   <div className="preview_item_description">
-                    <h2 style={{ color: item.secondarycolor }}>Description</h2>
-                    <p>{item.description}</p>
+                    <div className="hidden">
+                      <h2
+                        ref={(el) => (descriptionTitle.current[index] = el)}
+                        style={{ color: item.secondarycolor }}
+                      >
+                        Description
+                      </h2>
+                    </div>
+                    <p ref={(el) => (descriptionParagraph.current[index] = el)}>
+                      {item.description}
+                    </p>
                   </div>
                   <div className="preview_item_ingredient">
-                    <h2 style={{ color: item.color }}>Ingrédients</h2>
-                    <p>{item.ingredient}</p>
+                    <div className="hidden">
+                      <h2
+                        ref={(el) => (ingredientTitle.current[index] = el)}
+                        style={{ color: item.color }}
+                      >
+                        Ingrédients
+                      </h2>
+                    </div>
+                    <p ref={(el) => (ingredientParagraph.current[index] = el)}>
+                      {item.ingredient}
+                    </p>
                   </div>
                 </div>
               </div>
