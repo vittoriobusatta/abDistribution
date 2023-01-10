@@ -17,6 +17,9 @@ export default function Home(
         <Link href="/perfume">
           <h1>Perfume</h1>
         </Link>
+        <Link href="/mist">
+          <h1>Mist</h1>
+        </Link>
       </main>
     </>
   );

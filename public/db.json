@@ -44,28 +44,44 @@
     },
     "ambiancemist": {
       "sandalwood": {
+        "id": "1",
         "name": "Sandalwood",
-        "description": "",
-        "ingredient": "",
-        "image": "/ambiancemist/"
+        "description": "Laissez-vous envahir par la chaleur et la sérénité de la senteur envoûtante du bois de santal avec cette brume d'ambiance.",
+        "ingredient": "Pétales de roses séchés, huile de coco, huile essentielle de santal",
+        "color": "#EC334D",
+        "secondarycolor": "#0E0D57",
+        "background": "linear-gradient(270deg, #EC334D 0%, #B82848 50%, #262259 78.13%, #0E0D57 100%);",
+        "image": "/ambiancemist/Sandalwood.png"
       },
       "cachemere": {
+        "id": "2",
         "name": "Cachemere",
-        "description": "",
-        "ingredient": "",
-        "image": "/ambiancemist/"
+        "description": "Apportez une touche de couleur et de vitalité dans votre vie avec cette brume d'ambiance aux senteurs éclatantes.",
+        "ingredient": "Fleurs de lavande séchées, huile de jojoba, huile essentielle de lavande",
+        "color": "#40984A",
+        "secondarycolor": "#E7AF43",
+        "background": "linear-gradient(270deg, #E7AF43 0%, #C5C447 50%, #40984A 100%);",
+        "image": "/ambiancemist/Cachemere.png"
       },
       "rainbow": {
+        "id": "3",
         "name": "Rainbow",
-        "description": "",
-        "ingredient": "",
-        "image": "/ambiancemist/"
+        "description": "Créez une ambiance chaleureuse et accueillante avec cette brume d'ambiance au parfum de cachemire.",
+        "ingredient": "zestes d'orange séchés, huile de baies de goji, mélange d'huile essentielles citron et romarin,",
+        "color": "#D14888",
+        "secondarycolor": "#ED7252",
+        "background": "linear-gradient(270deg, #D14888 0%, #F9AE88 50%, #ED7252 100%);",
+        "image": "/ambiancemist/Rainbow.png"
       },
       "blackrose": {
-        "name": "Blackrose",
-        "description": "",
-        "ingredient": "",
-        "image": "/ambiancemist/"
+        "id": "4",
+        "name": "Black Rose",
+        "description": "Cette brume d'ambiance est un mélange subtil de senteurs élégantes de rose noire et de bois de cèdre. ",
+        "ingredient": "pétales de roses noires séchés, huile de noyau d'abricot, huile essentielle de rose noire.",
+        "color": "#8785BB",
+        "secondarycolor": "#DA6780",
+        "background": "linear-gradient(270deg, #8785BB 0%, #D581AB 50%, #DA6780 100%);",
+        "image": "/ambiancemist/Blackrose.png"
       }
     }
   }
