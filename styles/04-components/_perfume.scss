@@ -64,7 +64,7 @@
   }
   
   .preview_item_content {
-    height: 100%;
+    height: calc(100% + $safe_area_inset_top);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -162,5 +162,6 @@
     cursor: pointer;
     color: #fff;
     font-size: 16px;
+    text-transform: uppercase;
   }
   
