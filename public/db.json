@@ -51,7 +51,7 @@
         "color": "#EC334D",
         "secondarycolor": "#0E0D57",
         "background": "linear-gradient(270deg, #EC334D 0%, #B82848 50%, #262259 78.13%, #0E0D57 100%);",
-        "image": "/ambiancemist/Sandalwood.png"
+        "image": "/ambiancemist/Sandalwood.webp"
       },
       "cachemere": {
         "id": "2",
@@ -61,7 +61,7 @@
         "color": "#40984A",
         "secondarycolor": "#E7AF43",
         "background": "linear-gradient(270deg, #E7AF43 0%, #C5C447 50%, #40984A 100%);",
-        "image": "/ambiancemist/Cachemere.png"
+        "image": "/ambiancemist/Cachemere.webp"
       },
       "rainbow": {
         "id": "3",
@@ -71,7 +71,7 @@
         "color": "#D14888",
         "secondarycolor": "#ED7252",
         "background": "linear-gradient(270deg, #D14888 0%, #F9AE88 50%, #ED7252 100%);",
-        "image": "/ambiancemist/Rainbow.png"
+        "image": "/ambiancemist/Rainbow.webp"
       },
       "blackrose": {
         "id": "4",
@@ -81,7 +81,7 @@
         "color": "#8785BB",
         "secondarycolor": "#DA6780",
         "background": "linear-gradient(270deg, #8785BB 0%, #D581AB 50%, #DA6780 100%);",
-        "image": "/ambiancemist/Blackrose.png"
+        "image": "/ambiancemist/Blackrose.webp"
       }
     }
   }
