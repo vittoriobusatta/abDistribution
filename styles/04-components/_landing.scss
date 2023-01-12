@@ -20,18 +20,6 @@
     text-align: center;
     position: relative;
     z-index: 2;
-    color: #fff;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 43%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-0.5deg);
-      width: 105%;
-      height: 115%;
-      background: #272421;
-      z-index: -1;
-    }
   }
 }
 

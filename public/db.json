@@ -5,15 +5,15 @@
       "category": "Parfums",
       "origine": "Turquie",
       "brand": "Ultra Compact",
-      "products" : {
+      "products": {
         "brave": {
           "id": "1",
           "name": "brave",
           "description": "Cette brume corporelle vous donnera le courage de vous lancer dans de nouvelles aventures et de surmonter vos peurs.",
           "ingredient": "Fleurs de lavande séchées, huile de noisette, huile essentielle de cèdre.",
-          "color": "#DF3C13",
-          "secondarycolor": "#993018",
-          "background": "linear-gradient(270deg, #e43d12 0%, #932f18 100%)",
+          "color1": "#DF3C13",
+          "color2": "#993018",
+          "gradient": "linear-gradient(270deg, #e43d12 0%, #932f18 100%)",
           "image": "/bodymist/Brave.png"
         },
         "creative": {
@@ -21,9 +21,9 @@
           "name": "creative",
           "description": "Laissez votre créativité s'envoler avec cette brume corporelle qui vous aidera à trouver l'inspiration et à laisser libre cours à votre imagination.",
           "ingredient": "Fleurs de camomille séchées, huile de coco, huile essentielle de gingembre. ",
-          "color": "#EFE021",
-          "secondarycolor": "#9EB735",
-          "background": "linear-gradient(270deg, #f4e228 0%, #d5d600 50%, #9ab538 100%)",
+          "color1": "#EFE021",
+          "color2": "#9EB735",
+          "gradient": "linear-gradient(270deg, #f4e228 0%, #d5d600 50%, #9ab538 100%)",
           "image": "/bodymist/Creative.png"
         },
         "dynamic": {
@@ -31,9 +31,9 @@
           "name": "dynamic",
           "description": "Cette brume corporelle vous donnera l'énergie et la motivation nécessaires pour affronter votre journée avec dynamisme.",
           "ingredient": "Zestes d'orange séchés, huile de ricin, huile essentielle de poivre noir. ",
-          "color": "#DB211C",
-          "secondarycolor": "#9B317F",
-          "background": "linear-gradient(270deg, #d93e2a 0%, #c21a40 50.52%, #8c3388 100%)",
+          "color1": "#DB211C",
+          "color2": "#9B317F",
+          "gradient": "linear-gradient(270deg, #d93e2a 0%, #c21a40 50.52%, #8c3388 100%)",
           "image": "/bodymist/Dynamic.png"
         },
         "loyal": {
@@ -41,53 +41,66 @@
           "name": "loyal",
           "description": "Faites preuve de loyauté envers vous-même avec cette brume corporelle afin de vous sentir mieux dans votre corps et dans votre esprit.",
           "ingredient": "Fleurs de rose séchées, huile d'amande douce, huile essentielle de palmarosa. ",
-          "color": "#05AAD2",
-          "secondarycolor": "#136B8C",
-          "background": "linear-gradient(270deg, #03aed7 0%, #1b6182 100%)",
+          "color1": "#05AAD2",
+          "color2": "#136B8C",
+          "gradient": "linear-gradient(270deg, #03aed7 0%, #1b6182 100%)",
           "image": "/bodymist/Loyal.png"
         }
       }
     },
     "ambiancemist": {
-      "sandalwood": {
-        "id": "1",
-        "name": "Sandalwood",
-        "description": "Laissez-vous envahir par la chaleur et la sérénité de la senteur envoûtante du bois de santal avec cette brume d'ambiance.",
-        "ingredient": "Pétales de roses séchés, huile de coco, huile essentielle de santal",
-        "color": "#0E0D57",
-        "secondarycolor": "#EC334D",
-        "background": "linear-gradient(270deg, #EC334D 0%, #B82848 50%, #262259 78.13%, #0E0D57 100%)",
-        "image": "/ambiancemist/Sandalwood.webp"
-      },
-      "cachemere": {
-        "id": "2",
-        "name": "Cachemere",
-        "description": "Apportez une touche de couleur et de vitalité dans votre vie avec cette brume d'ambiance aux senteurs éclatantes.",
-        "ingredient": "Fleurs de lavande séchées, huile de jojoba, huile essentielle de lavande",
-        "color": "#40984A",
-        "secondarycolor": "#E7AF43",
-        "background": "linear-gradient(270deg, #E7AF43 0%, #C5C447 50%, #40984A 100%)",
-        "image": "/ambiancemist/Cachemere.webp"
-      },
-      "rainbow": {
-        "id": "3",
-        "name": "Rainbow",
-        "description": "Créez une ambiance chaleureuse et accueillante avec cette brume d'ambiance au parfum de cachemire.",
-        "ingredient": "zestes d'orange séchés, huile de baies de goji, mélange d'huile essentielles citron et romarin,",
-        "color": "#ED7252",
-        "secondarycolor": "#D14888",
-        "background": "linear-gradient(270deg, #D14888 0%, #F9AE88 50%, #ED7252 100%)",
-        "image": "/ambiancemist/Rainbow.webp"
-      },
-      "blackrose": {
-        "id": "4",
-        "name": "Black Rose",
-        "description": "Cette brume d'ambiance est un mélange subtil de senteurs élégantes de rose noire et de bois de cèdre. ",
-        "ingredient": "pétales de roses noires séchés, huile de noyau d'abricot, huile essentielle de rose noire.",
-        "color": "#DA6780",
-        "secondarycolor": "#8785BB",
-        "background": "linear-gradient(270deg, #8785BB 0%, #D581AB 50%, #DA6780 100%)",
-        "image": "/ambiancemist/BlackRose.webp"
+      "name": "Brumes d'Ambiance",
+      "category": "Parfums",
+      "origine": "Turquie",
+      "brand": "Ultra Compact",
+      "color1": "#794856",
+      "color2": "#D5A7B4",
+      "background": "#FFEEFA",
+      "products": {
+        "sandalwood": {
+          "id": "5",
+          "name": "Sandalwood",
+          "description": "Laissez-vous envahir par la chaleur et la sérénité de la senteur envoûtante du bois de santal avec cette brume d'ambiance.",
+          "ingredient": "Pétales de roses séchés, huile de coco, huile essentielle de santal",
+          "color1": "#0E0D57",
+          "color2": "#EC334D",
+          "background": "#FFECEC",
+          "gradient": "linear-gradient(270deg, #EC334D 0%, #B82848 50%, #262259 78.13%, #0E0D57 100%)",
+          "image": "/ambiancemist/Sandalwood.webp"
+        },
+        "cachemere": {
+          "id": "6",
+          "name": "Cachemere",
+          "description": "Apportez une touche de couleur et de vitalité dans votre vie avec cette brume d'ambiance aux senteurs éclatantes.",
+          "ingredient": "Fleurs de lavande séchées, huile de jojoba, huile essentielle de lavande",
+          "color1": "#40984A",
+          "color2": "#E7AF43",
+          "background": "#FFFEF0",
+          "gradient": "linear-gradient(270deg, #E7AF43 0%, #C5C447 50%, #40984A 100%)",
+          "image": "/ambiancemist/Cachemere.webp"
+        },
+        "rainbow": {
+          "id": "7",
+          "name": "Rainbow",
+          "description": "Créez une ambiance chaleureuse et accueillante avec cette brume d'ambiance au parfum de cachemire.",
+          "ingredient": "zestes d'orange séchés, huile de baies de goji, mélange d'huile essentielles citron et romarin,",
+          "color1": "#ED7252",
+          "color2": "#D14888",
+          "background": "#FFF5EC",
+          "gradient": "linear-gradient(270deg, #D14888 0%, #F9AE88 50%, #ED7252 100%)",
+          "image": "/ambiancemist/Rainbow.webp"
+        },
+        "blackrose": {
+          "id": "8",
+          "name": "Black Rose",
+          "description": "Cette brume d'ambiance est un mélange subtil de senteurs élégantes de rose noire et de bois de cèdre. ",
+          "ingredient": "pétales de roses noires séchés, huile de noyau d'abricot, huile essentielle de rose noire.",
+          "color1": "#DA6780",
+          "color2": "#8785BB",
+          "background": "#FFECF7",
+          "gradient": "linear-gradient(270deg, #8785BB 0%, #D581AB 50%, #DA6780 100%)",
+          "image": "/ambiancemist/BlackRose.webp"
+        }
       }
     }
   }

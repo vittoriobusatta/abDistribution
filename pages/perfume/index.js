@@ -240,7 +240,7 @@ function BodyMist({ newArray, productArray }) {
       </div>
 
       <div className="content_overlay">
-        <div className="overlay_inner" ref={overlayInner}></div>
+        <div key={item.id} className="overlay_inner" ref={overlayInner}></div>
       </div>
       <div className="preview">
         {newArray.map((item, index) => {
