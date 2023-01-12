@@ -11,6 +11,9 @@ header {
   padding: 16px 26px;
   & svg {
     height: clamp(36px, 5rem, 44px);
+    @media screen and (max-width: 576px) {
+      height: 34px;
+    }
   }
   @media screen and (min-width: 576px) {
     padding: 16px 32px;
