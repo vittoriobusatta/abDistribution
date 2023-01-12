@@ -11,11 +11,11 @@ export async function getStaticProps() {
 
   const appData = JSON.parse(data);
 
-  let newArray = Object.entries(appData[0].ambiancemist.products).map(
+  let newArray = Object.entries(appData[0].airfreshener.products).map(
     ([key, value]) => value
   );
 
-  let productArray = appData[0].ambiancemist;
+  let productArray = appData[0].airfreshener;
 
   return {
     props: {
@@ -198,13 +198,15 @@ function BodyMist({ newArray, productArray }) {
       >
         <Header
           color1={productArray.color1}
-          color2={productArray.color2}
+          color2={productArray.color1}
           backgroundColor={productArray.background}
         />
 
         <div className="landing">
           <div className="landing_inner">
-            <h1 style={{ color: productArray.color1 }}>{productArray.name}</h1>
+            <h1 style={{ color: productArray.color1 }}>
+              {productArray.name}
+            </h1>
             <div className="landing_content">
               <div className="landing_informations">
                 <h3 style={{ color: productArray.color1 }}>Catégorie</h3>

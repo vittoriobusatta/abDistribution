@@ -20,6 +20,9 @@ export default function Home(
         <Link href="/mist">
           <h1>Brumes Ambiance</h1>
         </Link>
+        <Link href="/airfreshener">
+          <h1>Désodorisants</h1>
+        </Link>
       </main>
     </>
   );

@@ -294,7 +294,7 @@ function BodyMist({ newArray, productArray }) {
                           background: item.gradient,
                           backgroundClip: "text",
                           WebkitBackgroundClip: "text",
-                          color: "transparent",
+                          color: "transparent"
                         }}
                         ref={(el) => (titleRef.current[index] = el)}
                       >

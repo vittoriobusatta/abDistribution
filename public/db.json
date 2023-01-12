@@ -109,6 +109,61 @@
           "image": "/ambiancemist/BlackRose.webp"
         }
       }
+    },
+    "airfreshener": {
+      "name": "Désodorisants",
+      "category": "Parfums",
+      "origine": "Turquie",
+      "brand": "Ultra Compact",
+      "color1": "#9E9E4D",
+      "color2": "#F5F2CB",
+      "background": "#FFFDE8",
+      "products": {
+        "greentea": {
+          "id": "9",
+          "name": "Green Tea",
+          "description": "Découvrez la fraîcheur et la vitalité de la senteur du thé vert avec ce désodorisant d'air.",
+          "ingredient": "Pétales de roses séchés, huile d'amande douce, huile essentielle de palmarosa. ",
+          "color1": "#4C9337",
+          "color2": "#B6D075",
+          "background": "#FFFDE8",
+          "gradient": "linear-gradient(270deg, #4C9337 0%, #B6D075 100%);",
+          "image": "/airfreshener/Tea.png"
+        },
+        "lavender": {
+          "id": "10",
+          "name": "Lavender",
+          "description": "",
+          "ingredient": "",
+          "color1": "#78579A",
+          "color2": "#C9B1D2",
+          "background": "#FCF2FF",
+          "gradient": "linear-gradient(270deg, #78579A 0%, #C9B1D2 100%);",
+          "image": "/airfreshener/Lavender.png"
+        },
+        "mysticoud": {
+          "id": "11",
+          "name": "Mystic Oud",
+          "description": "",
+          "ingredient": "",
+          "color1": "#805028",
+          "color2": "#D5823E",
+          "background": "#FFF4E8",
+          "gradient": "linear-gradient(270deg, #805028 0%, #D5823E 100%);",
+          "image": "/airfreshener/Oud.png"
+        },
+        "whiterose": {
+          "id": "12",
+          "name": "White Rose",
+          "description": "",
+          "ingredient": "",
+          "color1": "#EFBFD9",
+          "color2": "#E971A7",
+          "background": "#FFF3FA",
+          "gradient": "",
+          "image": "/airfreshener/Rose.png"
+        }
+      }
     }
   }
 ]
