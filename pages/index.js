@@ -23,6 +23,10 @@ export default function Home(
         <Link href="/airfreshener">
           <h1>Désodorisants</h1>
         </Link>
+        <Link href="/coffee">
+          <h1>Cafés</h1>
+        </Link>
+
       </main>
     </>
   );

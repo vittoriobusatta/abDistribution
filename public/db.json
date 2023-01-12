@@ -208,6 +208,50 @@
           "image": "/airfreshener/Flower.png"
         }
       }
+    },
+    "coffee": {
+      "name": "Cafés",
+      "category": "Nourriture",
+      "origine": "Turquie",
+      "brand": "Nescafé",
+      "color1": "#893232",
+      "color2": "#F8955B",
+      "background": "#FFFAEC",
+      "products": {
+        "vanilla": {
+          "id": "17",
+          "name": "Vanilla",
+          "description": " ",
+          "ingredient": "",
+          "color1": "#3156A3",
+          "color2": "#40B8DA",
+          "background": "#F8FCFF",
+          "gradient": "radial-gradient(50% 616.78% at 50% 50%, #40B8DA 0%, #3156A3 100%)",
+          "image": "/coffee/Vanilla.png"
+        },
+        "choco": {
+          "id": "18",
+          "name": "Choco",
+          "description": " ",
+          "ingredient": "",
+          "color1": "#B83C2C",
+          "color2": "#9EB735",
+          "background": "#F7CB8A",
+          "gradient": "radial-gradient(50% 616.78% at 50% 50%, #F7CB8A 11.46%, #B83C2C 100%)",
+          "image": "/coffee/Choco.png"
+        },
+        "original": {
+          "id": "19",
+          "name": "Original",
+          "description": " ",
+          "ingredient": "",
+          "color1": "#D66627",
+          "color2": "#F2DB68",
+          "background": "#FFFEEC",
+          "gradient": "radial-gradient(50% 616.78% at 50% 50%, #F2DB68 0%, #D66627 100%)",
+          "image": "/coffee/Original.png"
+        }
+      }
     }
   }
 ]
