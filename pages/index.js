@@ -15,10 +15,10 @@ export default function Home(
 
       <main>
         <Link href="/perfume">
-          <h1>Perfume</h1>
+          <h1>Brumes Corporelles</h1>
         </Link>
         <Link href="/mist">
-          <h1>Mist</h1>
+          <h1>Brumes Ambiance</h1>
         </Link>
       </main>
     </>

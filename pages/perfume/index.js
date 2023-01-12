@@ -4,6 +4,7 @@ import path from "path";
 import Image from "next/image";
 import gsap from "gsap";
 import { ArrowBack, LogoUltraCompact } from "../../utils/icons";
+import Header from "../../components/Header";
 
 export async function getStaticProps() {
   const data = fs.readFileSync(path.join(process.cwd(), "/public/db.json"));
@@ -37,7 +38,7 @@ function BodyMist({ newArray, productArray }) {
   const ingredientTitle = useRef([]);
   const ingredientParagraph = useRef([]);
 
-  const overlayInner = useRef(null);
+  const overlayInner = useRef([]);
 
   useEffect(() => {
     gsap.set(overlayInner.current, {
@@ -70,7 +71,7 @@ function BodyMist({ newArray, productArray }) {
           });
         },
       })
-      .to(overlayInner.current, {
+      .to(overlayInner.current[index], {
         xPercent: 0,
         duration: 2,
       })
@@ -190,139 +191,168 @@ function BodyMist({ newArray, productArray }) {
   };
 
   return (
-    <section className="container">
-      <div className="landing">
-        <div className="landing_inner">
-          <h1>
-            <span>Brumes</span>
-            <span> Corporelles</span>
-          </h1>
-          <div className="landing_content">
-            <div className="landing_informations">
-              <h3>Catégorie</h3>
-              <p>{productArray.category}</p>
-            </div>
-            <div className="landing_informations">
-              <h3>Origine</h3>
-              <p>{productArray.origine}</p>
-            </div>
-            <div className="landing_informations">
-              <h3>Marque</h3>
-              <p>{productArray.brand}</p>
+    <>
+      <section
+        className="container"
+        style={{ backgroundColor: productArray.background }}
+      >
+        <Header
+          color1={productArray.color1}
+          color2={productArray.color2}
+          backgroundColor={productArray.background}
+        />
+
+        <div className="landing">
+          <div className="landing_inner">
+            <h1 style={{ color: productArray.color1 }}>
+              <span>Brumes</span>
+              <span> Corporelles</span>
+            </h1>
+            <div className="landing_content">
+              <div className="landing_informations">
+                <h3 style={{ color: productArray.color1 }}>Catégorie</h3>
+                <p style={{ color: productArray.color1 }}>
+                  {productArray.category}
+                </p>
+              </div>
+              <div className="landing_informations">
+                <h3 style={{ color: productArray.color1 }}>Origine</h3>
+                <p style={{ color: productArray.color1 }}>
+                  {productArray.origine}
+                </p>
+              </div>
+              <div className="landing_informations">
+                <h3 style={{ color: productArray.color1 }}>Marque</h3>
+                <p style={{ color: productArray.color1 }}>
+                  {productArray.brand}
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="card_container">
-        {newArray.map((item, index) => {
-          return (
-            <div className="card_content" key={item.id}>
+        <div className="card_container">
+          {newArray.map((item, index) => {
+            return (
+              <div className="card_content" key={item.id}>
+                <div
+                  className={"card " + item.name}
+                  ref={(el) => (cards.current[index] = el)}
+                  onClick={() => openPreview(index)}
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={200}
+                    height={200}
+                    ref={(el) => (imageRef.current[index] = el)}
+                    priority
+                    as="image"
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="content_overlay">
+          {newArray.map((item, index) => {
+            return (
               <div
-                className={"card " + item.name}
-                ref={(el) => (cards.current[index] = el)}
+                key={item.id}
+                className="overlay_inner"
                 style={{ background: item.background }}
-                onClick={() => openPreview(index)}
+                ref={(el) => (overlayInner.current[index] = el)}
+              ></div>
+            );
+          })}
+        </div>
+        <div className="preview">
+          {newArray.map((item, index) => {
+            return (
+              <div
+                className={
+                  previewIsOpen
+                    ? "preview_item active " + item.name
+                    : "preview_item " + item.name
+                }
+                key={item.id}
+                ref={(el) => (previewItem.current[index] = el)}
               >
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  width={200}
-                  height={200}
-                  ref={(el) => (imageRef.current[index] = el)}
-                  priority
-                  as="image"
-                />
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
-      <div className="content_overlay">
-        <div key={item.id} className="overlay_inner" ref={overlayInner}></div>
-      </div>
-      <div className="preview">
-        {newArray.map((item, index) => {
-          return (
-            <div
-              className={
-                previewIsOpen
-                  ? "preview_item active " + item.name
-                  : "preview_item " + item.name
-              }
-              key={item.id}
-              ref={(el) => (previewItem.current[index] = el)}
-            >
-              <div className="preview_item_content">
-                <div className="preview_item_head">
-                  <button className="close_btn" onClick={closePreview}>
-                    <ArrowBack color={item.secondarycolor} />
-                    {/* <span>Retour</span> */}
-                  </button>
-                  <LogoUltraCompact color={item.color} />
-                </div>
-                <div className="preview_item_product">
-                  <div className="hidden preview_item_title">
-                    <h1
-                      style={{
-                        background: item.background,
-                        backgroundClip: "text",
-                        WebkitBackgroundClip: "text",
-                        color: "transparent",
-                      }}
-                      ref={(el) => (titleRef.current[index] = el)}
-                    >
-                      {item.name}
-                    </h1>
+                <div className="preview_item_content">
+                  <div className="preview_item_head">
+                    <button className="close_btn" onClick={closePreview}>
+                      <ArrowBack color={item.color2} />
+                      {/* <span>Retour</span> */}
+                    </button>
+                    <LogoUltraCompact color={item.color1} />
                   </div>
-                  <div className="hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={100}
-                      height={100}
-                      ref={(el) => (imagePreview.current[index] = el)}
-                      priority
-                      as="image"
-                    />
-                  </div>
-                </div>
-
-                <div className="preview_item_information">
-                  <div className="preview_item_description">
-                    <div className="hidden">
-                      <h2
-                        ref={(el) => (descriptionTitle.current[index] = el)}
-                        style={{ color: item.secondarycolor }}
+                  <div className="preview_item_product">
+                    <div className="hidden preview_item_title">
+                      <h1
+                        style={{
+                          background: item.gradient,
+                          backgroundClip: "text",
+                          WebkitBackgroundClip: "text",
+                          color: "transparent",
+                        }}
+                        ref={(el) => (titleRef.current[index] = el)}
                       >
-                        Description
-                      </h2>
+                        {item.name}
+                      </h1>
                     </div>
-                    <p ref={(el) => (descriptionParagraph.current[index] = el)}>
-                      {item.description}
-                    </p>
-                  </div>
-                  <div className="preview_item_ingredient">
                     <div className="hidden">
-                      <h2
-                        ref={(el) => (ingredientTitle.current[index] = el)}
-                        style={{ color: item.color }}
-                      >
-                        Ingrédients
-                      </h2>
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        width={100}
+                        height={100}
+                        ref={(el) => (imagePreview.current[index] = el)}
+                        priority
+                        as="image"
+                      />
                     </div>
-                    <p ref={(el) => (ingredientParagraph.current[index] = el)}>
-                      {item.ingredient}
-                    </p>
+                  </div>
+
+                  <div className="preview_item_information">
+                    <div className="preview_item_description">
+                      <div className="hidden">
+                        <h2
+                          ref={(el) => (descriptionTitle.current[index] = el)}
+                          style={{ color: item.color1 }}
+                        >
+                          Description
+                        </h2>
+                      </div>
+                      <p
+                        ref={(el) => (descriptionParagraph.current[index] = el)}
+                      >
+                        {item.description}
+                      </p>
+                    </div>
+                    <div className="preview_item_ingredient">
+                      <div className="hidden">
+                        <h2
+                          ref={(el) => (ingredientTitle.current[index] = el)}
+                          style={{ color: item.color2 }}
+                        >
+                          Ingrédients
+                        </h2>
+                      </div>
+                      <p
+                        ref={(el) => (ingredientParagraph.current[index] = el)}
+                      >
+                        {item.ingredient}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-    </section>
+            );
+          })}
+        </div>
+      </section>
+    </>
   );
 }
 export default BodyMist;
