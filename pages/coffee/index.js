@@ -248,6 +248,7 @@ function Coffee({ newArray, productArray }) {
                   <Image
                     src={item.image}
                     alt={item.name}
+                    priority
                     width={200}
                     height={200}
                     ref={(el) => (imageRef.current[index] = el)}
