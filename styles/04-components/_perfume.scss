@@ -99,6 +99,18 @@
   justify-content: space-between;
   align-items: center;
   padding: 26px 26px 0;
+  @media screen and (min-width: 576px) {
+    padding: 26px 32px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 26px 42px;
+  }
+  @media screen and (min-width: 992px) {
+    padding: 26px 52px;
+  }
+  @media screen and (min-width: 1224px) {
+    padding: 26px 62px;
+  }
 }
 
 .preview_item_product {
