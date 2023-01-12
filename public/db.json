@@ -160,7 +160,7 @@
           "color1": "#EFBFD9",
           "color2": "#E971A7",
           "background": "#FFF3FA",
-          "gradient": "",
+          "gradient": "linear-gradient(270deg, #E971A7 0%, #EFBFD9 100%);",
           "image": "/airfreshener/Rose.png"
         }
       }
