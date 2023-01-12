@@ -12,11 +12,11 @@ export async function getStaticProps() {
 
   const appData = JSON.parse(data);
 
-  let newArray = Object.entries(appData[0].airfreshener.products).map(
+  let newArray = Object.entries(appData[0].handwash.products).map(
     ([key, value]) => value
   );
 
-  let productArray = appData[0].airfreshener;
+  let productArray = appData[0].handwash;
 
   return {
     props: {

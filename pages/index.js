@@ -26,7 +26,9 @@ export default function Home(
         <Link href="/coffee">
           <h1>Cafés</h1>
         </Link>
-
+        <Link href="/handwash">
+          <h1>Laves Main</h1>
+        </Link>
       </main>
     </>
   );
