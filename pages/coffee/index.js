@@ -251,8 +251,6 @@ function Coffee({ newArray, productArray }) {
                     width={200}
                     height={200}
                     ref={(el) => (imageRef.current[index] = el)}
-                    priority
-                    as="image"
                   />
                 </div>
               </div>

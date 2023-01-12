@@ -235,8 +235,8 @@
           "description": " ",
           "ingredient": "",
           "color1": "#B83C2C",
-          "color2": "#9EB735",
-          "background": "#F7CB8A",
+          "color2": "#F7CB8A",
+          "background": "#FFF6E8",
           "gradient": "radial-gradient(50% 616.78% at 50% 50%, #F7CB8A 11.46%, #B83C2C 100%)",
           "image": "/coffee/Choco.png"
         },
