@@ -296,6 +296,7 @@ function Coffee({ newArray, productArray }) {
                       <h1
                         style={{
                           backgroundImage: item.gradient,
+                          backgroundClip: "text",
                           WebkitBackgroundClip: "text",
                           WebkitTextFillColor: "transparent",
                           MozBackgroundClip: "text",
