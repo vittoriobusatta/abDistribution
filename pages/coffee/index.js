@@ -295,9 +295,11 @@ function Coffee({ newArray, productArray }) {
                     <div className="hidden preview_item_title">
                       <h1
                         style={{
-                          background: item.gradient,
+                          backgroundImage: item.gradient,
                           WebkitBackgroundClip: "text",
                           WebkitTextFillColor: "transparent",
+                          MozBackgroundClip: "text",
+                          MozTextFillColor: "transparent",
                         }}
                         ref={(el) => (titleRef.current[index] = el)}
                       >
