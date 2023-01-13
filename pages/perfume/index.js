@@ -321,7 +321,7 @@ function BodyMist({ newArray, productArray }) {
                     </div>
                   </div>
 
-                  <div className="preview_item_information">
+                  <div className="preview_item_information_mist">
                     <div className="preview_item_description">
                       <div className="hidden">
                         <h2

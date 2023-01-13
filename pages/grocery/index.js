@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import Image from "next/image";
 import gsap from "gsap";
-import { ArrowBack, LogoUltraCompact } from "../../utils/icons";
+import { ArrowBack, LogoTukas, LogoUltraCompact } from "../../utils/icons";
 import Header from "../../components/Header";
 import Head from "next/head";
 
@@ -291,7 +291,7 @@ function BodyMist({ newArray, productArray }) {
                       <ArrowBack color={item.color2} />
                       {/* <span>Retour</span> */}
                     </button>
-                    <LogoUltraCompact color={item.color1} />
+                    <LogoTukas color1={item.color1} />
                   </div>
                   <div className="preview_item_product">
                     <div className="hidden preview_item_title">
