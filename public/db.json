@@ -11,7 +11,7 @@
       "products": {
         "brave": {
           "id": "1",
-          "name": "brave",
+          "name": "Brave",
           "description": "Cette brume corporelle vous donnera le courage de vous lancer dans de nouvelles aventures et de surmonter vos peurs.",
           "ingredient": "Fleurs de lavande séchées, huile de noisette, huile essentielle de cèdre.",
           "color1": "#DF3C13",
@@ -22,7 +22,7 @@
         },
         "creative": {
           "id": "2",
-          "name": "creative",
+          "name": "Creative",
           "description": "Laissez votre créativité s'envoler avec cette brume corporelle qui vous aidera à trouver l'inspiration et à laisser libre cours à votre imagination.",
           "ingredient": "Fleurs de camomille séchées, huile de coco, huile essentielle de gingembre. ",
           "color1": "#EFE021",
@@ -33,7 +33,7 @@
         },
         "dynamic": {
           "id": "3",
-          "name": "dynamic",
+          "name": "Dynamic",
           "description": "Cette brume corporelle vous donnera l'énergie et la motivation nécessaires pour affronter votre journée avec dynamisme.",
           "ingredient": "Zestes d'orange séchés, huile de ricin, huile essentielle de poivre noir. ",
           "color1": "#DB211C",
@@ -44,7 +44,7 @@
         },
         "loyal": {
           "id": "4",
-          "name": "loyal",
+          "name": "Loyal",
           "description": "Faites preuve de loyauté envers vous-même avec cette brume corporelle afin de vous sentir mieux dans votre corps et dans votre esprit.",
           "ingredient": "Fleurs de rose séchées, huile d'amande douce, huile essentielle de palmarosa. ",
           "color1": "#05AAD2",
