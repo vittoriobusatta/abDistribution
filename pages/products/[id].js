@@ -174,7 +174,7 @@ export default function Product({ product }) {
           xPercent: -100,
           ease: "power2",
         },
-        "-=0.8"
+        "-=1"
       );
   };
 
@@ -309,7 +309,7 @@ export default function Product({ product }) {
                         height={100}
                         ref={(el) => (imagePreview.current[index] = el)}
                         priority
-                        as="image"
+                        // as="image"
                       />
                     </div>
                   </div>

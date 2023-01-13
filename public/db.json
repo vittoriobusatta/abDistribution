@@ -137,7 +137,7 @@
         "cachemere": {
           "id": "6",
           "name": "Cachemere",
-          "description": "Apportez une touche de couleur et de vitalité dans votre vie avec cette brume d'ambiance aux senteurs éclatantes.",
+          "description": "Créez une ambiance chaleureuse et accueillante avec cette brume d'ambiance au parfum de cachemire.",
           "ingredient": "Fleurs de lavande séchées, huile de jojoba, huile essentielle de lavande",
           "color1": "#40984A",
           "color2": "#E7AF43",
@@ -148,7 +148,7 @@
         "rainbow": {
           "id": "7",
           "name": "Rainbow",
-          "description": "Créez une ambiance chaleureuse et accueillante avec cette brume d'ambiance au parfum de cachemire.",
+          "description": "Apportez une touche de couleur et de vitalité dans votre vie avec cette brume d'ambiance aux senteurs éclatantes.",
           "ingredient": "zestes d'orange séchés, huile de baies de goji, mélange d'huile essentielles citron et romarin,",
           "color1": "#ED7252",
           "color2": "#D14888",
@@ -242,7 +242,7 @@
         "greentea": {
           "id": "9",
           "name": "Green Tea",
-          "description": "Découvrez la fraîcheur et la vitalité de la senteur du thé vert avec ce désodorisant d'air.",
+          "description": "Découvrez la fraîcheur et la vitalité de la senteur du thé vert avec ce désodorisant.",
           "ingredient": "Pétales de roses séchés, huile d'amande douce, huile essentielle de palmarosa. ",
           "color1": "#4C9337",
           "color2": "#B6D075",
@@ -253,7 +253,7 @@
         "lavender": {
           "id": "10",
           "name": "Lavender",
-          "description": "",
+          "description": "Découvrez la tranquillité et la sérénité avec la senteur de lavande de ce désodorisant.",
           "ingredient": "",
           "color1": "#78579A",
           "color2": "#C9B1D2",
@@ -264,7 +264,7 @@
         "mysticoud": {
           "id": "11",
           "name": "Mystic Oud",
-          "description": "",
+          "description": "Plongez dans l'univers mystique de l'oud avec ce désodorisant aux parfums orientaux.",
           "ingredient": "",
           "color1": "#805028",
           "color2": "#D5823E",
@@ -275,7 +275,7 @@
         "whiterose": {
           "id": "12",
           "name": "White Rose",
-          "description": "",
+          "description": "Laissez-vous envoûter par la douceur et la délicatesse de la rose blanche avec ce désodorisant.",
           "ingredient": "",
           "color1": "#EFBFD9",
           "color2": "#E971A7",
@@ -286,7 +286,7 @@
         "tobacco": {
           "id": "13",
           "name": "Tobacco",
-          "description": "",
+          "description": "Combattez efficacement les mauvaises odeurs de tabac avec ce désodorisant anti-tabac.",
           "ingredient": "",
           "color1": "#045FA2",
           "color2": "#C3D3EB",
@@ -297,7 +297,7 @@
         "ocean": {
           "id": "14",
           "name": "Ocean",
-          "description": "",
+          "description": "Ressentez la fraîcheur iodée de l'océan avec ce désodorisant aux parfums maritimes.",
           "ingredient": "",
           "color1": "#0A92C0",
           "color2": "#EF7A11",
@@ -308,7 +308,7 @@
         "fruits": {
           "id": "15",
           "name": "Fruits",
-          "description": "",
+          "description": "Savourez la vitalité et la fraîcheur des fruits avec ce désodorisant aux parfums fruités.",
           "ingredient": "",
           "color1": "#E10E2A",
           "color2": "#ED7B17",
@@ -319,7 +319,7 @@
         "flower": {
           "id": "16",
           "name": "Flower",
-          "description": "",
+          "description": "Laissez-vous emporter par la douceur et la subtilité des fleurs avec ce désodorisant aux parfums floraux.",
           "ingredient": "",
           "color1": "#E10E2A",
           "color2": "#A86CAA",
