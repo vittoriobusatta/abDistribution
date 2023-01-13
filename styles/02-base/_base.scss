@@ -70,17 +70,17 @@ html {
   }
 }
 
-main {
+main ul {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 10px;
   min-height: 100vh;
   & a h1 {
     color: #222;
     font-family: $newKansas;
-    font-size: 44px;
+    font-size: 36px;
     text-align: center;
     font-weight: $weight_bold;
   }
