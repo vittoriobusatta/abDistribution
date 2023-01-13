@@ -52,7 +52,7 @@ function Coffee({ newArray, productArray }) {
     gsap
       .timeline({
         defaults: {
-          duration: 1.1,
+          duration: 0.8,
           ease: "expo",
         },
         onStart: () => {
@@ -74,7 +74,7 @@ function Coffee({ newArray, productArray }) {
       })
       .to(overlayInner.current[index], {
         xPercent: 0,
-        duration: 2,
+        duration: 1.6,
       })
       .to(
         previewItem.current[index],
@@ -138,7 +138,7 @@ function Coffee({ newArray, productArray }) {
       .to(
         imagePreview.current[index],
         {
-          duration: 0.4,
+          // duration: 0.4,
           xPercent: 0,
           opacity: 1,
           ease: "ease",
@@ -151,7 +151,7 @@ function Coffee({ newArray, productArray }) {
     gsap
       .timeline({
         defaults: {
-          duration: 1,
+          duration: 0.6,
           ease: "power4",
         },
         onComplete: () => {
@@ -292,7 +292,7 @@ function Coffee({ newArray, productArray }) {
                     <LogoNescafe color1={item.color1} color2={item.color2} />
                   </div>
                   <div className="preview_item_product">
-                    {/* <div className="preview_item_title"> */}
+                    <div className="hidden preview_item_title">
                       <h1
                         style={{
                           backgroundImage: item.gradient,
@@ -306,7 +306,7 @@ function Coffee({ newArray, productArray }) {
                       >
                         {item.name}
                       </h1>
-                    {/* </div> */}
+                    </div>
                     <div className="hidden">
                       <Image
                         src={item.image}
