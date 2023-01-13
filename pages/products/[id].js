@@ -12,15 +12,19 @@ import {
 } from "../../utils/icons";
 import Header from "../../components/Header";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 export default function Product({ product }) {
+  let newArray = Object.values(product.products);
+
   const [previewIsOpen, setPreviewIsOpen] = useState(false);
+  const [animating, setAnimating] = useState(false);
   const cards = useRef([]);
   const previewItem = useRef([]);
   const imageRef = useRef([]);
-  const titleRef = useRef([]);
   const imagePreview = useRef([]);
 
+  const productTitle = useRef([]);
   const descriptionTitle = useRef([]);
   const descriptionParagraph = useRef([]);
   const ingredientTitle = useRef([]);
@@ -43,7 +47,7 @@ export default function Product({ product }) {
           ease: "expo",
         },
         onStart: () => {
-          gsap.set(titleRef.current, { yPercent: 150, skewY: 10 });
+          gsap.set(productTitle.current, { yPercent: 150, skewY: 10 });
           gsap.set(imagePreview.current[index], { xPercent: 10 });
           gsap.set(descriptionTitle.current[index], { yPercent: 100 });
           gsap.set(ingredientTitle.current[index], { yPercent: 100 });
@@ -72,7 +76,7 @@ export default function Product({ product }) {
         "-=0.8"
       )
       .to(
-        titleRef.current[index],
+        productTitle.current[index],
         {
           yPercent: 0,
           duration: 0.8,
@@ -151,7 +155,7 @@ export default function Product({ product }) {
         duration: 1.4,
       })
       .to(
-        titleRef.current,
+        productTitle.current,
         {
           yPercent: 150,
           duration: 1.4,
@@ -178,8 +182,6 @@ export default function Product({ product }) {
       );
   };
 
-  let newArray = Object.values(product.products);
-
   const Logo = ({ color1, color2 }) => {
     const router = useRouter();
     let path = router.asPath;
@@ -200,7 +202,21 @@ export default function Product({ product }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section
+
+      <motion.section
+        initial={{
+          opacity: 0,
+          // clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+        }}
+        animate={{
+          opacity: 1,
+          // clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+        }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
+        exit={{
+          opacity: 1,
+        }}
+        onAnimationComplete={() => setAnimating(true)}
         className="container"
         style={{ backgroundColor: product.background }}
       >
@@ -212,15 +228,52 @@ export default function Product({ product }) {
 
         <div className="landing">
           <div className="landing_inner">
-            <h1 style={{ color: product.color1 }}>{product.name}</h1>
+            <div className="hidden">
+              <motion.h1
+                initial={{
+                  opacity: 0,
+                  y: "100%",
+                }}
+                animate={
+                  animating
+                    ? {
+                        opacity: 1,
+                        y: 0,
+
+                        transition: {
+                          duration: 0.25,
+                          ease: "easeOut",
+                        },
+
+                        exit: {
+                          opacity: 0,
+                          y: "100%",
+                        },
+
+                        onAnimationComplete: () => setAnimating(false),
+                      }
+                    : {
+                        opacity: 0,
+                        y: "100%",
+                      }
+                }
+                style={{ color: product.color1 }}
+              >
+                {product.name}
+              </motion.h1>
+            </div>
             <div className="landing_content">
               <div className="landing_informations">
                 <h3 style={{ color: product.landingcolor1 }}>Catégorie</h3>
-                <p style={{ color: product.landingcolor2 }}>{product.category}</p>
+                <p style={{ color: product.landingcolor2 }}>
+                  {product.category}
+                </p>
               </div>
               <div className="landing_informations">
                 <h3 style={{ color: product.landingcolor1 }}>Origine</h3>
-                <p style={{ color: product.landingcolor2 }}>{product.origine}</p>
+                <p style={{ color: product.landingcolor2 }}>
+                  {product.origine}
+                </p>
               </div>
               <div className="landing_informations">
                 <h3 style={{ color: product.landingcolor1 }}>Marque</h3>
@@ -296,7 +349,7 @@ export default function Product({ product }) {
                           // color: "transparent",
                           color: item.color1,
                         }}
-                        ref={(el) => (titleRef.current[index] = el)}
+                        ref={(el) => (productTitle.current[index] = el)}
                       >
                         {item.name}
                       </h1>
@@ -351,7 +404,7 @@ export default function Product({ product }) {
             );
           })}
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }

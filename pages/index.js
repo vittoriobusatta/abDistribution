@@ -2,25 +2,23 @@ import Head from "next/head";
 import Link from "next/link";
 import fs from "fs";
 import path from "path";
+import { motion } from "framer-motion";
 
 export async function getStaticProps() {
-  
   const data = fs.readFileSync(path.join(process.cwd(), "/public/db.json"));
 
   const appData = JSON.parse(data);
 
-  let newArray = Object.entries(appData[0]).map(
-    ([key, value]) => value
-  );
+  let newArray = Object.entries(appData[0]).map(([key, value]) => value);
 
   return {
     props: {
-      newArray
+      newArray,
     },
   };
 }
 
-export default function Home({newArray}) {
+export default function Home({ newArray }) {
   return (
     <>
       <Head>
@@ -30,7 +28,20 @@ export default function Home({newArray}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <motion.main
+        initial={{
+          opacity: 0,
+          clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+        }}
+        animate={{
+          opacity: 1,
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+        }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
+        exit={{
+          opacity: 1,
+        }}
+      >
         <ul>
           {newArray.map((item) => (
             <li key={item.id}>
@@ -40,7 +51,7 @@ export default function Home({newArray}) {
             </li>
           ))}
         </ul>
-      </main>
+      </motion.main>
     </>
   );
 }
