@@ -1,7 +1,26 @@
 import Head from "next/head";
 import Link from "next/link";
+import fs from "fs";
+import path from "path";
 
-export default function Home() {
+export async function getStaticProps() {
+  
+  const data = fs.readFileSync(path.join(process.cwd(), "/public/db.json"));
+
+  const appData = JSON.parse(data);
+
+  let newArray = Object.entries(appData[0]).map(
+    ([key, value]) => value
+  );
+
+  return {
+    props: {
+      newArray
+    },
+  };
+}
+
+export default function Home({newArray}) {
   return (
     <>
       <Head>
@@ -12,30 +31,15 @@ export default function Home() {
       </Head>
 
       <main>
-        <Link href="/perfume">
-          <h1>Brumes Corporelles</h1>
-        </Link>
-        <Link href="/mist">
-          <h1>Brumes Ambiance</h1>
-        </Link>
-        <Link href="/airfreshener">
-          <h1>Désodorisants</h1>
-        </Link>
-        <Link href="/coffee">
-          <h1>Cafés</h1>
-        </Link>
-        <Link href="/handwash">
-          <h1>Laves Mains</h1>
-        </Link>
-        <Link href="/grocery">
-          <h1>Épicerie</h1>
-        </Link>
-        <Link href="/showergel">
-          <h1>Gels Douches</h1>
-        </Link>
-        <Link href="/antibacterial">
-          <h1>Anti-Bactérien</h1>
-        </Link>
+        <ul>
+          {newArray.map((item) => (
+            <li key={item.id}>
+              <Link href={`/products/${item.id}`}>
+                <h1>{item.name}</h1>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </main>
     </>
   );

@@ -1,6 +1,7 @@
 [
   {
     "bodymist": {
+      "id": "1",
       "name": "Brumes Corporelles",
       "category": "Parfums",
       "origine": "Turquie",
@@ -56,6 +57,7 @@
       }
     },
     "ambiancemist": {
+      "id": "2",
       "name": "Brumes d'Ambiance",
       "category": "Parfums",
       "origine": "Turquie",
@@ -111,6 +113,7 @@
       }
     },
     "airfreshener": {
+      "id": "3",
       "name": "Désodorisants",
       "category": "Parfums",
       "origine": "Turquie",
@@ -210,6 +213,7 @@
       }
     },
     "coffee": {
+      "id": "4",
       "name": "Cafés",
       "category": "Nourriture",
       "origine": "Turquie",
@@ -254,6 +258,7 @@
       }
     },
     "handwash": {
+      "id": "5",
       "name": "Laves Mains",
       "category": "Hygiène",
       "origine": "Turquie",
@@ -309,6 +314,7 @@
       }
     },
     "grocery": {
+      "id": "6",
       "name": "Épicerie",
       "category": "Nourriture",
       "origine": "Turquie",
@@ -370,6 +376,7 @@
       }
     },
     "antibacterial": {
+      "id": "7",
       "name": "Anti-Bactérien",
       "category": "Hygiène",
       "origine": "Turquie",
@@ -436,6 +443,7 @@
       }
     },
     "showergel": {
+      "id": "8",
       "name": "Gels Douches",
       "category": "Hygiène",
       "origine": "Turquie",
