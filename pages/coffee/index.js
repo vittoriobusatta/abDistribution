@@ -292,7 +292,7 @@ function Coffee({ newArray, productArray }) {
                     <LogoNescafe color1={item.color1} color2={item.color2} />
                   </div>
                   <div className="preview_item_product">
-                    <div className="preview_item_title">
+                    {/* <div className="preview_item_title"> */}
                       <h1
                         style={{
                           backgroundImage: item.gradient,
@@ -306,7 +306,7 @@ function Coffee({ newArray, productArray }) {
                       >
                         {item.name}
                       </h1>
-                    </div>
+                    {/* </div> */}
                     <div className="hidden">
                       <Image
                         src={item.image}
