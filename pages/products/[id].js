@@ -290,10 +290,11 @@ export default function Product({ product }) {
                     <div className="hidden preview_item_title">
                       <h1
                         style={{
-                          background: item.gradient,
-                          backgroundClip: "text",
-                          WebkitBackgroundClip: "text",
-                          color: "transparent",
+                          // background: item.gradient,
+                          // backgroundClip: "text",
+                          // WebkitBackgroundClip: "text",
+                          // color: "transparent",
+                          color: item.color1,
                         }}
                         ref={(el) => (titleRef.current[index] = el)}
                       >
