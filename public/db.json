@@ -307,6 +307,72 @@
           "image": "/handwash/Cranberry.png"
         }
       }
+    },
+    "grocery": {
+      "name": "Épicerie",
+      "category": "Nourriture",
+      "origine": "Turquie",
+      "brand": "Tukas",
+      "color1": "#C54126",
+      "color2": "#FFC16A",
+      "background": "#FFEED3",
+      "products": {
+        "whitebeans": {
+          "id": "24",
+          "name": "White Beans",
+          "description": "",
+          "ingredient": "",
+          "color1": "#FBA95B",
+          "color2": "#FBA95B",
+          "background": "#FFF1E4",
+          "gradient": "#FBA95B",
+          "image": "/grocery/WhiteBeans.png"
+        },
+        "redbeans": {
+          "id": "25",
+          "name": "Red Beans",
+          "description": "",
+          "ingredient": "",
+          "color1": "#BD4336",
+          "color2": "#BD4336",
+          "background": "#FFECEA",
+          "gradient": "#BD4336",
+          "image": "/grocery/RedBeans.png"
+        },
+        "apricot": {
+          "id": "26",
+          "name": "Apricot",
+          "description": "",
+          "ingredient": "",
+          "color1": "#EA711F",
+          "color2": "#EA711F",
+          "background": "#FFEDE0",
+          "gradient": "#EA711F",
+          "image": "/grocery/Apricot.png"
+        },
+        "strawberry": {
+          "id": "27",
+          "name": "Strawberry",
+          "description": "",
+          "ingredient": "",
+          "color1": "#CD251D",
+          "color2": "#CD251D",
+          "background": "#FFECEB",
+          "gradient": "#CD251D",
+          "image": "/grocery/Strawberry.png"
+        },
+        "pepper": {
+          "id": "27",
+          "name": "Pepper",
+          "description": "",
+          "ingredient": "",
+          "color1": "#7DC63A",
+          "color2": "#7DC63A",
+          "background": "#F4FFEA",
+          "gradient": "#7DC63A",
+          "image": "/grocery/Pepper.png"
+        }
+      }
     }
   }
 ]
