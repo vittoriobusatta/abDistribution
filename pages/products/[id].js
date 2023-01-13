@@ -233,12 +233,14 @@ export default function Product({ product }) {
                 initial={{
                   opacity: 0,
                   y: "100%",
+                  skewY: 7,
                 }}
                 animate={
                   animating
                     ? {
                         opacity: 1,
                         y: 0,
+                        skewY: 0,
 
                         transition: {
                           duration: 0.25,
@@ -255,6 +257,7 @@ export default function Product({ product }) {
                     : {
                         opacity: 0,
                         y: "100%",
+                        skewY: 7,
                       }
                 }
                 style={{ color: product.color1 }}
