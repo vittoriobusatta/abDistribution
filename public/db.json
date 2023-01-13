@@ -8,6 +8,8 @@
       "brand": "Nescafé",
       "color1": "#893232",
       "color2": "#F8955B",
+      "logocolor1": "#893232",
+      "logocolor2": "#F8955B",
       "background": "#FFFAEC",
       "products": {
         "vanilla": {
@@ -53,6 +55,8 @@
       "brand": "Tukas",
       "color1": "#C54126",
       "color2": "#FFC16A",
+      "logocolor1": "#C54126",
+      "logocolor2": "#FFC16A",
       "background": "#FFEED3",
       "products": {
         "apricot": {
@@ -115,6 +119,8 @@
       "brand": "Ultra Compact",
       "color1": "#794856",
       "color2": "#D5A7B4",
+      "logocolor1": "#794856",
+      "logocolor2": "#794856",
       "background": "#FFEEFA",
       "products": {
         "sandalwood": {
@@ -170,7 +176,9 @@
       "origine": "Turquie",
       "brand": "Ultra Compact",
       "color1": "#F7F7FF",
-      "color2": "#F7F7FF",
+      "color2": "#33302D",
+      "logocolor1": "#F7F7FF",
+      "logocolor2": "#F7F7FF",
       "background": "#33302D",
       "products": {
         "brave": {
@@ -227,6 +235,8 @@
       "brand": "Ultra Compact",
       "color1": "#9E9E4D",
       "color2": "#F5F2CB",
+      "logocolor1": "#9E9E4D",
+      "logocolor2": "#9E9E4D",
       "background": "#FFFDE8",
       "products": {
         "greentea": {
@@ -327,6 +337,8 @@
       "brand": "Ultra Compact",
       "color1": "#484D79",
       "color2": "#FEF0C5",
+      "logocolor1": "#484D79",
+      "logocolor2": "#484D79",
       "background": "#FFF4D4",
       "products": {
         "mango": {
@@ -383,6 +395,8 @@
       "brand": "Ultra Compact",
       "color1": "#F76B84",
       "color2": "#FFB547",
+      "logocolor1": "#F76B84",
+      "logocolor2": "#FFB547",
       "background": "#FFEDF5",
       "products": {
         "romantic": {
@@ -428,6 +442,8 @@
       "brand": "Ultra Compact",
       "color1": "#0C9E98",
       "color2": "#D0F2FF",
+      "logocolor1": "#0C9E98",
+      "logocolor2": "#0C9E98",
       "background": "#DFF6FF",
       "products": {
         "apricot": {

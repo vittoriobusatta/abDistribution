@@ -205,8 +205,8 @@ export default function Product({ product }) {
         style={{ backgroundColor: product.background }}
       >
         <Header
-          color1={product.color1}
-          color2={product.color1}
+          logocolor1={product.logocolor1}
+          logocolor2={product.logocolor2}
           backgroundColor={product.background}
         />
 
