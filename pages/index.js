@@ -27,7 +27,7 @@ export default function Home(
           <h1>Cafés</h1>
         </Link>
         <Link href="/handwash">
-          <h1>Laves Main</h1>
+          <h1>Laves Mains</h1>
         </Link>
         <Link href="/grocery">
           <h1>Épicerie</h1>

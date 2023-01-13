@@ -289,7 +289,6 @@ function BodyMist({ newArray, productArray }) {
                   <div className="preview_item_head">
                     <button className="close_btn" onClick={closePreview}>
                       <ArrowBack color={item.color2} />
-                      {/* <span>Retour</span> */}
                     </button>
                     <LogoTukas color1={item.color1} />
                   </div>

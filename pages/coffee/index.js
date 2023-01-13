@@ -296,9 +296,8 @@ function Coffee({ newArray, productArray }) {
                       <h1
                         style={{
                           background: item.gradient,
-                          backgroundClip: "text",
                           WebkitBackgroundClip: "text",
-                          color: "transparent",
+                          WebkitTextFillColor: "transparent",
                         }}
                         ref={(el) => (titleRef.current[index] = el)}
                       >
