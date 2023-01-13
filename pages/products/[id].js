@@ -178,7 +178,7 @@ export default function Product({ product }) {
           xPercent: -100,
           ease: "power2",
         },
-        "-=1"
+        "-=0.8"
       );
   };
 
