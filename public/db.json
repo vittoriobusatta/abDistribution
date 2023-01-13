@@ -434,6 +434,50 @@
           "image": "/antibacterial/wip3.png"
         }
       }
+    },
+    "showergel": {
+      "name": "Gels Douches",
+      "category": "Hygiène",
+      "origine": "Turquie",
+      "brand": "Ultra Compact",
+      "color1": "#F76B84",
+      "color2": "#FFB547",
+      "background": "#FFEDF5",
+      "products": {
+        "romantic": {
+          "id": "32",
+          "name": "Romantic",
+          "description": "",
+          "ingredient": "",
+          "color1": "#DC6CB4",
+          "color2": "#E8A2C6",
+          "background": "#FFF3FA",
+          "gradient": "#DC6CB4",
+          "image": "/showergel/Romantic.png"
+        },
+        "amber": {
+          "id": "33",
+          "name": "Amber",
+          "description": "",
+          "ingredient": "",
+          "color1": "#FEBE4A",
+          "color2": "#EAB14A",
+          "background": "#FFF5EB",
+          "gradient": "#FEBE4A",
+          "image": "/showergel/Amber.png"
+        },
+        "passion": {
+          "id": "34",
+          "name": "Passion",
+          "description": "",
+          "ingredient": "",
+          "color1": "#A138F5",
+          "color2": "#8936CC",
+          "background": "#F9EBFF",
+          "gradient": "#A138F5",
+          "image": "/showergel/Passion.png"
+        }
+      }
     }
   }
 ]

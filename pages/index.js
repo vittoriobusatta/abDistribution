@@ -1,9 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-export default function Home(
-  
-) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -31,6 +29,9 @@ export default function Home(
         </Link>
         <Link href="/grocery">
           <h1>Épicerie</h1>
+        </Link>
+        <Link href="/showergel">
+          <h1>Gels Douches</h1>
         </Link>
         <Link href="/antibacterial">
           <h1>Anti-Bactérien</h1>

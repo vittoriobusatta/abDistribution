@@ -13,18 +13,18 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 16px 26px;
+  padding: 16px 26px 0;
   @media screen and (min-width: 576px) {
-    padding: 16px 32px;
+    padding: 16px 32px 0;
   }
   @media screen and (min-width: 768px) {
-    padding: 16px 42px;
+    padding: 16px 42px 0;
   }
   @media screen and (min-width: 992px) {
-    padding: 20px 52px;
+    padding: 20px 52px 0;
   }
   @media screen and (min-width: 1224px) {
-    padding: 20px 62px;
+    padding: 20px 62px 0;
   }
   & h1 {
     font-family: $newKansas;

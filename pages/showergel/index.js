@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import Image from "next/image";
 import gsap from "gsap";
-import { ArrowBack, LogoUltraCompact } from "../../utils/icons";
+import { ArrowBack, LogoTukas, LogoUltraCompact } from "../../utils/icons";
 import Header from "../../components/Header";
 import Head from "next/head";
 
@@ -12,11 +12,11 @@ export async function getStaticProps() {
 
   const appData = JSON.parse(data);
 
-  let newArray = Object.entries(appData[0].bodymist.products).map(
+  let newArray = Object.entries(appData[0].showergel.products).map(
     ([key, value]) => value
   );
 
-  let productArray = appData[0].bodymist;
+  let productArray = appData[0].showergel;
 
   return {
     props: {
@@ -146,6 +146,7 @@ function BodyMist({ newArray, productArray }) {
         "-=0.9"
       );
   };
+
   const closePreview = () => {
     gsap
       .timeline({
@@ -210,25 +211,22 @@ function BodyMist({ newArray, productArray }) {
 
         <div className="landing">
           <div className="landing_inner">
-            <h1 style={{ color: productArray.color1 }}>
-              <span>Brumes</span>
-              <span> Corporelles</span>
-            </h1>
+            <h1 style={{ color: productArray.color1 }}>{productArray.name}</h1>
             <div className="landing_content">
               <div className="landing_informations">
-                <h3 style={{ color: productArray.color1 }}>Catégorie</h3>
+                <h3 style={{ color: productArray.color2 }}>Catégorie</h3>
                 <p style={{ color: productArray.color1 }}>
                   {productArray.category}
                 </p>
               </div>
               <div className="landing_informations">
-                <h3 style={{ color: productArray.color1 }}>Origine</h3>
+                <h3 style={{ color: productArray.color2 }}>Origine</h3>
                 <p style={{ color: productArray.color1 }}>
                   {productArray.origine}
                 </p>
               </div>
               <div className="landing_informations">
-                <h3 style={{ color: productArray.color1 }}>Marque</h3>
+                <h3 style={{ color: productArray.color2 }}>Marque</h3>
                 <p style={{ color: productArray.color1 }}>
                   {productArray.brand}
                 </p>
@@ -319,7 +317,7 @@ function BodyMist({ newArray, productArray }) {
                     </div>
                   </div>
 
-                  <div className="preview_item_information_mist">
+                  <div className="preview_item_information">
                     <div className="preview_item_description">
                       <div className="hidden">
                         <h2
