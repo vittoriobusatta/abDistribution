@@ -325,7 +325,6 @@
           "color1": "#EA711F",
           "color2": "#EA711F",
           "background": "#FFEDE0",
-          "gradient": "#EA711F",
           "image": "/grocery/Apricot.png"
         },
         "strawberry": {
@@ -336,7 +335,6 @@
           "color1": "#CD251D",
           "color2": "#CD251D",
           "background": "#FFECEB",
-          "gradient": "#CD251D",
           "image": "/grocery/Strawberry.png"
         },
         "pepper": {
@@ -347,7 +345,6 @@
           "color1": "#7DC63A",
           "color2": "#7DC63A",
           "background": "#F4FFEA",
-          "gradient": "#7DC63A",
           "image": "/grocery/Pepper.png"
         },
         "whitebeans": {
@@ -358,7 +355,6 @@
           "color1": "#FBA95B",
           "color2": "#FBA95B",
           "background": "#FFF1E4",
-          "gradient": "#FBA95B",
           "image": "/grocery/WhiteBeans.png"
         },
         "redbeans": {
@@ -369,8 +365,73 @@
           "color1": "#BD4336",
           "color2": "#BD4336",
           "background": "#FFECEA",
-          "gradient": "#BD4336",
           "image": "/grocery/RedBeans.png"
+        }
+      }
+    },
+    "antibacterial": {
+      "name": "Anti-Bactérien",
+      "category": "Hygiène",
+      "origine": "Turquie",
+      "brand": "Ultra Compact",
+      "color1": "#0C9E98",
+      "color2": "#D0F2FF",
+      "background": "#DFF6FF",
+      "products": {
+        "apricot": {
+          "id": "27",
+          "name": "Gels",
+          "description": "",
+          "ingredient": "",
+          "color1": "#0C9E98",
+          "color2": "#0C9E98",
+          "background": "#F4F4F4",
+          "gradient": "#0C9E98",
+          "image": "/antibacterial/gel1.png"
+        },
+        "strawberry": {
+          "id": "28",
+          "name": "Gels",
+          "description": "",
+          "ingredient": "",
+          "color1": "#0C9E98",
+          "color2": "#0C9E98",
+          "background": "#F4F4F4",
+          "gradient": "#0C9E98",
+          "image": "/antibacterial/gel2.png"
+        },
+        "pepper": {
+          "id": "29",
+          "name": "Lingettes",
+          "description": "",
+          "ingredient": "",
+          "color1": "#0C9E98",
+          "color2": "#0C9E98",
+          "background": "#F4F4F4",
+          "gradient": "#0C9E98",
+          "image": "/antibacterial/wip1.png"
+        },
+        "whitebeans": {
+          "id": "30",
+          "name": "Lingettes",
+          "description": "",
+          "ingredient": "",
+          "color1": "#0C9E98",
+          "color2": "#0C9E98",
+          "background": "#F4F4F4",
+          "gradient": "#0C9E98",
+          "image": "/antibacterial/wip2.png"
+        },
+        "redbeans": {
+          "id": "31",
+          "name": "Lingettes",
+          "description": "",
+          "ingredient": "",
+          "color1": "#0C9E98",
+          "color2": "#0C9E98",
+          "background": "#F4F4F4",
+          "gradient": "#0C9E98",
+          "image": "/antibacterial/wip3.png"
         }
       }
     }

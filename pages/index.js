@@ -32,6 +32,9 @@ export default function Home(
         <Link href="/grocery">
           <h1>Épicerie</h1>
         </Link>
+        <Link href="/antibacterial">
+          <h1>Anti-Bactérien</h1>
+        </Link>
       </main>
     </>
   );
