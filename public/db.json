@@ -10,6 +10,8 @@
       "color2": "#F8955B",
       "logocolor1": "#893232",
       "logocolor2": "#F8955B",
+      "landingcolor1": "#F8955B",
+      "landingcolor2": "#893232",
       "background": "#FFFAEC",
       "products": {
         "vanilla": {
@@ -57,6 +59,8 @@
       "color2": "#FFC16A",
       "logocolor1": "#C54126",
       "logocolor2": "#FFC16A",
+      "landingcolor1": "#FFC16A",
+      "landingcolor2": "#C54126",
       "background": "#FFEED3",
       "products": {
         "apricot": {
@@ -121,6 +125,8 @@
       "color2": "#D5A7B4",
       "logocolor1": "#794856",
       "logocolor2": "#794856",
+      "landingcolor1": "#794856",
+      "landingcolor2": "#794856",
       "background": "#FFEEFA",
       "products": {
         "sandalwood": {
@@ -179,6 +185,8 @@
       "color2": "#33302D",
       "logocolor1": "#F7F7FF",
       "logocolor2": "#F7F7FF",
+      "landingcolor1": "#F7F7FF",
+      "landingcolor2": "#F7F7FF",
       "background": "#33302D",
       "products": {
         "brave": {
@@ -237,6 +245,8 @@
       "color2": "#F5F2CB",
       "logocolor1": "#9E9E4D",
       "logocolor2": "#9E9E4D",
+      "landingcolor1": "#9E9E4D",
+      "landingcolor2": "#9E9E4D",
       "background": "#FFFDE8",
       "products": {
         "greentea": {
@@ -339,6 +349,8 @@
       "color2": "#FEF0C5",
       "logocolor1": "#484D79",
       "logocolor2": "#484D79",
+      "landingcolor1": "#484D79",
+      "landingcolor2": "#484D79",
       "background": "#FFF4D4",
       "products": {
         "mango": {
@@ -397,6 +409,8 @@
       "color2": "#FFB547",
       "logocolor1": "#F76B84",
       "logocolor2": "#FFB547",
+      "landingcolor1": "#FFB547",
+      "landingcolor2": "#F76B84",
       "background": "#FFEDF5",
       "products": {
         "romantic": {
@@ -444,6 +458,8 @@
       "color2": "#D0F2FF",
       "logocolor1": "#0C9E98",
       "logocolor2": "#0C9E98",
+      "landingcolor1": "#0C9E98",
+      "landingcolor2": "#0C9E98",
       "background": "#DFF6FF",
       "products": {
         "apricot": {

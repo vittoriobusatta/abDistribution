@@ -215,16 +215,16 @@ export default function Product({ product }) {
             <h1 style={{ color: product.color1 }}>{product.name}</h1>
             <div className="landing_content">
               <div className="landing_informations">
-                <h3 style={{ color: product.color1 }}>Catégorie</h3>
-                <p style={{ color: product.color1 }}>{product.category}</p>
+                <h3 style={{ color: product.landingcolor1 }}>Catégorie</h3>
+                <p style={{ color: product.landingcolor2 }}>{product.category}</p>
               </div>
               <div className="landing_informations">
-                <h3 style={{ color: product.color1 }}>Origine</h3>
-                <p style={{ color: product.color1 }}>{product.origine}</p>
+                <h3 style={{ color: product.landingcolor1 }}>Origine</h3>
+                <p style={{ color: product.landingcolor2 }}>{product.origine}</p>
               </div>
               <div className="landing_informations">
-                <h3 style={{ color: product.color1 }}>Marque</h3>
-                <p style={{ color: product.color1 }}>{product.brand}</p>
+                <h3 style={{ color: product.landingcolor1 }}>Marque</h3>
+                <p style={{ color: product.landingcolor2 }}>{product.brand}</p>
               </div>
             </div>
           </div>
