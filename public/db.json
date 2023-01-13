@@ -317,28 +317,6 @@
       "color2": "#FFC16A",
       "background": "#FFEED3",
       "products": {
-        "whitebeans": {
-          "id": "24",
-          "name": "White Beans",
-          "description": "",
-          "ingredient": "",
-          "color1": "#FBA95B",
-          "color2": "#FBA95B",
-          "background": "#FFF1E4",
-          "gradient": "#FBA95B",
-          "image": "/grocery/WhiteBeans.png"
-        },
-        "redbeans": {
-          "id": "25",
-          "name": "Red Beans",
-          "description": "",
-          "ingredient": "",
-          "color1": "#BD4336",
-          "color2": "#BD4336",
-          "background": "#FFECEA",
-          "gradient": "#BD4336",
-          "image": "/grocery/RedBeans.png"
-        },
         "apricot": {
           "id": "26",
           "name": "Apricot",
@@ -371,6 +349,28 @@
           "background": "#F4FFEA",
           "gradient": "#7DC63A",
           "image": "/grocery/Pepper.png"
+        },
+        "whitebeans": {
+          "id": "24",
+          "name": "White Beans",
+          "description": "",
+          "ingredient": "",
+          "color1": "#FBA95B",
+          "color2": "#FBA95B",
+          "background": "#FFF1E4",
+          "gradient": "#FBA95B",
+          "image": "/grocery/WhiteBeans.png"
+        },
+        "redbeans": {
+          "id": "25",
+          "name": "Red Beans",
+          "description": "",
+          "ingredient": "",
+          "color1": "#BD4336",
+          "color2": "#BD4336",
+          "background": "#FFECEA",
+          "gradient": "#BD4336",
+          "image": "/grocery/RedBeans.png"
         }
       }
     }
