@@ -1,63 +1,114 @@
 [
   {
-    "bodymist": {
+    "coffee": {
       "id": "1",
-      "name": "Brumes Corporelles",
-      "category": "Parfums",
+      "name": "Cafés",
+      "category": "Nourriture",
       "origine": "Turquie",
-      "brand": "Ultra Compact",
-      "color1": "#F7F7FF",
-      "color2": "#F7F7FF",
-      "background": "#33302D",
+      "brand": "Nescafé",
+      "color1": "#893232",
+      "color2": "#F8955B",
+      "background": "#FFFAEC",
       "products": {
-        "brave": {
-          "id": "1",
-          "name": "Brave",
-          "description": "Cette brume corporelle vous donnera le courage de vous lancer dans de nouvelles aventures et de surmonter vos peurs.",
-          "ingredient": "Fleurs de lavande séchées, huile de noisette, huile essentielle de cèdre.",
-          "color1": "#DF3C13",
-          "color2": "#993018",
-          "background": "radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #272421",
-          "gradient": "linear-gradient(270deg, #e43d12 0%, #932f18 100%)",
-          "image": "/bodymist/Brave.png"
+        "vanilla": {
+          "id": "17",
+          "name": "Vanilla",
+          "description": "Un mélange parfait de lait et de café, rehaussé d'une touche de vanille pour un goût sucré et crémeux.",
+          "ingredient": "Café, lait, sucre, arôme naturel de vanille",
+          "color1": "#3156A3",
+          "color2": "#40B8DA",
+          "background": "#F8FCFF",
+          "gradient": "radial-gradient(50% 616.78% at 50% 50%, #40B8DA 0%, #3156A3 100%)",
+          "image": "/coffee/Vanilla.png"
         },
-        "creative": {
-          "id": "2",
-          "name": "Creative",
-          "description": "Laissez votre créativité s'envoler avec cette brume corporelle qui vous aidera à trouver l'inspiration et à laisser libre cours à votre imagination.",
-          "ingredient": "Fleurs de camomille séchées, huile de coco, huile essentielle de gingembre. ",
-          "color1": "#EFE021",
-          "color2": "#9EB735",
-          "background": "radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #272421",
-          "gradient": "linear-gradient(270deg, #f4e228 0%, #d5d600 50%, #9ab538 100%)",
-          "image": "/bodymist/Creative.png"
+        "choco": {
+          "id": "18",
+          "name": "Café Choco",
+          "description": "Un café au lait classique avec l'ajout de chocolat pour un goût riche et décadent.",
+          "ingredient": "Café, lait, chocolat, sucre, arôme naturel cacao",
+          "color1": "#B83C2C",
+          "color2": "#F7CB8A",
+          "background": "#FFF6E8",
+          "gradient": "radial-gradient(50% 616.78% at 50% 50%, #F7CB8A 11.46%, #B83C2C 100%)",
+          "image": "/coffee/Choco.png"
         },
-        "dynamic": {
-          "id": "3",
-          "name": "Dynamic",
-          "description": "Cette brume corporelle vous donnera l'énergie et la motivation nécessaires pour affronter votre journée avec dynamisme.",
-          "ingredient": "Zestes d'orange séchés, huile de ricin, huile essentielle de poivre noir. ",
-          "color1": "#DB211C",
-          "color2": "#9B317F",
-          "background": "radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #272421",
-          "gradient": "linear-gradient(270deg, #d93e2a 0%, #c21a40 50.52%, #8c3388 100%)",
-          "image": "/bodymist/Dynamic.png"
+        "original": {
+          "id": "19",
+          "name": "Original",
+          "description": "Un café au lait traditionnel fait à partir de lait et de café corsé, pour un goût original et équilibré.",
+          "ingredient": "Café, lait, sucre",
+          "color1": "#D66627",
+          "color2": "#F2DB68",
+          "background": "#FFFEEC",
+          "gradient": "radial-gradient(50% 616.78% at 50% 50%, #F2DB68 0%, #D66627 100%)",
+          "image": "/coffee/Original.png"
+        }
+      }
+    },
+    "grocery": {
+      "id": "2",
+      "name": "Épicerie",
+      "category": "Nourriture",
+      "origine": "Turquie",
+      "brand": "Tukas",
+      "color1": "#C54126",
+      "color2": "#FFC16A",
+      "background": "#FFEED3",
+      "products": {
+        "apricot": {
+          "id": "26",
+          "name": "Apricot",
+          "description": "",
+          "ingredient": "",
+          "color1": "#EA711F",
+          "color2": "#EA711F",
+          "background": "#FFEDE0",
+          "image": "/grocery/Apricot.png"
         },
-        "loyal": {
-          "id": "4",
-          "name": "Loyal",
-          "description": "Faites preuve de loyauté envers vous-même avec cette brume corporelle afin de vous sentir mieux dans votre corps et dans votre esprit.",
-          "ingredient": "Fleurs de rose séchées, huile d'amande douce, huile essentielle de palmarosa. ",
-          "color1": "#05AAD2",
-          "color2": "#136B8C",
-          "background": "radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #272421",
-          "gradient": "linear-gradient(270deg, #03aed7 0%, #1b6182 100%)",
-          "image": "/bodymist/Loyal.png"
+        "strawberry": {
+          "id": "27",
+          "name": "Strawberry",
+          "description": "",
+          "ingredient": "",
+          "color1": "#CD251D",
+          "color2": "#CD251D",
+          "background": "#FFECEB",
+          "image": "/grocery/Strawberry.png"
+        },
+        "pepper": {
+          "id": "28",
+          "name": "Pepper",
+          "description": "",
+          "ingredient": "",
+          "color1": "#7DC63A",
+          "color2": "#7DC63A",
+          "background": "#F4FFEA",
+          "image": "/grocery/Pepper.png"
+        },
+        "whitebeans": {
+          "id": "24",
+          "name": "White Beans",
+          "description": "",
+          "ingredient": "",
+          "color1": "#FBA95B",
+          "color2": "#FBA95B",
+          "background": "#FFF1E4",
+          "image": "/grocery/WhiteBeans.png"
+        },
+        "redbeans": {
+          "id": "25",
+          "name": "Red Beans",
+          "description": "",
+          "ingredient": "",
+          "color1": "#BD4336",
+          "color2": "#BD4336",
+          "background": "#FFECEA",
+          "image": "/grocery/RedBeans.png"
         }
       }
     },
     "ambiancemist": {
-      "id": "2",
+      "id": "3",
       "name": "Brumes d'Ambiance",
       "category": "Parfums",
       "origine": "Turquie",
@@ -112,8 +163,64 @@
         }
       }
     },
+    "bodymist": {
+      "id": "4",
+      "name": "Brumes Corporelles",
+      "category": "Parfums",
+      "origine": "Turquie",
+      "brand": "Ultra Compact",
+      "color1": "#F7F7FF",
+      "color2": "#F7F7FF",
+      "background": "#33302D",
+      "products": {
+        "brave": {
+          "id": "1",
+          "name": "Brave",
+          "description": "Cette brume corporelle vous donnera le courage de vous lancer dans de nouvelles aventures et de surmonter vos peurs.",
+          "ingredient": "Fleurs de lavande séchées, huile de noisette, huile essentielle de cèdre.",
+          "color1": "#DF3C13",
+          "color2": "#993018",
+          "background": "radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #272421",
+          "gradient": "linear-gradient(270deg, #e43d12 0%, #932f18 100%)",
+          "image": "/bodymist/Brave.png"
+        },
+        "creative": {
+          "id": "2",
+          "name": "Creative",
+          "description": "Laissez votre créativité s'envoler avec cette brume corporelle qui vous aidera à trouver l'inspiration et à laisser libre cours à votre imagination.",
+          "ingredient": "Fleurs de camomille séchées, huile de coco, huile essentielle de gingembre. ",
+          "color1": "#EFE021",
+          "color2": "#9EB735",
+          "background": "radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #272421",
+          "gradient": "linear-gradient(270deg, #f4e228 0%, #d5d600 50%, #9ab538 100%)",
+          "image": "/bodymist/Creative.png"
+        },
+        "dynamic": {
+          "id": "3",
+          "name": "Dynamic",
+          "description": "Cette brume corporelle vous donnera l'énergie et la motivation nécessaires pour affronter votre journée avec dynamisme.",
+          "ingredient": "Zestes d'orange séchés, huile de ricin, huile essentielle de poivre noir. ",
+          "color1": "#DB211C",
+          "color2": "#9B317F",
+          "background": "radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #272421",
+          "gradient": "linear-gradient(270deg, #d93e2a 0%, #c21a40 50.52%, #8c3388 100%)",
+          "image": "/bodymist/Dynamic.png"
+        },
+        "loyal": {
+          "id": "4",
+          "name": "Loyal",
+          "description": "Faites preuve de loyauté envers vous-même avec cette brume corporelle afin de vous sentir mieux dans votre corps et dans votre esprit.",
+          "ingredient": "Fleurs de rose séchées, huile d'amande douce, huile essentielle de palmarosa. ",
+          "color1": "#05AAD2",
+          "color2": "#136B8C",
+          "background": "radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #272421",
+          "gradient": "linear-gradient(270deg, #03aed7 0%, #1b6182 100%)",
+          "image": "/bodymist/Loyal.png"
+        }
+      }
+    },
     "airfreshener": {
-      "id": "3",
+      "id": "5",
       "name": "Désodorisants",
       "category": "Parfums",
       "origine": "Turquie",
@@ -212,53 +319,8 @@
         }
       }
     },
-    "coffee": {
-      "id": "4",
-      "name": "Cafés",
-      "category": "Nourriture",
-      "origine": "Turquie",
-      "brand": "Nescafé",
-      "color1": "#893232",
-      "color2": "#F8955B",
-      "background": "#FFFAEC",
-      "products": {
-        "vanilla": {
-          "id": "17",
-          "name": "Vanilla",
-          "description": "Un mélange parfait de lait et de café, rehaussé d'une touche de vanille pour un goût sucré et crémeux.",
-          "ingredient": "Café, lait, sucre, arôme naturel de vanille",
-          "color1": "#3156A3",
-          "color2": "#40B8DA",
-          "background": "#F8FCFF",
-          "gradient": "radial-gradient(50% 616.78% at 50% 50%, #40B8DA 0%, #3156A3 100%)",
-          "image": "/coffee/Vanilla.png"
-        },
-        "choco": {
-          "id": "18",
-          "name": "Café Choco",
-          "description": "Un café au lait classique avec l'ajout de chocolat pour un goût riche et décadent.",
-          "ingredient": "Café, lait, chocolat, sucre, arôme naturel cacao",
-          "color1": "#B83C2C",
-          "color2": "#F7CB8A",
-          "background": "#FFF6E8",
-          "gradient": "radial-gradient(50% 616.78% at 50% 50%, #F7CB8A 11.46%, #B83C2C 100%)",
-          "image": "/coffee/Choco.png"
-        },
-        "original": {
-          "id": "19",
-          "name": "Original",
-          "description": "Un café au lait traditionnel fait à partir de lait et de café corsé, pour un goût original et équilibré.",
-          "ingredient": "Café, lait, sucre",
-          "color1": "#D66627",
-          "color2": "#F2DB68",
-          "background": "#FFFEEC",
-          "gradient": "radial-gradient(50% 616.78% at 50% 50%, #F2DB68 0%, #D66627 100%)",
-          "image": "/coffee/Original.png"
-        }
-      }
-    },
     "handwash": {
-      "id": "5",
+      "id": "6",
       "name": "Laves Mains",
       "category": "Hygiène",
       "origine": "Turquie",
@@ -313,70 +375,53 @@
         }
       }
     },
-    "grocery": {
-      "id": "6",
-      "name": "Épicerie",
-      "category": "Nourriture",
+    "showergel": {
+      "id": "7",
+      "name": "Gels Douches",
+      "category": "Hygiène",
       "origine": "Turquie",
-      "brand": "Tukas",
-      "color1": "#C54126",
-      "color2": "#FFC16A",
-      "background": "#FFEED3",
+      "brand": "Ultra Compact",
+      "color1": "#F76B84",
+      "color2": "#FFB547",
+      "background": "#FFEDF5",
       "products": {
-        "apricot": {
-          "id": "26",
-          "name": "Apricot",
+        "romantic": {
+          "id": "32",
+          "name": "Romantic",
           "description": "",
           "ingredient": "",
-          "color1": "#EA711F",
-          "color2": "#EA711F",
-          "background": "#FFEDE0",
-          "image": "/grocery/Apricot.png"
+          "color1": "#DC6CB4",
+          "color2": "#E8A2C6",
+          "background": "#FFF3FA",
+          "gradient": "#DC6CB4",
+          "image": "/showergel/Romantic.png"
         },
-        "strawberry": {
-          "id": "27",
-          "name": "Strawberry",
+        "amber": {
+          "id": "33",
+          "name": "Amber",
           "description": "",
           "ingredient": "",
-          "color1": "#CD251D",
-          "color2": "#CD251D",
-          "background": "#FFECEB",
-          "image": "/grocery/Strawberry.png"
+          "color1": "#FEBE4A",
+          "color2": "#EAB14A",
+          "background": "#FFF5EB",
+          "gradient": "#FEBE4A",
+          "image": "/showergel/Amber.png"
         },
-        "pepper": {
-          "id": "28",
-          "name": "Pepper",
+        "passion": {
+          "id": "34",
+          "name": "Passion",
           "description": "",
           "ingredient": "",
-          "color1": "#7DC63A",
-          "color2": "#7DC63A",
-          "background": "#F4FFEA",
-          "image": "/grocery/Pepper.png"
-        },
-        "whitebeans": {
-          "id": "24",
-          "name": "White Beans",
-          "description": "",
-          "ingredient": "",
-          "color1": "#FBA95B",
-          "color2": "#FBA95B",
-          "background": "#FFF1E4",
-          "image": "/grocery/WhiteBeans.png"
-        },
-        "redbeans": {
-          "id": "25",
-          "name": "Red Beans",
-          "description": "",
-          "ingredient": "",
-          "color1": "#BD4336",
-          "color2": "#BD4336",
-          "background": "#FFECEA",
-          "image": "/grocery/RedBeans.png"
+          "color1": "#A138F5",
+          "color2": "#8936CC",
+          "background": "#F9EBFF",
+          "gradient": "#A138F5",
+          "image": "/showergel/Passion.png"
         }
       }
     },
     "antibacterial": {
-      "id": "7",
+      "id": "8",
       "name": "Anti-Bactérien",
       "category": "Hygiène",
       "origine": "Turquie",
@@ -439,51 +484,6 @@
           "background": "#F4F4F4",
           "gradient": "#0C9E98",
           "image": "/antibacterial/wip3.png"
-        }
-      }
-    },
-    "showergel": {
-      "id": "8",
-      "name": "Gels Douches",
-      "category": "Hygiène",
-      "origine": "Turquie",
-      "brand": "Ultra Compact",
-      "color1": "#F76B84",
-      "color2": "#FFB547",
-      "background": "#FFEDF5",
-      "products": {
-        "romantic": {
-          "id": "32",
-          "name": "Romantic",
-          "description": "",
-          "ingredient": "",
-          "color1": "#DC6CB4",
-          "color2": "#E8A2C6",
-          "background": "#FFF3FA",
-          "gradient": "#DC6CB4",
-          "image": "/showergel/Romantic.png"
-        },
-        "amber": {
-          "id": "33",
-          "name": "Amber",
-          "description": "",
-          "ingredient": "",
-          "color1": "#FEBE4A",
-          "color2": "#EAB14A",
-          "background": "#FFF5EB",
-          "gradient": "#FEBE4A",
-          "image": "/showergel/Amber.png"
-        },
-        "passion": {
-          "id": "34",
-          "name": "Passion",
-          "description": "",
-          "ingredient": "",
-          "color1": "#A138F5",
-          "color2": "#8936CC",
-          "background": "#F9EBFF",
-          "gradient": "#A138F5",
-          "image": "/showergel/Passion.png"
         }
       }
     }

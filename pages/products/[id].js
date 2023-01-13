@@ -4,10 +4,14 @@ import path from "path";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
-import { ArrowBack, LogoTukas, LogoUltraCompact } from "../../utils/icons";
+import {
+  ArrowBack,
+  LogoTukas,
+  LogoUltraCompact,
+  LogoNescafe,
+} from "../../utils/icons";
 import Header from "../../components/Header";
-
-// fait moi un code pour recuperer les données des produits dans le fichier db.json et les afficher dans la page product/[id].js en fonction de l'id du produit
+import { useRouter } from "next/router";
 
 export default function Product({ product }) {
   const [previewIsOpen, setPreviewIsOpen] = useState(false);
@@ -176,6 +180,18 @@ export default function Product({ product }) {
 
   let newArray = Object.values(product.products);
 
+  const Logo = ({ color1, color2 }) => {
+    const router = useRouter();
+    let path = router.asPath;
+    if (path === "/products/1") {
+      return <LogoNescafe color1={color1} color2={color2} />;
+    } else if (path === "/products/2") {
+      return <LogoTukas color1={color1} />;
+    } else {
+      return <LogoUltraCompact color={color1} />;
+    }
+  };
+
   return (
     <>
       <Head>
@@ -250,6 +266,7 @@ export default function Product({ product }) {
             );
           })}
         </div>
+
         <div className="preview">
           {newArray.map((item, index) => {
             return (
@@ -267,7 +284,7 @@ export default function Product({ product }) {
                     <button className="close_btn" onClick={closePreview}>
                       <ArrowBack color={item.color2} />
                     </button>
-                    <LogoUltraCompact color={item.color1} />
+                    <Logo color1={item.color1} color2={item.color2} />
                   </div>
                   <div className="preview_item_product">
                     <div className="hidden preview_item_title">
@@ -339,7 +356,9 @@ export default function Product({ product }) {
 }
 
 export async function getStaticProps({ params }) {
-  const data = fs.readFileSync(path.join(process.cwd(), "/public/db.json"));
+  const data = await fs.promises.readFile(
+    path.join(process.cwd(), "/public/db.json")
+  );
   const appData = JSON.parse(data);
   let productsData = Object.entries(appData[0]).map(([key, value]) => value);
   const product = productsData.find((item) => item.id === params.id);
@@ -353,7 +372,9 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const data = fs.readFileSync(path.join(process.cwd(), "/public/db.json"));
+  const data = await fs.promises.readFile(
+    path.join(process.cwd(), "/public/db.json")
+  );
   const appData = JSON.parse(data);
   let productsData = Object.entries(appData[0]).map(([key, value]) => value);
 
