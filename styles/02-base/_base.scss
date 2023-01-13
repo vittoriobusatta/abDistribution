@@ -27,6 +27,7 @@ html {
   -ms-overflow-style: none;
   scrollbar-width: none;
   font-family: $rivalSans;
+  background-color: #FFFAEC;
   @media screen and (max-width: 1400px) {
     font-size: 58%;
   }
@@ -66,5 +67,21 @@ html {
   width: 100%;
   & h1 {
     white-space: nowrap;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+  min-height: 100vh;
+  & a h1 {
+    color: #222;
+    font-family: $newKansas;
+    font-size: 44px;
+    text-align: center;
+    font-weight: $weight_bold;
   }
 }

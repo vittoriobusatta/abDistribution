@@ -138,10 +138,10 @@ function Coffee({ newArray, productArray }) {
       .to(
         imagePreview.current[index],
         {
-          // duration: 0.4,
+          duration: 1,
           xPercent: 0,
           opacity: 1,
-          ease: "ease",
+          ease: "power4",
         },
         "-=0.9"
       );
