@@ -287,12 +287,14 @@ function Coffee({ newArray, productArray }) {
                   <div className="preview_item_head">
                     <button className="close_btn" onClick={closePreview}>
                       <ArrowBack color={item.color2} />
-                      {/* <span>Retour</span> */}
                     </button>
                     <LogoNescafe color1={item.color1} color2={item.color2} />
                   </div>
                   <div className="preview_item_product">
-                    <div className="hidden preview_item_title">
+                    <div
+                      style={{ backgroundColor: item.background }}
+                      className="hidden preview_item_title"
+                    >
                       <h1
                         style={{
                           backgroundImage: item.gradient,
