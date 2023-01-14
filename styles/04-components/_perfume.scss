@@ -53,6 +53,7 @@
     width: auto;
     filter: brightness(100%);
     transition: filter 0.3s ease;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     @media screen and (max-width: 768px) {
       height: 300px;
       max-width: 300px;

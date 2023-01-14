@@ -237,7 +237,7 @@ export default function Product({ product }) {
             animatedStatus.current[index] = true;
             gsap.fromTo(
               entry.target,
-              { y: 0, clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" },
+              { y: 0},
               {
                 delay: 0.3,
                 y: 0,
