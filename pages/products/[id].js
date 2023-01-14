@@ -250,7 +250,6 @@ export default function Product({ product }) {
           }
         });
       },
-      { threshold: 0.5 }
     );
     imageRef.current.forEach((ref) => {
       observer.observe(ref);
