@@ -1,7 +1,7 @@
 import Head from "next/head";
 import fs from "fs";
 import path from "path";
-import React, { useEffect, useRef, useState } from "react";
+import React, { use, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import {
@@ -19,6 +19,9 @@ export default function Product({ product }) {
 
   const [previewIsOpen, setPreviewIsOpen] = useState(false);
   const [animating, setAnimating] = useState(false);
+
+  const animatedStatus = useRef([]);
+
   const cards = useRef([]);
   const previewItem = useRef([]);
   const imageRef = useRef([]);
@@ -227,6 +230,38 @@ export default function Product({ product }) {
     };
   });
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = imageRef.current.indexOf(entry.target);
+          if (entry.isIntersecting && !animatedStatus.current[index]) {
+            animatedStatus.current[index] = true;
+            gsap.fromTo(
+              entry.target,
+              { y: 0, clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" },
+              {
+                delay: 0.3,
+                y: 0,
+                opacity: 1,
+                ease: "power4.out",
+                clipPath: "polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%)",
+              }
+            );
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    imageRef.current.forEach((ref) => {
+      observer.observe(ref);
+    });
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -381,6 +416,7 @@ export default function Product({ product }) {
                     ref={(el) => (imageRef.current[index] = el)}
                     priority
                     as="image"
+                    className="opacity"
                   />
                 </div>
               </div>
