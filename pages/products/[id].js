@@ -235,9 +235,8 @@ export default function Product({ product }) {
           const index = imageRef.current.indexOf(entry.target);
           if (entry.isIntersecting && !animatedStatus.current[index]) {
             animatedStatus.current[index] = true;
-            gsap.fromTo(
+            gsap.to(
               entry.target,
-              { y: 0},
               {
                 delay: 0.3,
                 y: 0,
