@@ -335,9 +335,9 @@ export default function Product({ product }) {
                               opacity: 1,
 
                               transition: {
-                                duration: 0.35,
+                                duration: 0.45,
                                 ease: easeOut,
-                                delay: 0.6 * (index + 1),
+                                delay: 0.4 * (index + 1),
                               },
 
                               onAnimationComplete: () => setAnimating(false),
