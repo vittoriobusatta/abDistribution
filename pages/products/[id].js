@@ -35,11 +35,6 @@ export default function Product({ product }) {
 
   const overlayInner = useRef([]);
 
-  useEffect(() => {
-    gsap.set(overlayInner.current, {
-      xPercent: -100,
-    });
-  }, []);
 
   const openPreview = (index) => {
     setPreviewIsOpen(true);
@@ -231,6 +226,9 @@ export default function Product({ product }) {
   });
 
   useEffect(() => {
+    gsap.set(overlayInner.current, {
+      xPercent: -100,
+    });
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -261,6 +259,7 @@ export default function Product({ product }) {
       observer.disconnect();
     };
   }, []);
+
 
   return (
     <>
