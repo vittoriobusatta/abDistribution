@@ -297,59 +297,66 @@ export default function Product({ product }) {
               {landingdata.map((item, index) => {
                 return (
                   <li key={item.id} className="landing_informations">
-                    <motion.h3
-                      initial={{
-                        opacity: 0,
-                        y: "100%",
-                      }}
-                      animate={
-                        animating
-                          ? {
-                              opacity: 1,
-                              y: 0,
+                    <div className="hidden">
+                      <motion.h3
+                        initial={{
+                          opacity: 0,
+                          y: "100%",
+                        }}
+                        animate={
+                          animating
+                            ? {
+                                opacity: 1,
+                                y: 0,
 
-                              transition: {
-                                duration: 0.55,
-                                ease: [0, 0.87, 0.58, 1],
-                                delay: 0.4 * (index + 1),
-                              },
+                                transition: {
+                                  duration: 0.45,
+                                  ease: [0, 0.87, 0.58, 1],
+                                  delay: 0.4 * (index + 1),
+                                },
 
-                              onAnimationComplete: () => setAnimating(false),
-                            }
-                          : {
-                              opacity: 0,
-                              y: "100%",
-                            }
-                      }
-                      style={{ color: product.landingcolor1 }}
-                    >
-                      {item.title}
-                    </motion.h3>
-                    <motion.p
-                      initial={{
-                        opacity: 0,
-                      }}
-                      animate={
-                        animating
-                          ? {
-                              opacity: 1,
+                                onAnimationComplete: () => setAnimating(false),
+                              }
+                            : {
+                                opacity: 0,
+                                y: "100%",
+                              }
+                        }
+                        style={{ color: product.landingcolor1 }}
+                      >
+                        {item.title}
+                      </motion.h3>
+                    </div>
+                    <div className="hidden">
+                      <motion.p
+                        initial={{
+                          opacity: 0,
+                          y: "100%",
+                        }}
+                        animate={
+                          animating
+                            ? {
+                                opacity: 1,
+                                y: 0,
 
-                              transition: {
-                                duration: 0.45,
-                                ease: easeOut,
-                                delay: 0.4 * (index + 1),
-                              },
+                                transition: {
+                                  duration: 0.45,
+                                  ease: easeOut,
+                                  delay: 0.5 * (index + 1),
+                                },
 
-                              onAnimationComplete: () => setAnimating(false),
-                            }
-                          : {
-                              opacity: 0,
-                            }
-                      }
-                      style={{ color: product.landingcolor2 }}
-                    >
-                      {item.paragraph}
-                    </motion.p>
+                                onAnimationComplete: () => setAnimating(false),
+                              }
+                            : {
+                                opacity: 0,
+                                y: "100%",
+                              }
+                        }
+                        style={{ color: product.landingcolor2 }}
+                      >
+                        {item.paragraph}
+                      </motion.p>
+                    </div>
                   </li>
                 );
               })}
