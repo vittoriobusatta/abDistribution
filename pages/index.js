@@ -3,6 +3,7 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import { motion } from "framer-motion";
+import Header from "../components/Header";
 
 export async function getStaticProps() {
   const data = fs.readFileSync(path.join(process.cwd(), "/public/db.json"));
@@ -27,6 +28,8 @@ export default function Home({ newArray }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Header logocolor1="#000" logocolor2="#000" />
 
       <motion.main
         initial={{

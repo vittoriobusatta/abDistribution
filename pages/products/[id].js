@@ -243,6 +243,7 @@ export default function Product({ product }) {
                 y: 0,
                 opacity: 1,
                 ease: "power4.out",
+                duration: 1.4,
                 clipPath: "polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%)",
               }
             );
