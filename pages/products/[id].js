@@ -12,7 +12,7 @@ import {
 } from "../../utils/icons";
 import Header from "../../components/Header";
 import { useRouter } from "next/router";
-import { motion } from "framer-motion";
+import { easeOut, motion } from "framer-motion";
 
 export default function Product({ product }) {
   let newArray = Object.values(product.products);
@@ -194,6 +194,39 @@ export default function Product({ product }) {
     }
   };
 
+  let landingInfo = [
+    {
+      category: {
+        id: 1,
+        title: "Catégorie",
+        paragraph: product.category,
+      },
+    },
+    {
+      brand: {
+        id: 2,
+        title: "Marque",
+        paragraph: product.brand,
+      },
+    },
+    {
+      origine: {
+        id: 3,
+        title: "Origine",
+        paragraph: product.origine,
+      },
+    },
+  ];
+
+  let landingdata = landingInfo.map((item) => {
+    const key = Object.keys(item)[0];
+    return {
+      id: item[key].id,
+      title: item[key].title,
+      paragraph: item[key].paragraph,
+    };
+  });
+
   return (
     <>
       <Head>
@@ -206,16 +239,11 @@ export default function Product({ product }) {
       <motion.section
         initial={{
           opacity: 0,
-          // clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
         }}
         animate={{
           opacity: 1,
-          // clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
         }}
         transition={{ duration: 0.75, ease: "easeOut" }}
-        exit={{
-          opacity: 1,
-        }}
         onAnimationComplete={() => setAnimating(true)}
         className="container"
         style={{ backgroundColor: product.background }}
@@ -243,7 +271,7 @@ export default function Product({ product }) {
                         skewY: 0,
 
                         transition: {
-                          duration: 0.25,
+                          duration: 0.35,
                           ease: "easeOut",
                         },
 
@@ -265,24 +293,67 @@ export default function Product({ product }) {
                 {product.name}
               </motion.h1>
             </div>
-            <div className="landing_content">
-              <div className="landing_informations">
-                <h3 style={{ color: product.landingcolor1 }}>Catégorie</h3>
-                <p style={{ color: product.landingcolor2 }}>
-                  {product.category}
-                </p>
-              </div>
-              <div className="landing_informations">
-                <h3 style={{ color: product.landingcolor1 }}>Origine</h3>
-                <p style={{ color: product.landingcolor2 }}>
-                  {product.origine}
-                </p>
-              </div>
-              <div className="landing_informations">
-                <h3 style={{ color: product.landingcolor1 }}>Marque</h3>
-                <p style={{ color: product.landingcolor2 }}>{product.brand}</p>
-              </div>
-            </div>
+            <ul className="landing_content">
+              {landingdata.map((item, index) => {
+                return (
+                  <li key={item.id} className="landing_informations">
+                    <motion.h3
+                      initial={{
+                        opacity: 0,
+                        y: "100%",
+                      }}
+                      animate={
+                        animating
+                          ? {
+                              opacity: 1,
+                              y: 0,
+
+                              transition: {
+                                duration: 0.55,
+                                ease: [0, 0.87, 0.58, 1],
+                                delay: 0.4 * (index + 1),
+                              },
+
+                              onAnimationComplete: () => setAnimating(false),
+                            }
+                          : {
+                              opacity: 0,
+                              y: "100%",
+                            }
+                      }
+                      style={{ color: product.landingcolor1 }}
+                    >
+                      {item.title}
+                    </motion.h3>
+                    <motion.p
+                      initial={{
+                        opacity: 0,
+                      }}
+                      animate={
+                        animating
+                          ? {
+                              opacity: 1,
+
+                              transition: {
+                                duration: 0.35,
+                                ease: easeOut,
+                                delay: 0.6 * (index + 1),
+                              },
+
+                              onAnimationComplete: () => setAnimating(false),
+                            }
+                          : {
+                              opacity: 0,
+                            }
+                      }
+                      style={{ color: product.landingcolor2 }}
+                    >
+                      {item.paragraph}
+                    </motion.p>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
 

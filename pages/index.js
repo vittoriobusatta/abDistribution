@@ -31,16 +31,11 @@ export default function Home({ newArray }) {
       <motion.main
         initial={{
           opacity: 0,
-          clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
         }}
         animate={{
           opacity: 1,
-          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
         }}
         transition={{ duration: 0.75, ease: "easeOut" }}
-        exit={{
-          opacity: 1,
-        }}
       >
         <ul>
           {newArray.map((item) => (
