@@ -20,7 +20,13 @@
   grid-template-columns: repeat(2, 1fr);
   @media screen and (max-width: 576px) {
     grid-template-columns: repeat(1, 1fr);
-    padding: 144px 26px 44px;
+    padding: 188px 26px 44px;
+  }
+  @media screen and (min-width: 576px) {
+    margin-top: 30vh;
+  }
+  @media screen and (min-width: 1224px) {
+    margin-top: 40vh;
   }
   & .card_content {
     display: flex;
