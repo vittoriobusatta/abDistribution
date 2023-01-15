@@ -134,7 +134,9 @@
       "products": {
         "sandalwood": {
           "id": "5",
+          "title" : "Brumes d’Ambiance Bois de Santal",
           "name": "Sandalwood",
+          "category": "Entretien Ménager",
           "description": "Laissez-vous envahir par la chaleur et la sérénité de la senteur envoûtante du bois de santal avec cette brume d'ambiance.",
           "ingredient": "Pétales de roses séchés, huile de coco, huile essentielle de santal",
           "color1": "#0E0D57",
@@ -145,7 +147,9 @@
         },
         "cachemere": {
           "id": "6",
+          "title" : "Brumes d’Ambiance Cachemire",
           "name": "Cachemere",
+          "category": "Entretien Ménager",
           "description": "Créez une ambiance chaleureuse et accueillante avec cette brume d'ambiance au parfum de cachemire.",
           "ingredient": "Fleurs de lavande séchées, huile de jojoba, huile essentielle de lavande",
           "color1": "#40984A",
@@ -156,7 +160,9 @@
         },
         "rainbow": {
           "id": "7",
+          "title" : "Brumes d’Ambiance Arc-en-ciel",
           "name": "Rainbow",
+          "category": "Entretien Ménager",
           "description": "Apportez une touche de couleur et de vitalité dans votre vie avec cette brume d'ambiance aux senteurs éclatantes.",
           "ingredient": "zestes d'orange séchés, huile de baies de goji, mélange d'huile essentielles citron et romarin,",
           "color1": "#ED7252",
@@ -167,7 +173,9 @@
         },
         "blackrose": {
           "id": "8",
+          "title" : "Brumes d’Ambiance Rose Noire",
           "name": "Black Rose",
+          "category": "Entretien Ménager",
           "description": "Cette brume d'ambiance est un mélange subtil de senteurs élégantes de rose noire et de bois de cèdre. ",
           "ingredient": "pétales de roses noires séchés, huile de noyau d'abricot, huile essentielle de rose noire.",
           "color1": "#DA6780",

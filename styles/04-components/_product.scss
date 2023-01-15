@@ -32,6 +32,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    & .card_details {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      & h3 {
+        font-family: $rivalSans;
+        font-weight: $weight_regular;
+        font-size: 14px;
+      }
+      & h2 {
+        font-family: $rivalSans;
+        font-weight: $weight_regular;
+        font-size: 16px;
+      }
+    }
   }
 }
 

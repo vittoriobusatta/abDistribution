@@ -466,7 +466,7 @@ export default function Product({ product }) {
             return (
               <div className="card_content" key={item.id}>
                 <div
-                  className={"card " + item.name}
+                  className="card"
                   ref={(el) => (cards.current[index] = el)}
                   onClick={() => openPreview(index)}
                 >
@@ -480,6 +480,12 @@ export default function Product({ product }) {
                     as="image"
                     className="opacity"
                   />
+                </div>
+                <div className="card_details">
+                  <h3 style={{ color: product.color1, opacity: 0.6 }}>
+                    {item.category}
+                  </h3>
+                  <h2 style={{ color: product.color1 }}>{item.title}</h2>
                 </div>
               </div>
             );
