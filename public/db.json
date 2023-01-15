@@ -13,6 +13,7 @@
       "landingcolor1": "#F8955B",
       "landingcolor2": "#893232",
       "background": "#FFFAEC",
+      "description": "NESCAFÉ Xpress vous donnera le réveil dont vous avez besoin pour continuer votre journée. Les grains de café et le lait doux spécialement sélectionnés pour vous permettre de vous sentir mieux.",
       "products": {
         "vanilla": {
           "id": "17",
@@ -128,6 +129,7 @@
       "landingcolor1": "#794856",
       "landingcolor2": "#794856",
       "background": "#FFEEFA",
+      "description": "Créez une atmosphère chaleureuse et accueillante chez vous avec nos brumes d'ambiance. Choisissez parmi une large sélection de parfums, allant des senteurs fraîches et citronnées aux parfums plus chauds et boisés.",
       "products": {
         "sandalwood": {
           "id": "5",
@@ -188,6 +190,7 @@
       "landingcolor1": "#F7F7FF",
       "landingcolor2": "#F7F7FF",
       "background": "#33302D",
+      "description": "Rafraîchissez-vous et parfumez votre peau avec nos brumes corporelles. Formulées avec des ingrédients naturels, elles hydratent votre peau tout en lui apportant une senteur délicate.",
       "products": {
         "brave": {
           "id": "1",
@@ -248,6 +251,7 @@
       "landingcolor1": "#9E9E4D",
       "landingcolor2": "#9E9E4D",
       "background": "#FFFDE8",
+      "description": "Eliminez les mauvaises odeurs de votre maison avec notre sélection de désodorisants. Choisissez parmi une variété de parfums, allant des senteurs fraîches et propres aux parfums plus boisés et épicés.",
       "products": {
         "greentea": {
           "id": "9",
@@ -352,6 +356,7 @@
       "landingcolor1": "#484D79",
       "landingcolor2": "#484D79",
       "background": "#FFF4D4",
+      "description": "Une bonne hygiène des mains est importante pour tout le monde. Il est important de se laver les mains plusieurs fois par jour. Dans cette catégorie, vous retrouverez des savons liquides pour les mains sèches aux senteurs fruitées.",
       "products": {
         "mango": {
           "id": "20",
@@ -461,6 +466,7 @@
       "landingcolor1": "#0C9E98",
       "landingcolor2": "#0C9E98",
       "background": "#DFF6FF",
+      "description": "Essentiels dans la vie quotidienne, ils sont à prendre partout avec vous pour vous protéger, ainsi que votre entourage à chaque occasion. Découvrez une sélection de produits adaptés à chaque situation pour une hygiène irréprochable.",
       "products": {
         "apricot": {
           "id": "27",

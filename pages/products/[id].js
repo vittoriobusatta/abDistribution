@@ -35,7 +35,6 @@ export default function Product({ product }) {
 
   const overlayInner = useRef([]);
 
-
   const openPreview = (index) => {
     setPreviewIsOpen(true);
     gsap
@@ -229,28 +228,23 @@ export default function Product({ product }) {
     gsap.set(overlayInner.current, {
       xPercent: -100,
     });
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const index = imageRef.current.indexOf(entry.target);
-          if (entry.isIntersecting && !animatedStatus.current[index]) {
-            animatedStatus.current[index] = true;
-            gsap.to(
-              entry.target,
-              {
-                delay: 0.3,
-                y: 0,
-                opacity: 1,
-                ease: "power4.out",
-                duration: 1.4,
-                clipPath: "polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%)",
-              }
-            );
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-    );
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const index = imageRef.current.indexOf(entry.target);
+        if (entry.isIntersecting && !animatedStatus.current[index]) {
+          animatedStatus.current[index] = true;
+          gsap.to(entry.target, {
+            delay: 0.3,
+            y: 0,
+            opacity: 1,
+            ease: "power4.out",
+            duration: 1.4,
+            clipPath: "polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%)",
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    });
     imageRef.current.forEach((ref) => {
       observer.observe(ref);
     });
@@ -258,7 +252,6 @@ export default function Product({ product }) {
       observer.disconnect();
     };
   }, []);
-
 
   return (
     <>
@@ -394,6 +387,77 @@ export default function Product({ product }) {
                 );
               })}
             </ul>
+          </div>
+        </div>
+
+        <div className="details">
+          <div className="details_content">
+            <motion.h2
+              initial={{
+                opacity: 0,
+                y: "100%",
+                skewY: 10,
+              }}
+              animate={
+                animating
+                  ? {
+                      opacity: 1,
+                      y: 0,
+                      skewY: 0,
+
+                      transition: {
+                        duration: 0.35,
+                        ease: "easeOut",
+                        delay: 0.5,
+                      },
+
+                      exit: {
+                        opacity: 0,
+                        y: "100%",
+                      },
+                    }
+                  : {
+                      opacity: 0,
+                      y: "100%",
+                      skewY: 10,
+                    }
+              }
+              style={{ color: product.color1 }}
+            >
+              <span>Nos</span>
+              <span>Produits</span>
+            </motion.h2>
+            <motion.p
+              initial={{
+                opacity: 0,
+                clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+              }}
+              animate={
+                animating
+                  ? {
+                      opacity: 1,
+                      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+
+                      transition: {
+                        duration: 0.35,
+                        ease: "easeOut",
+                        delay: 0.7,
+                      },
+
+                      exit: {
+                        opacity: 0,
+                        y: "100%",
+                      },
+                    }
+                  : {
+                      opacity: 0,
+                      clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+                    }
+              }
+              style={{ color: product.color1 }}
+            >
+              {product.description}
+            </motion.p>
           </div>
         </div>
 
