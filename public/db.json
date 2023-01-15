@@ -63,6 +63,7 @@
       "landingcolor1": "#FFC16A",
       "landingcolor2": "#C54126",
       "background": "#FFEED3",
+      "description": "Découvrez un large éventail de produits alimentaires tels que des produits en conserve, des légumes marinés, des confitures et sauces.",
       "products": {
         "apricot": {
           "id": "26",
@@ -129,7 +130,7 @@
       "landingcolor1": "#794856",
       "landingcolor2": "#794856",
       "background": "#FFEEFA",
-      "description": "Créez une atmosphère chaleureuse et accueillante chez vous avec nos brumes d'ambiance. Choisissez parmi une large sélection de parfums, allant des senteurs fraîches et citronnées aux parfums plus chauds et boisés.",
+      "description": "Transformez votre maison en un véritable havre de paix avec nos brumes d'ambiance. Choisissez parmi une vaste sélection de parfums pour créer une ambiance apaisante pour chaque pièce.",
       "products": {
         "sandalwood": {
           "id": "5",
@@ -199,7 +200,7 @@
           "ingredient": "Fleurs de lavande séchées, huile de noisette, huile essentielle de cèdre.",
           "color1": "#DF3C13",
           "color2": "#993018",
-          "background": "radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #272421",
+          "background": "#FFEAE4",
           "gradient": "linear-gradient(270deg, #e43d12 0%, #932f18 100%)",
           "image": "/bodymist/Brave.png"
         },
@@ -210,7 +211,7 @@
           "ingredient": "Fleurs de camomille séchées, huile de coco, huile essentielle de gingembre. ",
           "color1": "#EFE021",
           "color2": "#9EB735",
-          "background": "radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #272421",
+          "background": "#F9FFE2",
           "gradient": "linear-gradient(270deg, #f4e228 0%, #d5d600 50%, #9ab538 100%)",
           "image": "/bodymist/Creative.png"
         },
@@ -221,7 +222,7 @@
           "ingredient": "Zestes d'orange séchés, huile de ricin, huile essentielle de poivre noir. ",
           "color1": "#DB211C",
           "color2": "#9B317F",
-          "background": "radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #272421",
+          "background": "#FFF0FC",
           "gradient": "linear-gradient(270deg, #d93e2a 0%, #c21a40 50.52%, #8c3388 100%)",
           "image": "/bodymist/Dynamic.png"
         },
@@ -232,7 +233,7 @@
           "ingredient": "Fleurs de rose séchées, huile d'amande douce, huile essentielle de palmarosa. ",
           "color1": "#05AAD2",
           "color2": "#136B8C",
-          "background": "radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #272421",
+          "background": "#EBFBFF",
           "gradient": "linear-gradient(270deg, #03aed7 0%, #1b6182 100%)",
           "image": "/bodymist/Loyal.png"
         }
@@ -417,6 +418,7 @@
       "landingcolor1": "#FFB547",
       "landingcolor2": "#F76B84",
       "background": "#FFEDF5",
+      "description": "Nos gels douche nettoient en douceur tout en prenant soin de votre peau grâce à leurs ingrédients naturels. Choisissez parmi une variété de parfums pour une expérience sensorielle agréable sous la douche.",
       "products": {
         "romantic": {
           "id": "32",
