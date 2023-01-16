@@ -1,16 +1,27 @@
-@import './01-config/variables';
-@import './01-config/animations';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-@import './02-base/base';
-@import './02-base/reset';
-@import './02-base/typography';
-
-@import './03-globals/header';
-@import './03-globals/footer';
-@import './03-globals/loader';
-@import './03-globals/menu';
-
-@import './04-components/product';
-@import './04-components/landing';
-
-
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #fffaec;
+    & svg {
+        height: 38px;
+        position: absolute; 
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    & h1 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-family: "rival sans";
+    }
+}
