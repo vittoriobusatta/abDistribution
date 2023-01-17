@@ -253,6 +253,8 @@ export default function Product({ product }) {
     };
   }, []);
 
+  console.log(previewIsOpen)
+
   return (
     <>
       <Head>
@@ -506,7 +508,6 @@ export default function Product({ product }) {
             );
           })}
         </div>
-
         <div className="preview">
           {newArray.map((item, index) => {
             return (
