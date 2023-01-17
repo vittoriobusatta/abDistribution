@@ -277,6 +277,8 @@ export default function Product({ product }) {
         <Header
           logocolor1={product.logocolor1}
           logocolor2={product.logocolor2}
+          color2={product.color2}
+          color1={product.color1}
           backgroundColor={product.background}
         />
 
