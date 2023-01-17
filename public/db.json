@@ -3,7 +3,7 @@
     "coffee": {
       "id": "1",
       "name": "Cafés",
-      "category": "Nourriture",
+      "category": "Alimentaire",
       "origine": "Turquie",
       "brand": "Nescafé",
       "color1": "#893232",
@@ -17,6 +17,7 @@
       "products": {
         "vanilla": {
           "id": "17",
+          "title" : "Café au Lait Vanille",
           "name": "Vanilla",
           "description": "Un mélange parfait de lait et de café, rehaussé d'une touche de vanille pour un goût sucré et crémeux.",
           "ingredient": "Café, lait, sucre, arôme naturel de vanille",
@@ -28,6 +29,7 @@
         },
         "choco": {
           "id": "18",
+          "title" : "Café au Lait Chocolat",
           "name": "Café Choco",
           "description": "Un café au lait classique avec l'ajout de chocolat pour un goût riche et décadent.",
           "ingredient": "Café, lait, chocolat, sucre, arôme naturel cacao",
@@ -39,6 +41,7 @@
         },
         "original": {
           "id": "19",
+          "title" : "Café au Lait",
           "name": "Original",
           "description": "Un café au lait traditionnel fait à partir de lait et de café corsé, pour un goût original et équilibré.",
           "ingredient": "Café, lait, sucre",
@@ -67,6 +70,7 @@
       "products": {
         "apricot": {
           "id": "26",
+          "title" : "Confiture d'Abricot",
           "name": "Apricot",
           "description": "",
           "ingredient": "",
@@ -77,6 +81,7 @@
         },
         "strawberry": {
           "id": "27",
+          "title" : "Confiture de Fraise",
           "name": "Strawberry",
           "description": "",
           "ingredient": "",
@@ -87,6 +92,7 @@
         },
         "pepper": {
           "id": "28",
+          "title" : "Piment Mariné",
           "name": "Pepper",
           "description": "",
           "ingredient": "",
@@ -97,6 +103,7 @@
         },
         "whitebeans": {
           "id": "24",
+          "title" : "Haricot Blanc",
           "name": "White Beans",
           "description": "",
           "ingredient": "",
@@ -107,6 +114,7 @@
         },
         "redbeans": {
           "id": "25",
+          "title" : "Haricot Rouge",
           "name": "Red Beans",
           "description": "",
           "ingredient": "",
@@ -136,7 +144,6 @@
           "id": "5",
           "title" : "Brumes d’Ambiance Bois de Santal",
           "name": "Sandalwood",
-          "category": "Entretien Ménager",
           "description": "Laissez-vous envahir par la chaleur et la sérénité de la senteur envoûtante du bois de santal avec cette brume d'ambiance.",
           "ingredient": "Pétales de roses séchés, huile de coco, huile essentielle de santal",
           "color1": "#0E0D57",
@@ -149,7 +156,6 @@
           "id": "6",
           "title" : "Brumes d’Ambiance Cachemire",
           "name": "Cachemere",
-          "category": "Entretien Ménager",
           "description": "Créez une ambiance chaleureuse et accueillante avec cette brume d'ambiance au parfum de cachemire.",
           "ingredient": "Fleurs de lavande séchées, huile de jojoba, huile essentielle de lavande",
           "color1": "#40984A",
@@ -162,7 +168,6 @@
           "id": "7",
           "title" : "Brumes d’Ambiance Arc-en-ciel",
           "name": "Rainbow",
-          "category": "Entretien Ménager",
           "description": "Apportez une touche de couleur et de vitalité dans votre vie avec cette brume d'ambiance aux senteurs éclatantes.",
           "ingredient": "zestes d'orange séchés, huile de baies de goji, mélange d'huile essentielles citron et romarin,",
           "color1": "#ED7252",
@@ -175,7 +180,6 @@
           "id": "8",
           "title" : "Brumes d’Ambiance Rose Noire",
           "name": "Black Rose",
-          "category": "Entretien Ménager",
           "description": "Cette brume d'ambiance est un mélange subtil de senteurs élégantes de rose noire et de bois de cèdre. ",
           "ingredient": "pétales de roses noires séchés, huile de noyau d'abricot, huile essentielle de rose noire.",
           "color1": "#DA6780",
@@ -205,7 +209,6 @@
           "id": "1",
           "title" : "Brumes Corporelle Brave",
           "name": "Brave",
-          "category": "Entretien Ménager",
           "description": "Cette brume corporelle vous donnera le courage de vous lancer dans de nouvelles aventures et de surmonter vos peurs.",
           "ingredient": "Fleurs de lavande séchées, huile de noisette, huile essentielle de cèdre.",
           "color1": "#DF3C13",
@@ -218,7 +221,6 @@
           "id": "2",
           "title" : "Brumes Corporelle Creative",
           "name": "Creative",
-          "category": "Entretien Ménager",
           "description": "Laissez votre créativité s'envoler avec cette brume corporelle qui vous aidera à trouver l'inspiration et à laisser libre cours à votre imagination.",
           "ingredient": "Fleurs de camomille séchées, huile de coco, huile essentielle de gingembre. ",
           "color1": "#EFE021",
@@ -231,7 +233,6 @@
           "id": "3",
           "title" : "Brumes Corporelle Dynamic",
           "name": "Dynamic",
-          "category": "Entretien Ménager",
           "description": "Cette brume corporelle vous donnera l'énergie et la motivation nécessaires pour affronter votre journée avec dynamisme.",
           "ingredient": "Zestes d'orange séchés, huile de ricin, huile essentielle de poivre noir. ",
           "color1": "#DB211C",
@@ -244,7 +245,6 @@
           "id": "4",
           "title" : "Brumes Corporelle Loyal",
           "name": "Loyal",
-          "category": "Entretien Ménager",
           "description": "Faites preuve de loyauté envers vous-même avec cette brume corporelle afin de vous sentir mieux dans votre corps et dans votre esprit.",
           "ingredient": "Fleurs de rose séchées, huile d'amande douce, huile essentielle de palmarosa. ",
           "color1": "#05AAD2",
@@ -272,6 +272,7 @@
       "products": {
         "greentea": {
           "id": "9",
+          "title" : "Désodorisants Thé Vert",
           "name": "Green Tea",
           "description": "Découvrez la fraîcheur et la vitalité de la senteur du thé vert avec ce désodorisant.",
           "ingredient": "Pétales de roses séchés, huile d'amande douce, huile essentielle de palmarosa. ",
@@ -283,6 +284,7 @@
         },
         "lavender": {
           "id": "10",
+          "title" : "Désodorisants Lavende",
           "name": "Lavender",
           "description": "Découvrez la tranquillité et la sérénité avec la senteur de lavande de ce désodorisant.",
           "ingredient": "",
@@ -294,6 +296,7 @@
         },
         "mysticoud": {
           "id": "11",
+          "title" : "Désodorisants Oud",
           "name": "Mystic Oud",
           "description": "Plongez dans l'univers mystique de l'oud avec ce désodorisant aux parfums orientaux.",
           "ingredient": "",
@@ -305,6 +308,7 @@
         },
         "whiterose": {
           "id": "12",
+          "title" : "Désodorisants Rose Blanche",
           "name": "White Rose",
           "description": "Laissez-vous envoûter par la douceur et la délicatesse de la rose blanche avec ce désodorisant.",
           "ingredient": "",
@@ -316,6 +320,7 @@
         },
         "tobacco": {
           "id": "13",
+          "title" : "Désodorisants Anti-Tabbac",
           "name": "Tobacco",
           "description": "Combattez efficacement les mauvaises odeurs de tabac avec ce désodorisant anti-tabac.",
           "ingredient": "",
@@ -327,6 +332,7 @@
         },
         "ocean": {
           "id": "14",
+          "title" : "Désodorisants Océan",
           "name": "Ocean",
           "description": "Ressentez la fraîcheur iodée de l'océan avec ce désodorisant aux parfums maritimes.",
           "ingredient": "",
@@ -338,6 +344,7 @@
         },
         "fruits": {
           "id": "15",
+          "title" : "Désodorisants Fruits",
           "name": "Fruits",
           "description": "Savourez la vitalité et la fraîcheur des fruits avec ce désodorisant aux parfums fruités.",
           "ingredient": "",
@@ -349,6 +356,7 @@
         },
         "flower": {
           "id": "16",
+          "title" : "Désodorisants Fleurs",
           "name": "Flower",
           "description": "Laissez-vous emporter par la douceur et la subtilité des fleurs avec ce désodorisant aux parfums floraux.",
           "ingredient": "",
@@ -377,6 +385,7 @@
       "products": {
         "mango": {
           "id": "20",
+          "title" : "Laves Mains Mangue",
           "name": "Mango",
           "description": "",
           "ingredient": "",
@@ -388,6 +397,7 @@
         },
         "plum": {
           "id": "21",
+          "title" : "Laves Mains Prune",
           "name": "Plum",
           "description": "",
           "ingredient": "",
@@ -399,6 +409,7 @@
         },
         "blueberry": {
           "id": "22",
+          "title" : "Laves Mains Myrtille",
           "name": "Blueberry",
           "description": "",
           "ingredient": "",
@@ -410,6 +421,7 @@
         },
         "cranberry": {
           "id": "23",
+          "title" : "Laves Mains Canneberge",
           "name": "Cranberry",
           "description": "",
           "ingredient": "",
@@ -438,6 +450,7 @@
       "products": {
         "romantic": {
           "id": "32",
+          "title" : "Gel Douche Rose",
           "name": "Romantic",
           "description": "",
           "ingredient": "",
@@ -449,6 +462,7 @@
         },
         "amber": {
           "id": "33",
+          "title" : "Gel Douche Ambre & Oud",
           "name": "Amber",
           "description": "",
           "ingredient": "",
@@ -460,6 +474,7 @@
         },
         "passion": {
           "id": "34",
+          "title" : "Gel Douche Passion",
           "name": "Passion",
           "description": "",
           "ingredient": "",
@@ -486,8 +501,9 @@
       "background": "#DFF6FF",
       "description": "Essentiels dans la vie quotidienne, ils sont à prendre partout avec vous pour vous protéger, ainsi que votre entourage à chaque occasion. Découvrez une sélection de produits adaptés à chaque situation pour une hygiène irréprochable.",
       "products": {
-        "apricot": {
+        "gel1": {
           "id": "27",
+          "title" : "Gel Hydroalchoolique",
           "name": "Gels",
           "description": "",
           "ingredient": "",
@@ -497,8 +513,9 @@
           "gradient": "#0C9E98",
           "image": "/antibacterial/gel1.png"
         },
-        "strawberry": {
+        "gel2": {
           "id": "28",
+          "title" : "Gel Hydroalchoolique",
           "name": "Gels",
           "description": "",
           "ingredient": "",
@@ -508,8 +525,9 @@
           "gradient": "#0C9E98",
           "image": "/antibacterial/gel2.png"
         },
-        "pepper": {
+        "wip1": {
           "id": "29",
+          "title" : "Lingette Hydroalchoolique",
           "name": "Lingettes",
           "description": "",
           "ingredient": "",
@@ -519,8 +537,9 @@
           "gradient": "#0C9E98",
           "image": "/antibacterial/wip1.png"
         },
-        "whitebeans": {
+        "wip2": {
           "id": "30",
+          "title" : "Lingette Hydroalchoolique",
           "name": "Lingettes",
           "description": "",
           "ingredient": "",
@@ -530,8 +549,9 @@
           "gradient": "#0C9E98",
           "image": "/antibacterial/wip2.png"
         },
-        "redbeans": {
+        "wip3Lingette": {
           "id": "31",
+          "title" : "Lingette Hydroalchoolique",
           "name": "Lingettes",
           "description": "",
           "ingredient": "",

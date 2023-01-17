@@ -483,7 +483,7 @@ export default function Product({ product }) {
                 </div>
                 <div className="card_details">
                   <h3 style={{ color: product.color1, opacity: 0.6 }}>
-                    {item.category}
+                    {landingdata[0].paragraph}
                   </h3>
                   <h2 style={{ color: product.color1 }}>{item.title}</h2>
                 </div>
