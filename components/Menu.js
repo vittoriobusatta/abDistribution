@@ -1,6 +1,6 @@
 import gsap from "gsap";
 // import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, openMenu } from "react";
 
 function Menu({ color1, color2, backgroundColor, setOpenMenu, menuContainer }) {
   const [changeMenu, setChangeMenu] = useState(false);
@@ -24,15 +24,20 @@ function Menu({ color1, color2, backgroundColor, setOpenMenu, menuContainer }) {
 
   useEffect(() => {
     let tl = gsap.timeline();
-    gsap.set(menuContainer.current, { width: "0%" });
-    tl.to(menuContainer.current, {
-      duration: 0.5,
-      width: 320,
-      ease: "power3.inOut",
-    });
-    return () => {
-      tl.kill();
-    };
+    if (openMenu) {
+      tl.to(menuContainer.current, {
+        duration: 0.5,
+        ease: "power3.inOut",
+        x: 320,
+      });
+    }
+    else {
+      tl.to(menuContainer.current, {
+        duration: 0.5,
+        ease: "power3.inOut",
+        x: 0,
+      });
+    }
   }, [menuContainer]);
 
   const menuArray = [

@@ -39,7 +39,6 @@ function Header({ logocolor1, logocolor2, color1, color2, backgroundColor }) {
           <div style={{ background: logocolor1 }} className="bar"></div>
         </button>
       </header>
-      {openMenu && (
         <Menu
           setOpenMenu={setOpenMenu}
           openMenu={openMenu}
@@ -48,7 +47,6 @@ function Header({ logocolor1, logocolor2, color1, color2, backgroundColor }) {
           backgroundColor={backgroundColor}
           menuContainer={menuContainer}
         />
-      )}
     </>
   );
 }
