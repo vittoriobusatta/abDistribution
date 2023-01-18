@@ -253,8 +253,6 @@ export default function Product({ product }) {
     };
   }, []);
 
-  console.log(previewIsOpen)
-
   return (
     <>
       <Head>

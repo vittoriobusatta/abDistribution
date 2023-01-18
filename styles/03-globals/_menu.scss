@@ -7,6 +7,7 @@
   z-index: 99;
   height: calc(100% + $safe_area_inset_top);
   width: 320px;
+  transform: translateX(320px);
 }
 
 .menu_container {
@@ -47,10 +48,11 @@
     }
     ul.menu_hidden_list {
       & li.menu_hidden_item {
-        font-size: 14px;
+        font-size: 16px;
         font-family: $rivalSans;
         font-weight: $weight_medium;
         opacity: 0.8;
+        cursor: pointer;
       }
     }
     &.menu_active {
@@ -80,7 +82,7 @@
 .menu_sublist {
   display: flex;
   flex-direction: column;
-  padding: 0 26px;
+  padding: 0 16px;
   // row-gap: 10px;
 }
 .menu_subitem {

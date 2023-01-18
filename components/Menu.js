@@ -2,25 +2,52 @@ import gsap from "gsap";
 // import Link from "next/link";
 import React, { useEffect, useRef, useState, openMenu } from "react";
 
-function Menu({ color1, color2, backgroundColor, setOpenMenu, menuContainer }) {
+function Menu({
+  color1,
+  color2,
+  backgroundColor,
+  setOpenMenu,
+  menuContainer,
+  openMenu,
+}) {
   const [changeMenu, setChangeMenu] = useState(false);
   const menuHidden = useRef([]);
 
-  const Close = () => {
+  const CloseMenu = () => {
     setOpenMenu(false);
+    let tl = gsap.timeline();
+    tl.to(menuContainer.current, {
+      duration: 0.5,
+      ease: "power3.inOut",
+      x: 320,
+    });
   };
 
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (menuContainer.current && !menuContainer.current.contains(e.target)) {
         setOpenMenu(false);
+        let tl = gsap.timeline();
+        tl.to(menuContainer.current, {
+          duration: 0.5,
+          ease: "power3.inOut",
+          x: 320,
+        });
+      }
+      if (openMenu === false) {
+        setChangeMenu(false);
+        const tl = gsap.timeline();
+        tl.to(menuHidden.current, {
+          x: 320,
+          ease: "power3.inOut",
+        });
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [menuContainer, setOpenMenu]);
+  }, [menuContainer, setOpenMenu, openMenu]);
 
   useEffect(() => {
     let tl = gsap.timeline();
@@ -28,17 +55,29 @@ function Menu({ color1, color2, backgroundColor, setOpenMenu, menuContainer }) {
       tl.to(menuContainer.current, {
         duration: 0.5,
         ease: "power3.inOut",
-        x: 320,
-      });
-    }
-    else {
-      tl.to(menuContainer.current, {
-        duration: 0.5,
-        ease: "power3.inOut",
         x: 0,
       });
     }
-  }, [menuContainer]);
+  }, [menuContainer, openMenu]);
+
+  const ChangeMenuHandler = (index) => {
+    setChangeMenu(true);
+    const tl = gsap.timeline();
+    gsap.set(menuHidden.current[index], { x: 320 });
+    tl.to(menuHidden.current[index], {
+      x: 0,
+      ease: "power3.inOut",
+    });
+  };
+
+  const BackOldMenu = () => {
+    setChangeMenu(false);
+    const tl = gsap.timeline();
+    tl.to(menuHidden.current, {
+      x: 320,
+      ease: "power3.inOut",
+    });
+  };
 
   const menuArray = [
     {
@@ -93,24 +132,6 @@ function Menu({ color1, color2, backgroundColor, setOpenMenu, menuContainer }) {
     },
   ];
 
-  const ChangeMenuHandler = (index) => {
-    setChangeMenu(true);
-    const tl = gsap.timeline();
-    gsap.set(menuHidden.current[index], { x: 320 });
-    tl.to(menuHidden.current[index], {
-      x: 0,
-      ease: "power3.inOut",
-    });
-  };
-
-  const BackOldMenu = () => {
-    setChangeMenu(false);
-    const tl = gsap.timeline();
-    tl.to(menuHidden.current, {
-      x: 320,
-      ease: "power3.inOut",
-    });
-  };
 
   return (
     <section
@@ -124,7 +145,7 @@ function Menu({ color1, color2, backgroundColor, setOpenMenu, menuContainer }) {
             <button
               aria-label="menu"
               className={`burger active`}
-              onClick={Close}
+              onClick={openMenu ? () => CloseMenu() : () => setOpenMenu(true)}
             >
               <div style={{ background: color2 }} className="bar"></div>
               <div style={{ background: color2 }} className="bar"></div>
@@ -187,9 +208,14 @@ function Menu({ color1, color2, backgroundColor, setOpenMenu, menuContainer }) {
                   item.pages &&
                   Object.keys(item.pages).map((page, index) => {
                     return (
-                      <li key={index} 
-                      style={{ color: backgroundColor }}
-                      className="menu_hidden_item">
+                      <li
+                        key={index}
+                        style={{ color: backgroundColor }}
+                        className="menu_hidden_item"
+                        onClick={
+                          openMenu ? () => CloseMenu() : () => setOpenMenu(true)
+                        }
+                      >
                         {/* <Link
                           onClick={() => {
                             setOpenMenu(false);

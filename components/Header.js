@@ -24,6 +24,7 @@ function Header({ logocolor1, logocolor2, color1, color2, backgroundColor }) {
     }
   }, [openMenu]);
 
+
   return (
     <>
       <header style={{ background: backgroundColor }}>
