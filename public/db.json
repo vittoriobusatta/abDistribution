@@ -213,7 +213,7 @@
           "ingredient": "Fleurs de lavande séchées, huile de noisette, huile essentielle de cèdre.",
           "color1": "#DF3C13",
           "color2": "#993018",
-          "background": "#FFEAE4",
+          "background": "#33302D",
           "gradient": "linear-gradient(270deg, #e43d12 0%, #932f18 100%)",
           "image": "/bodymist/Brave.png"
         },
@@ -225,7 +225,7 @@
           "ingredient": "Fleurs de camomille séchées, huile de coco, huile essentielle de gingembre. ",
           "color1": "#EFE021",
           "color2": "#9EB735",
-          "background": "#F9FFE2",
+          "background": "#33302D",
           "gradient": "linear-gradient(270deg, #f4e228 0%, #d5d600 50%, #9ab538 100%)",
           "image": "/bodymist/Creative.png"
         },
@@ -237,7 +237,7 @@
           "ingredient": "Zestes d'orange séchés, huile de ricin, huile essentielle de poivre noir. ",
           "color1": "#DB211C",
           "color2": "#9B317F",
-          "background": "#FFF0FC",
+          "background": "#33302D",
           "gradient": "linear-gradient(270deg, #d93e2a 0%, #c21a40 50.52%, #8c3388 100%)",
           "image": "/bodymist/Dynamic.png"
         },
@@ -249,7 +249,7 @@
           "ingredient": "Fleurs de rose séchées, huile d'amande douce, huile essentielle de palmarosa. ",
           "color1": "#05AAD2",
           "color2": "#136B8C",
-          "background": "#EBFBFF",
+          "background": "#33302D",
           "gradient": "linear-gradient(270deg, #03aed7 0%, #1b6182 100%)",
           "image": "/bodymist/Loyal.png"
         }
