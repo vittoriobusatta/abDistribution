@@ -33,6 +33,7 @@
       text-transform: uppercase;
     }
     & h2 {
+      cursor: pointer;
       & svg {
         transform: rotate(180deg);
         margin-right: 16px;
