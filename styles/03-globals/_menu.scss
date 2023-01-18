@@ -6,8 +6,12 @@
   top: 0;
   z-index: 99;
   height: calc(100% + $safe_area_inset_top);
-  width: 320px;
-  transform: translateX(320px);
+  width: 270px;
+  transform: translateX(270px);
+  @media screen and (min-width: 576px) {
+    width: 320px;
+    transform: translateX(320px);
+  }
 }
 
 .menu_container {
@@ -16,9 +20,13 @@
   position: relative;
   & .menu_inner {
     height: 100%;
-    width: 320px;
+    width: 270px;
     position: absolute;
     top: 0;
+    @media screen and (min-width: 576px) {
+      width: 320px;
+      transform: translateX(320px);
+    }
   }
   & .menu_hidden {
     transform: translateX(320px);
