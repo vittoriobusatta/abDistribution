@@ -44,6 +44,7 @@ header {
     height: 3px;
     transition: transform 1s ease;
     border-radius: 10px;
+    background-color: #222;
     &:nth-child(1) {
       transform: translate3d(0, -5px, 0);
     }
