@@ -153,10 +153,22 @@ function Menu({
           </div>
           <ul className="menu_list">
             <li className="menu_item">
-              <Link style={{ color: color2 }} href="/">Accueil</Link>
+              <Link
+                onClick={openMenu ? () => CloseMenu() : () => setOpenMenu(true)}
+                style={{ color: color2 }}
+                href="/"
+              >
+                Accueil
+              </Link>
             </li>
             <li className="menu_item">
-              <Link style={{ color: color2 }} href="/">Categories</Link>
+              <Link
+                onClick={openMenu ? () => CloseMenu() : () => setOpenMenu(true)}
+                style={{ color: color2 }}
+                href="/products/4"
+              >
+                Categories
+              </Link>
             </li>
             <ul className="menu_sublist" style={{ color: backgroundColor }}>
               {menuArray.map((item, index) => {
@@ -172,7 +184,9 @@ function Menu({
               })}
             </ul>
             <li className="menu_item">
-              <Link style={{ color: color2 }} href="/">Contact</Link>
+              <Link style={{ color: color2 }} href="/">
+                Contact
+              </Link>
             </li>
           </ul>
         </div>

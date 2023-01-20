@@ -228,11 +228,17 @@ export default function Product({ product }) {
     gsap.set(overlayInner.current, {
       xPercent: -100,
     });
+    gsap.set(imageRef.current, {
+      clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+      opacity: 0,
+    });
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const index = imageRef.current.indexOf(entry.target);
         if (entry.isIntersecting && !animatedStatus.current[index]) {
           animatedStatus.current[index] = true;
+
           gsap.to(entry.target, {
             delay: 0.3,
             y: 0,
@@ -480,7 +486,6 @@ export default function Product({ product }) {
                     ref={(el) => (imageRef.current[index] = el)}
                     priority
                     as="image"
-                    className="opacity"
                   />
                 </div>
                 <div className="card_details">
@@ -506,6 +511,7 @@ export default function Product({ product }) {
             );
           })}
         </div>
+
         <div className="preview">
           {newArray.map((item, index) => {
             return (
@@ -590,6 +596,7 @@ export default function Product({ product }) {
             );
           })}
         </div>
+        
       </motion.section>
     </>
   );

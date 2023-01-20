@@ -42,11 +42,25 @@ export default function Home({ newArray }) {
       >
         <ul>
           {newArray.map((item) => (
-            <li key={item.id}>
-              <Link href={`/products/${item.id}`}>
-                <h1>{item.name}</h1>
-              </Link>
-            </li>
+            <Link
+              style={{
+                backgroundColor: item.color1,
+                width: "100%",
+                padding: "3rem",
+              }}
+              key={item.id}
+              href={`/products/${item.id}`}
+            >
+              <li>
+                <h1
+                  style={{
+                    color: item.color2,
+                  }}
+                >
+                  {item.name}
+                </h1>
+              </li>
+            </Link>
           ))}
         </ul>
       </motion.main>

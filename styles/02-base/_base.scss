@@ -72,11 +72,10 @@ html {
 
 main ul {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  row-gap: 10px;
   min-height: 100vh;
+  padding-top: 70px;
   & a h1 {
     color: #222;
     font-family: $newKansas;

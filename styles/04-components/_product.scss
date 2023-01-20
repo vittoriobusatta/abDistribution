@@ -78,7 +78,6 @@
     width: auto;
     filter: brightness(100%);
     transition: filter 0.3s ease;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     @media screen and (max-width: 768px) {
       height: 300px;
       max-width: 300px;
@@ -218,7 +217,7 @@
   height: 150vmax;
   pointer-events: none;
   will-change: transform;
-  z-index: 30;
+  z-index: 40;
   transform: rotate(45deg);
   background: transparent;
 }
