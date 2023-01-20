@@ -93,8 +93,8 @@ function Menu({
           title: "Lave-Mains",
           path: "6",
         },
-        antibacterial: {
-          title: "Anti-Bactérien",
+        showergel: {
+          title: "Gels Douches",
           path: "7",
         },
         antibacterial: {
