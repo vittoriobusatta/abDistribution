@@ -165,7 +165,7 @@ function Menu({
               <Link
                 onClick={openMenu ? () => CloseMenu() : () => setOpenMenu(true)}
                 style={{ color: color2 }}
-                href="/"
+                href="/catalogue"
               >
                 Categories
               </Link>
@@ -184,7 +184,7 @@ function Menu({
               })}
             </ul>
             <li className="menu_item">
-              <Link style={{ color: color2 }} href="/">
+              <Link style={{ color: color2 }} href="/contact">
                 Contact
               </Link>
             </li>
