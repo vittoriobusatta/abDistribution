@@ -3,7 +3,7 @@
     "coffee": {
       "id": "1",
       "name": "Cafés",
-      "category": "Alimentaire",
+      "category": "Alimentation",
       "origine": "Turquie",
       "brand": "Nescafé",
       "color1": "#893232",
@@ -56,7 +56,7 @@
     "grocery": {
       "id": "2",
       "name": "Épicerie",
-      "category": "Nourriture",
+      "category": "Alimentation",
       "origine": "Turquie",
       "brand": "Tukas",
       "color1": "#C54126",
@@ -128,7 +128,7 @@
     "ambiancemist": {
       "id": "3",
       "name": "Brumes d'Ambiance",
-      "category": "Parfums",
+      "category": "Brumes",
       "origine": "Turquie",
       "brand": "Ultra Compact",
       "color1": "#794856",
@@ -193,7 +193,7 @@
     "bodymist": {
       "id": "4",
       "name": "Brumes Corporelle",
-      "category": "Parfums",
+      "category": "Brumes",
       "origine": "Turquie",
       "brand": "Ultra Compact",
       "color1": "#33302D",
