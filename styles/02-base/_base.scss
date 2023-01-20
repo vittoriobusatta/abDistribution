@@ -27,7 +27,7 @@ html {
   -ms-overflow-style: none;
   scrollbar-width: none;
   font-family: $rivalSans;
-  background-color: #FFFAEC;
+  background-color: #fffaec;
   @media screen and (max-width: 1400px) {
     font-size: 58%;
   }
@@ -70,17 +70,29 @@ html {
   }
 }
 
-main ul {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
+
+
+main {
   padding-top: 70px;
-  & a h1 {
-    color: #222;
-    font-family: $newKansas;
-    font-size: 36px;
+  & .maintitle {
+    font-size: 52px;
     text-align: center;
     font-weight: $weight_bold;
+    font-family: $newKansas;
+    color: #222;
+    padding: 8rem;
+  }
+  & ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    & a h1 {
+      color: #222;
+      font-family: $newKansas;
+      font-size: 36px;
+      text-align: center;
+      font-weight: $weight_bold;
+    }
   }
 }

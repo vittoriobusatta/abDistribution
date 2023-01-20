@@ -31,15 +31,9 @@ export default function Home({ newArray }) {
 
       <Header logocolor1="#000" logocolor2="#000" />
 
-      <motion.main
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-        }}
-        transition={{ duration: 0.75, ease: "easeOut" }}
+      <main
       >
+        <h1 className="maintitle">Catalogue</h1>
         <ul>
           {newArray.map((item) => (
             <Link
@@ -63,7 +57,7 @@ export default function Home({ newArray }) {
             </Link>
           ))}
         </ul>
-      </motion.main>
+      </main>
     </>
   );
 }

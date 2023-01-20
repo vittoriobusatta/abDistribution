@@ -1,4 +1,3 @@
-import gsap from "gsap";
 import Link from "next/link";
 import { useEffect, useCallback, useState, useRef } from "react";
 import { AbLogo } from "../utils/icons";

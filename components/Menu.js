@@ -165,7 +165,7 @@ function Menu({
               <Link
                 onClick={openMenu ? () => CloseMenu() : () => setOpenMenu(true)}
                 style={{ color: color2 }}
-                href="/products/4"
+                href="/"
               >
                 Categories
               </Link>
@@ -236,7 +236,7 @@ function Menu({
                           openMenu ? () => CloseMenu() : () => setOpenMenu(true)
                         }
                       >
-                        {/* <Link
+                        <Link
                           onClick={() => {
                             setOpenMenu(false);
                           }}
@@ -245,9 +245,9 @@ function Menu({
                             opacity: 0.9,
                           }}
                           href={`/products/${item.pages[page].path}`}
-                        > */}
+                        >
                         {item.pages[page].title}
-                        {/* </Link> */}
+                        </Link> 
                       </li>
                     );
                   })}

@@ -61,13 +61,13 @@ export default function Product({ product }) {
         },
       })
       .to(overlayInner.current[index], {
-        xPercent: 0,
+        x: 0,
         duration: 1.6,
       })
       .to(
         previewItem.current[index],
         {
-          xPercent: 0,
+          x: 0,
           opacity: 1,
         },
         "-=0.8"
@@ -172,7 +172,7 @@ export default function Product({ product }) {
       .to(
         overlayInner.current,
         {
-          xPercent: -100,
+          x: "-100%",
           ease: "power2",
         },
         "-=0.8"
@@ -225,9 +225,6 @@ export default function Product({ product }) {
   });
 
   useEffect(() => {
-    gsap.set(overlayInner.current, {
-      xPercent: -100,
-    });
     gsap.set(imageRef.current, {
       clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
       opacity: 0,
