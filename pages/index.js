@@ -40,7 +40,7 @@ export default function Home({ newArray }) {
               style={{
                 backgroundColor: item.color1,
                 width: "100%",
-                padding: "3rem",
+                padding: "2.5rem",
               }}
               key={item.id}
               href={`/products/${item.id}`}
