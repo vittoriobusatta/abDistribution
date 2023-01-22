@@ -109,11 +109,11 @@ function Menu({
       pages: {
         ambiancemist: {
           title: "Brume Corporelle",
-          path: "3",
+          path: "4",
         },
         bodymist: {
           title: "Brume d'Ambiance",
-          path: "4",
+          path: "3",
         },
       },
     },
@@ -139,9 +139,9 @@ function Menu({
       ref={menuContainer}
       className="menu"
     >
-      <nav className="menu_container">
-        <div className="menu_inner">
-          <div className="menu_head">
+      <nav className="menu__container">
+        <div className="menu__inner">
+          <div className="menu__head">
             <button
               aria-label="menu"
               className={`burger active`}
@@ -151,8 +151,8 @@ function Menu({
               <div style={{ background: color2 }} className="bar"></div>
             </button>
           </div>
-          <ul className="menu_list">
-            <li className="menu_item">
+          <ul className="menu__list">
+            <li className="menu__list__item">
               <Link
                 onClick={openMenu ? () => CloseMenu() : () => setOpenMenu(true)}
                 style={{ color: color2 }}
@@ -161,7 +161,7 @@ function Menu({
                 Accueil
               </Link>
             </li>
-            <li className="menu_item">
+            <li className="menu__list__item">
               <Link
                 onClick={openMenu ? () => CloseMenu() : () => setOpenMenu(true)}
                 style={{ color: color2 }}
@@ -170,12 +170,12 @@ function Menu({
                 Categories
               </Link>
             </li>
-            <ul className="menu_sublist" style={{ color: backgroundColor }}>
+            <ul className="menu__sublist" style={{ color: backgroundColor }}>
               {menuArray.map((item, index) => {
                 return (
                   <li
                     key={item.id}
-                    className="menu_subitem"
+                    className="menu__sublist__item"
                     onClick={() => ChangeMenuHandler(index)}
                   >
                     {item.name}
@@ -183,7 +183,7 @@ function Menu({
                 );
               })}
             </ul>
-            <li className="menu_item">
+            <li className="menu__list__item">
               <Link style={{ color: color2 }} href="/contact">
                 Contact
               </Link>
@@ -195,7 +195,7 @@ function Menu({
             <div
               key={item.id}
               style={{ backgroundColor: color1 }}
-              className={changeMenu ? "menu_hidden active" : "menu_hidden"}
+              className={changeMenu ? "menu__hidden menu__hidden--active" : "menu__hidden"}
               ref={(el) => (menuHidden.current[index] = el)}
             >
               <h2 onClick={BackOldMenu}>

@@ -22,7 +22,6 @@ export default function Product({ product }) {
 
   const animatedStatus = useRef([]);
 
-  const cards = useRef([]);
   const previewItem = useRef([]);
   const imageRef = useRef([]);
   const imagePreview = useRef([]);
@@ -466,15 +465,15 @@ export default function Product({ product }) {
           </div>
         </div>
 
-        <div className="card_container">
+        <div className="product">
           {newArray.map((item, index) => {
             return (
-              <div className="card_content" key={item.id}>
+              <div className="product__item" key={item.id}>
                 <div
-                  className="card"
-                  ref={(el) => (cards.current[index] = el)}
-                  onClick={() => openPreview(index)}
-                >
+                className="product__container"
+                onClick={() => openPreview(index)}
+              >
+                <div className="product__content">
                   <Image
                     src={item.image}
                     alt={item.name}
@@ -483,25 +482,31 @@ export default function Product({ product }) {
                     ref={(el) => (imageRef.current[index] = el)}
                     priority
                     as="image"
+                    className="product__image"
                   />
                 </div>
-                <div className="card_details">
+                <div className="product__details">
                   <h3 style={{ color: product.color1, opacity: 0.6 }}>
                     {landingdata[0].paragraph}
                   </h3>
                   <h2 style={{ color: product.color1 }}>{item.title}</h2>
+                  <div className="product__details__viewmore hidden">
+                    <p style={{ color: product.color1 }}>Voir le produit</p>
+                  </div>
                 </div>
               </div>
+              </div>
+              
             );
           })}
         </div>
 
-        <div className="content_overlay">
+        <div className="overlay">
           {newArray.map((item, index) => {
             return (
               <div
                 key={item.id}
-                className="overlay_inner"
+                className="overlay__inner"
                 style={{ background: item.background }}
                 ref={(el) => (overlayInner.current[index] = el)}
               ></div>
@@ -515,21 +520,21 @@ export default function Product({ product }) {
               <div
                 className={
                   previewIsOpen
-                    ? "preview_item active " + item.name
-                    : "preview_item " + item.name
+                    ? "preview__item preview__item--active " + item.name
+                    : "preview__item " + item.name
                 }
                 key={item.id}
                 ref={(el) => (previewItem.current[index] = el)}
               >
-                <div className="preview_item_content">
-                  <div className="preview_item_head">
-                    <button className="close_btn" onClick={closePreview}>
+                <div className="preview__content">
+                  <div className="preview__head">
+                    <button className="preview__head__close" onClick={closePreview}>
                       <ArrowBack color={item.color2} />
                     </button>
                     <Logo color1={item.color1} color2={item.color2} />
                   </div>
-                  <div className="preview_item_product">
-                    <div className="hidden preview_item_title">
+                  <div className="preview__product">
+                    <div className="preview__product__title hidden">
                       <h1
                         style={{
                           // background: item.gradient,
@@ -545,6 +550,7 @@ export default function Product({ product }) {
                     </div>
                     <div className="hidden">
                       <Image
+                      className="preview__product__image"
                         src={item.image}
                         alt={item.name}
                         width={100}
@@ -556,8 +562,8 @@ export default function Product({ product }) {
                     </div>
                   </div>
 
-                  <div className="preview_item_information">
-                    <div className="preview_item_description">
+                  <div className="preview__product__information">
+                    <div className="preview__product__description">
                       <div className="hidden">
                         <h2
                           ref={(el) => (descriptionTitle.current[index] = el)}
@@ -572,7 +578,7 @@ export default function Product({ product }) {
                         {item.description}
                       </p>
                     </div>
-                    <div className="preview_item_ingredient">
+                    <div className="preview__product__ingredient">
                       <div className="hidden">
                         <h2
                           ref={(el) => (ingredientTitle.current[index] = el)}
@@ -593,7 +599,6 @@ export default function Product({ product }) {
             );
           })}
         </div>
-        
       </motion.section>
     </>
   );
