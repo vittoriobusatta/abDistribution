@@ -1,0 +1,18 @@
+.category__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 26px;
+    & h1 {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-align: left;
+        max-width: 100px;
+    }
+    &__img {
+        width: 40%;
+        height: 80%;
+        object-fit: cover;
+    }
+}

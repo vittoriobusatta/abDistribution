@@ -4,6 +4,7 @@ import fs from "fs";
 import path from "path";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
+import Image from "next/image";
 
 export async function getStaticProps() {
   const data = fs.readFileSync(path.join(process.cwd(), "/public/db.json"));
@@ -40,12 +41,11 @@ export default function Home({ newArray }) {
               style={{
                 backgroundColor: item.color1,
                 width: "100%",
-                padding: "2.5rem",
               }}
               key={item.id}
               href={`/products/${item.id}`}
             >
-              <li>
+              <li className="category__items">
                 <h1
                   style={{
                     color: item.color2,
@@ -53,6 +53,13 @@ export default function Home({ newArray }) {
                 >
                   {item.name}
                 </h1>
+                <Image
+                className="category__items__img"
+                  src={item.preview}
+                  alt={item.name}
+                  width={200}
+                  height={200}
+                />
               </li>
             </Link>
           ))}

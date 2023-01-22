@@ -13,6 +13,7 @@
       "landingcolor1": "#F8955B",
       "landingcolor2": "#893232",
       "background": "#FFFAEC",
+      "preview": "/catalogue/coffee.png",
       "description": "Découvrez une collection de café formulé avec des grains de café et un lait doux sélectionnés pour vous offrir un café riche en saveur et en arômes, pour un début de journée délicieux et énergisant.",
       "products": {
         "vanilla": {
@@ -66,6 +67,7 @@
       "landingcolor1": "#FFC16A",
       "landingcolor2": "#C54126",
       "background": "#FFEED3",
+      "preview": "/catalogue/grocery.png",
       "description": "Notre gamme de produits alimentaires vous offre une variété de saveurs. Découvrez une séléction de produits en conserve, des légumes marinés, des confitures et sauces pour donner de la saveur à vos plats.",
       "products": {
         "apricot": {
@@ -127,7 +129,7 @@
     },
     "airfreshener": {
       "id": "5",
-      "name": "Désodorisants",
+      "name": "Parfumeurs d'Air",
       "category": "Hygiène",
       "origine": "Turquie",
       "brand": "Ultra Compact",
@@ -138,6 +140,7 @@
       "landingcolor1": "#9E9E4D",
       "landingcolor2": "#9E9E4D",
       "background": "#FFFDE8",
+      "preview": "/catalogue/airfreshener.png",
       "description": "Eliminez les mauvaises odeurs de votre maison avec notre sélection de désodorisants. Choisissez parmi une variété de parfums, allant des senteurs fraîches et propres aux parfums plus boisés et épicés.",
       "products": {
         "greentea": {
@@ -251,6 +254,7 @@
       "landingcolor1": "#484D79",
       "landingcolor2": "#484D79",
       "background": "#FFF4D4",
+      "preview": "/catalogue/handwash.png",
       "description": "Une bonne hygiène des mains est importante pour tout le monde. Il est important de se laver les mains plusieurs fois par jour. Dans cette catégorie, vous retrouverez des savons liquides pour les mains sèches aux senteurs fruitées.",
       "products": {
         "mango": {
@@ -316,6 +320,7 @@
       "landingcolor1": "#FF8678",
       "landingcolor2": "#843B62",
       "background": "#FFE9EE",
+      "preview": "/catalogue/showergel.png",
       "description": "Nos gels douche nettoient en douceur tout en prenant soin de votre peau grâce à leurs ingrédients naturels. Choisissez parmi une variété de parfums pour une expérience sensorielle agréable sous la douche.",
       "products": {
         "romantic": {
@@ -369,6 +374,7 @@
       "landingcolor1": "#0C9E98",
       "landingcolor2": "#0C9E98",
       "background": "#DFF6FF",
+      "preview": "/catalogue/antibacterial.png",
       "description": "Essentiels dans la vie quotidienne, ils sont à prendre partout avec vous pour vous protéger, ainsi que votre entourage à chaque occasion. Découvrez une sélection de produits adaptés à chaque situation pour une hygiène irréprochable.",
       "products": {
         "gel1": {
@@ -446,6 +452,7 @@
       "landingcolor1": "#321C3D",
       "landingcolor2": "#321C3D",
       "background": "#FFEEFA",
+      "preview": "/catalogue/ambiancemist.png",
       "description": "Transformez votre maison en un véritable havre de paix avec nos brumes d'ambiance. Choisissez parmi une vaste sélection de parfums pour créer une ambiance apaisante pour chaque pièce.",
       "products": {
         "sandalwood": {
@@ -511,6 +518,7 @@
       "landingcolor1": "#33302D",
       "landingcolor2": "#33302D",
       "background": "#F7F7FF",
+      "preview": "/catalogue/bodymist.png",
       "description": "Rafraîchissez-vous et parfumez votre peau avec nos brumes corporelles. Formulées avec des ingrédients naturels, elles hydratent votre peau tout en lui apportant une senteur délicate.",
       "products": {
         "brave": {
