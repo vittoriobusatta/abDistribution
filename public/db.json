@@ -141,11 +141,11 @@
       "landingcolor2": "#9E9E4D",
       "background": "#FFFDE8",
       "preview": "/catalogue/airfreshener.png",
-      "description": "Eliminez les mauvaises odeurs de votre maison avec notre sélection de désodorisants. Choisissez parmi une variété de parfums, allant des senteurs fraîches et propres aux parfums plus boisés et épicés.",
+      "description": "Eliminez les mauvaises odeurs de votre maison avec notre sélection de parfumeurs d'air. Choisissez parmi une variété de parfums, allant des senteurs fraîches et propres aux parfums plus boisés et épicés.",
       "products": {
         "greentea": {
           "id": "9",
-          "title" : "Désodorisants Thé Vert",
+          "title" : "Parfumeurs d'Air Thé Vert",
           "name": "Green Tea",
           "description": "Découvrez la fraîcheur et la vitalité de la senteur du thé vert avec ce désodorisant.",
           "ingredient": "Pétales de roses séchés, huile d'amande douce, huile essentielle de palmarosa. ",
@@ -157,7 +157,7 @@
         },
         "lavender": {
           "id": "10",
-          "title" : "Désodorisants Lavende",
+          "title" : "Parfumeurs d'Air Lavende",
           "name": "Lavender",
           "description": "Découvrez la tranquillité et la sérénité avec la senteur de lavande de ce désodorisant.",
           "ingredient": "",
@@ -169,7 +169,7 @@
         },
         "mysticoud": {
           "id": "11",
-          "title" : "Désodorisants Oud",
+          "title" : "Parfumeurs d'Air Oud",
           "name": "Mystic Oud",
           "description": "Plongez dans l'univers mystique de l'oud avec ce désodorisant aux parfums orientaux.",
           "ingredient": "",
@@ -181,7 +181,7 @@
         },
         "whiterose": {
           "id": "12",
-          "title" : "Désodorisants Rose Blanche",
+          "title" : "Parfumeurs d'Air Rose Blanche",
           "name": "White Rose",
           "description": "Laissez-vous envoûter par la douceur et la délicatesse de la rose blanche avec ce désodorisant.",
           "ingredient": "",
@@ -193,7 +193,7 @@
         },
         "tobacco": {
           "id": "13",
-          "title" : "Désodorisants Anti-Tabbac",
+          "title" : "Parfumeurs d'Air Anti-Tabbac",
           "name": "Tobacco",
           "description": "Combattez efficacement les mauvaises odeurs de tabac avec ce désodorisant anti-tabac.",
           "ingredient": "",
@@ -205,7 +205,7 @@
         },
         "ocean": {
           "id": "14",
-          "title" : "Désodorisants Océan",
+          "title" : "Parfumeurs d'Air Océan",
           "name": "Ocean",
           "description": "Ressentez la fraîcheur iodée de l'océan avec ce désodorisant aux parfums maritimes.",
           "ingredient": "",
@@ -217,7 +217,7 @@
         },
         "fruits": {
           "id": "15",
-          "title" : "Désodorisants Fruits",
+          "title" : "Parfumeurs d'Air Fruits",
           "name": "Fruits",
           "description": "Savourez la vitalité et la fraîcheur des fruits avec ce désodorisant aux parfums fruités.",
           "ingredient": "",
@@ -229,7 +229,7 @@
         },
         "flower": {
           "id": "16",
-          "title" : "Désodorisants Fleurs",
+          "title" : "Parfumeurs d'Air Fleurs",
           "name": "Flower",
           "description": "Laissez-vous emporter par la douceur et la subtilité des fleurs avec ce désodorisant aux parfums floraux.",
           "ingredient": "",
