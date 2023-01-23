@@ -9,6 +9,8 @@ header {
   min-height: 60px;
   z-index: 10;
   padding: 16px 26px;
+  transition: top 0.3s ease-in-out;
+  background-color: #fffaec;
   & svg {
     height: clamp(36px, 5rem, 44px);
     @media screen and (max-width: 576px) {

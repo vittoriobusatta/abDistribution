@@ -86,7 +86,7 @@ function Menu({
       id: 1,
       pages: {
         airfreshener: {
-          title: "Désodorisant",
+          title: "Parfumeurs d'Air",
           path: "5",
         },
         handwash: {

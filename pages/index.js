@@ -2,7 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import fs from "fs";
 import path from "path";
-import { motion } from "framer-motion";
 import Header from "../components/Header";
 import Image from "next/image";
 
@@ -21,6 +20,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ newArray }) {
+
   return (
     <>
       <Head>
