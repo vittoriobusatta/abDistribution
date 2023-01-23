@@ -1,0 +1,14 @@
+.footer {
+    text-align: center;
+    background-color: #fff;
+    &__inner {
+        padding: 16px;
+    }
+    &__copyright {
+        font-size: 12px;
+    }
+    &__mentions {
+        font-size: 12px;
+    }
+}
+

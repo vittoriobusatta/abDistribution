@@ -5,6 +5,7 @@ export default function App({ Component, pageProps, router  }) {
   return (
     <>
       <AnimatePresence initial={false} mode={"wait"}>
+        
         <Component key={router.pathname} {...pageProps} />
       </AnimatePresence>
     </>
