@@ -32,15 +32,16 @@ export default function Home({ newArray }) {
 
       <Header logocolor1="#000" logocolor2="#000" />
 
-      <main
+      <main className="category"
       >
         <h1 className="maintitle">Catalogue</h1>
-        <ul>
+        <ul className="category__list">
           {newArray.map((item) => (
             <Link
               style={{
                 backgroundColor: item.color1,
                 width: "100%",
+                borderRadius: "10px",
               }}
               key={item.id}
               href={`/products/${item.id}`}
