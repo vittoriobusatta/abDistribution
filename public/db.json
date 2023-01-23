@@ -127,6 +127,150 @@
         }
       }
     },
+    "handwash": {
+      "id": "6",
+      "name": "Laves Mains",
+      "category": "Hygiène",
+      "origine": "Turquie",
+      "brand": "Ultra Compact",
+      "color1": "#484D79",
+      "color2": "#FEF0C5",
+      "logocolor1": "#484D79",
+      "logocolor2": "#484D79",
+      "landingcolor1": "#484D79",
+      "landingcolor2": "#484D79",
+      "background": "#FFF4D4",
+      "preview": "/catalogue/handwash.png",
+      "description": "Une bonne hygiène des mains est importante pour tout le monde. Il est important de se laver les mains plusieurs fois par jour. Dans cette catégorie, vous retrouverez des savons liquides pour les mains sèches aux senteurs fruitées.",
+      "products": {
+        "mango": {
+          "id": "20",
+          "title" : "Laves Mains Mangue",
+          "name": "Mango",
+          "description": "",
+          "ingredient": "",
+          "color1": "#EF7A11",
+          "color2": "#FFCA44",
+          "background": "#FFF5EB",
+          "gradient": "#FFCA44",
+          "image": "/handwash/Mango.png"
+        },
+        "plum": {
+          "id": "21",
+          "title" : "Laves Mains Prune",
+          "name": "Plum",
+          "description": "",
+          "ingredient": "",
+          "color1": "#BD4B93",
+          "color2": "#A257BD",
+          "background": "#F9EBFF",
+          "gradient": "#BD4B93",
+          "image": "/handwash/Plum.png"
+        },
+        "blueberry": {
+          "id": "22",
+          "title" : "Laves Mains Myrtille",
+          "name": "Blueberry",
+          "description": "",
+          "ingredient": "",
+          "color1": "#5FD7F3",
+          "color2": "#2760A9",
+          "background": "#EBFFFE",
+          "gradient": "#5FD7F3",
+          "image": "/handwash/Blueberry.png"
+        },
+        "cranberry": {
+          "id": "23",
+          "title" : "Laves Mains Canneberge",
+          "name": "Cranberry",
+          "description": "",
+          "ingredient": "",
+          "color1": "#E91D2D",
+          "color2": "#AB0F1B",
+          "background": "#FFEBEB",
+          "gradient": "#E91D2D",
+          "image": "/handwash/Cranberry.png"
+        }
+      }
+    },
+    "antibacterial": {
+      "id": "8",
+      "name": "Anti-Bactérien",
+      "category": "Hygiène",
+      "origine": "Turquie",
+      "brand": "Ultra Compact",
+      "color1": "#0C9E98",
+      "color2": "#D0F2FF",
+      "logocolor1": "#0C9E98",
+      "logocolor2": "#0C9E98",
+      "landingcolor1": "#0C9E98",
+      "landingcolor2": "#0C9E98",
+      "background": "#DFF6FF",
+      "preview": "/catalogue/antibacterial.png",
+      "description": "Essentiels dans la vie quotidienne, ils sont à prendre partout avec vous pour vous protéger, ainsi que votre entourage à chaque occasion. Découvrez une sélection de produits adaptés à chaque situation pour une hygiène irréprochable.",
+      "products": {
+        "gel1": {
+          "id": "27",
+          "title" : "Gel Hydroalchoolique",
+          "name": "Gels",
+          "description": "",
+          "ingredient": "",
+          "color1": "#0C9E98",
+          "color2": "#0C9E98",
+          "background": "#F4F4F4",
+          "gradient": "#0C9E98",
+          "image": "/antibacterial/gel1.png"
+        },
+        "gel2": {
+          "id": "28",
+          "title" : "Gel Hydroalchoolique",
+          "name": "Gels",
+          "description": "",
+          "ingredient": "",
+          "color1": "#0C9E98",
+          "color2": "#0C9E98",
+          "background": "#F4F4F4",
+          "gradient": "#0C9E98",
+          "image": "/antibacterial/gel2.png"
+        },
+        "wip1": {
+          "id": "29",
+          "title" : "Lingette Hydroalchoolique",
+          "name": "Lingettes",
+          "description": "",
+          "ingredient": "",
+          "color1": "#0C9E98",
+          "color2": "#0C9E98",
+          "background": "#F4F4F4",
+          "gradient": "#0C9E98",
+          "image": "/antibacterial/wip1.png"
+        },
+        "wip2": {
+          "id": "30",
+          "title" : "Lingette Hydroalchoolique",
+          "name": "Lingettes",
+          "description": "",
+          "ingredient": "",
+          "color1": "#0C9E98",
+          "color2": "#0C9E98",
+          "background": "#F4F4F4",
+          "gradient": "#0C9E98",
+          "image": "/antibacterial/wip2.png"
+        },
+        "wip3Lingette": {
+          "id": "31",
+          "title" : "Lingette Hydroalchoolique",
+          "name": "Lingettes",
+          "description": "",
+          "ingredient": "",
+          "color1": "#0C9E98",
+          "color2": "#0C9E98",
+          "background": "#F4F4F4",
+          "gradient": "#0C9E98",
+          "image": "/antibacterial/wip3.png"
+        }
+      }
+    },
     "airfreshener": {
       "id": "5",
       "name": "Parfumeurs d'Air",
@@ -241,72 +385,6 @@
         }
       }
     },
-    "handwash": {
-      "id": "6",
-      "name": "Laves Mains",
-      "category": "Hygiène",
-      "origine": "Turquie",
-      "brand": "Ultra Compact",
-      "color1": "#484D79",
-      "color2": "#FEF0C5",
-      "logocolor1": "#484D79",
-      "logocolor2": "#484D79",
-      "landingcolor1": "#484D79",
-      "landingcolor2": "#484D79",
-      "background": "#FFF4D4",
-      "preview": "/catalogue/handwash.png",
-      "description": "Une bonne hygiène des mains est importante pour tout le monde. Il est important de se laver les mains plusieurs fois par jour. Dans cette catégorie, vous retrouverez des savons liquides pour les mains sèches aux senteurs fruitées.",
-      "products": {
-        "mango": {
-          "id": "20",
-          "title" : "Laves Mains Mangue",
-          "name": "Mango",
-          "description": "",
-          "ingredient": "",
-          "color1": "#EF7A11",
-          "color2": "#FFCA44",
-          "background": "#FFF5EB",
-          "gradient": "#FFCA44",
-          "image": "/handwash/Mango.png"
-        },
-        "plum": {
-          "id": "21",
-          "title" : "Laves Mains Prune",
-          "name": "Plum",
-          "description": "",
-          "ingredient": "",
-          "color1": "#BD4B93",
-          "color2": "#A257BD",
-          "background": "#F9EBFF",
-          "gradient": "#BD4B93",
-          "image": "/handwash/Plum.png"
-        },
-        "blueberry": {
-          "id": "22",
-          "title" : "Laves Mains Myrtille",
-          "name": "Blueberry",
-          "description": "",
-          "ingredient": "",
-          "color1": "#5FD7F3",
-          "color2": "#2760A9",
-          "background": "#EBFFFE",
-          "gradient": "#5FD7F3",
-          "image": "/handwash/Blueberry.png"
-        },
-        "cranberry": {
-          "id": "23",
-          "title" : "Laves Mains Canneberge",
-          "name": "Cranberry",
-          "description": "",
-          "ingredient": "",
-          "color1": "#E91D2D",
-          "color2": "#AB0F1B",
-          "background": "#FFEBEB",
-          "gradient": "#E91D2D",
-          "image": "/handwash/Cranberry.png"
-        }
-      }
-    },
     "showergel": {
       "id": "7",
       "name": "Gels Douches",
@@ -358,84 +436,6 @@
           "background": "#F9EBFF",
           "gradient": "#A138F5",
           "image": "/showergel/Passion.png"
-        }
-      }
-    },
-    "antibacterial": {
-      "id": "8",
-      "name": "Anti-Bactérien",
-      "category": "Hygiène",
-      "origine": "Turquie",
-      "brand": "Ultra Compact",
-      "color1": "#0C9E98",
-      "color2": "#D0F2FF",
-      "logocolor1": "#0C9E98",
-      "logocolor2": "#0C9E98",
-      "landingcolor1": "#0C9E98",
-      "landingcolor2": "#0C9E98",
-      "background": "#DFF6FF",
-      "preview": "/catalogue/antibacterial.png",
-      "description": "Essentiels dans la vie quotidienne, ils sont à prendre partout avec vous pour vous protéger, ainsi que votre entourage à chaque occasion. Découvrez une sélection de produits adaptés à chaque situation pour une hygiène irréprochable.",
-      "products": {
-        "gel1": {
-          "id": "27",
-          "title" : "Gel Hydroalchoolique",
-          "name": "Gels",
-          "description": "",
-          "ingredient": "",
-          "color1": "#0C9E98",
-          "color2": "#0C9E98",
-          "background": "#F4F4F4",
-          "gradient": "#0C9E98",
-          "image": "/antibacterial/gel1.png"
-        },
-        "gel2": {
-          "id": "28",
-          "title" : "Gel Hydroalchoolique",
-          "name": "Gels",
-          "description": "",
-          "ingredient": "",
-          "color1": "#0C9E98",
-          "color2": "#0C9E98",
-          "background": "#F4F4F4",
-          "gradient": "#0C9E98",
-          "image": "/antibacterial/gel2.png"
-        },
-        "wip1": {
-          "id": "29",
-          "title" : "Lingette Hydroalchoolique",
-          "name": "Lingettes",
-          "description": "",
-          "ingredient": "",
-          "color1": "#0C9E98",
-          "color2": "#0C9E98",
-          "background": "#F4F4F4",
-          "gradient": "#0C9E98",
-          "image": "/antibacterial/wip1.png"
-        },
-        "wip2": {
-          "id": "30",
-          "title" : "Lingette Hydroalchoolique",
-          "name": "Lingettes",
-          "description": "",
-          "ingredient": "",
-          "color1": "#0C9E98",
-          "color2": "#0C9E98",
-          "background": "#F4F4F4",
-          "gradient": "#0C9E98",
-          "image": "/antibacterial/wip2.png"
-        },
-        "wip3Lingette": {
-          "id": "31",
-          "title" : "Lingette Hydroalchoolique",
-          "name": "Lingettes",
-          "description": "",
-          "ingredient": "",
-          "color1": "#0C9E98",
-          "color2": "#0C9E98",
-          "background": "#F4F4F4",
-          "gradient": "#0C9E98",
-          "image": "/antibacterial/wip3.png"
         }
       }
     },

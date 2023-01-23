@@ -61,37 +61,3 @@ html {
   font-family: $newKansas;
   font-weight: $weight_bold;
 }
-
-.content {
-  display: inline-flex;
-  width: 100%;
-  & h1 {
-    white-space: nowrap;
-  }
-}
-
-
-main {
-  padding-top: 70px;
-  & .maintitle {
-    font-size: 52px;
-    text-align: center;
-    font-weight: $weight_bold;
-    font-family: $newKansas;
-    color: #222;
-    padding: 8rem;
-  }
-  & ul {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    & a h1 {
-      color: #222;
-      font-family: $newKansas;
-      font-size: 32px;
-      text-align: center;
-      font-weight: $weight_bold;
-    }
-  }
-}
