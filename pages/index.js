@@ -57,8 +57,8 @@ export default function Home({ newArray }) {
                 className="category__items__img"
                   src={item.preview}
                   alt={item.name}
-                  width={200}
-                  height={200}
+                  width={100}
+                  height={150}
                 />
               </li>
             </Link>
