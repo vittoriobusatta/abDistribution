@@ -109,4 +109,15 @@
       cursor: pointer;
     }
   }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    // backdrop-filter: blur(10px);
+    background-color: #000000;
+    opacity: 0.5;
+    z-index: 2;
+  }
 }
