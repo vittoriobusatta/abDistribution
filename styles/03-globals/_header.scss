@@ -1,20 +1,25 @@
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 60px;
-  z-index: 10;
-  padding: 16px 26px;
-  transition: top 0.3s ease-in-out;
+  width: calc(100% - 40px);
+  margin: 20px;
+  border-bottom: none;
+  box-shadow: none;
+  transition: all 0.25s;
+  border-radius: 7px;
   background-color: #fffaec;
+  position: fixed;
+  z-index: 3;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  box-shadow: 0 2px 8px #0000000f, 0 3px 12px #00000015;
+  padding: 16px;
+
   & svg {
-    height: clamp(36px, 5rem, 44px);
+    height: clamp(36px, 5rem, 42px);
     @media screen and (max-width: 576px) {
-      height: 35px;
+      height: 26px;
     }
   }
   @media screen and (min-width: 576px) {

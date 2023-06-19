@@ -1,15 +1,16 @@
-[
-  {
+{
+  "coffee": {
     "id": "1",
     "name": "Cafés",
-    "path": "cafes",
-    "intro": "Découvrez nos collections de",
-    "phrase": "Cafés <span>délicieux</span> et <span>rafraîchissants</span>",
     "category": "Alimentation",
     "origine": "Turquie",
     "brand": "Nescafé",
     "color1": "#893232",
-    "color2": "#FFFAEC",
+    "color2": "#F8955B",
+    "logocolor1": "#893232",
+    "logocolor2": "#F8955B",
+    "landingcolor1": "#F8955B",
+    "landingcolor2": "#893232",
     "background": "#FFFAEC",
     "preview": "/catalogue/coffee.png",
     "description": "Découvrez une collection de café formulé avec des grains de café et un lait doux sélectionnés pour vous offrir un café riche en saveur et en arômes, pour un début de journée délicieux et énergisant.",
@@ -52,17 +53,18 @@
       }
     }
   },
-  {
+  "grocery": {
     "id": "2",
     "name": "Épicerie",
-    "path": "epicerie",
-    "intro": "Découvrez l'équilibre parfait des produits alliant",
-    "phrase": "<span>Excellence</span>, <span>qualité</span> et délices <span>gourmands.</span>",
     "category": "Alimentation",
     "origine": "Turquie",
     "brand": "Tukas",
     "color1": "#C54126",
-    "color2": "#FFEED3",
+    "color2": "#FFC16A",
+    "logocolor1": "#C54126",
+    "logocolor2": "#FFC16A",
+    "landingcolor1": "#FFC16A",
+    "landingcolor2": "#C54126",
     "background": "#FFEED3",
     "preview": "/catalogue/grocery.png",
     "description": "Notre gamme de produits alimentaires vous offre une variété de saveurs. Découvrez une séléction de produits en conserve, des légumes marinés, des confitures et sauces pour donner de la saveur à vos plats.",
@@ -124,17 +126,18 @@
       }
     }
   },
-  {
+  "handwash": {
     "id": "6",
     "name": "Laves Mains",
-    "path": "laves-mains",
-    "intro": "Prenez soin de votre hygiène avec nos",
-    "phrase": "Laves mains pour une sensation de <span>fraîcheur.</span>",
     "category": "Hygiène",
     "origine": "Turquie",
     "brand": "Ultra Compact",
     "color1": "#484D79",
     "color2": "#FEF0C5",
+    "logocolor1": "#484D79",
+    "logocolor2": "#484D79",
+    "landingcolor1": "#484D79",
+    "landingcolor2": "#484D79",
     "background": "#FFF4D4",
     "preview": "/catalogue/handwash.png",
     "description": "Une bonne hygiène des mains est importante pour tout le monde. Il est important de se laver les mains plusieurs fois par jour. Dans cette catégorie, vous retrouverez des savons liquides pour les mains sèches aux senteurs fruitées.",
@@ -189,17 +192,18 @@
       }
     }
   },
-  {
+  "antibacterial": {
     "id": "8",
     "name": "Anti-Bactérien",
-    "path": "anti-bacterien",
-    "intro": "Protégez-vous efficacement avec votre",
-    "phrase": "Meilleur allié contre les <span>microbes.</span>",
     "category": "Hygiène",
     "origine": "Turquie",
     "brand": "Ultra Compact",
     "color1": "#0C9E98",
     "color2": "#D0F2FF",
+    "logocolor1": "#0C9E98",
+    "logocolor2": "#0C9E98",
+    "landingcolor1": "#0C9E98",
+    "landingcolor2": "#0C9E98",
     "background": "#DFF6FF",
     "preview": "/catalogue/antibacterial.png",
     "description": "Essentiels dans la vie quotidienne, ils sont à prendre partout avec vous pour vous protéger, ainsi que votre entourage à chaque occasion. Découvrez une sélection de produits adaptés à chaque situation pour une hygiène irréprochable.",
@@ -266,17 +270,18 @@
       }
     }
   },
-  {
+  "airfreshener": {
     "id": "5",
-    "name": "Désodorisants",
-    "path": "desodorisants",
-    "intro": "Plongez dans un monde parfumé avec nos",
-    "phrase": "Désodorisants qui enchantent vos <span>sens.</span>",
+    "name": "Parfumeurs d'Air",
     "category": "Hygiène",
     "origine": "Turquie",
     "brand": "Ultra Compact",
     "color1": "#9E9E4D",
     "color2": "#F5F2CB",
+    "logocolor1": "#9E9E4D",
+    "logocolor2": "#9E9E4D",
+    "landingcolor1": "#9E9E4D",
+    "landingcolor2": "#9E9E4D",
     "background": "#FFFDE8",
     "preview": "/catalogue/airfreshener.png",
     "description": "Eliminez les mauvaises odeurs de votre maison avec notre sélection de parfumeurs d'air. Choisissez parmi une variété de parfums, allant des senteurs fraîches et propres aux parfums plus boisés et épicés.",
@@ -379,17 +384,18 @@
       }
     }
   },
-  {
+  "showergel": {
     "id": "7",
     "name": "Gels Douches",
-    "path": "gels-douches",
-    "intro": "Offrez-vous une expérience revitalisante avec nos",
-    "phrase": "Gels douches pour une peau <span>douce</span> et <span>soyeuse.</span>",
     "category": "Hygiène",
     "origine": "Turquie",
     "brand": "Ultra Compact",
     "color1": "#843B62",
-    "color2": "#FFE9EE",
+    "color2": "#FF8678",
+    "logocolor1": "#843B62",
+    "logocolor2": "#FF8678",
+    "landingcolor1": "#FF8678",
+    "landingcolor2": "#843B62",
     "background": "#FFE9EE",
     "preview": "/catalogue/showergel.png",
     "description": "Nos gels douche nettoient en douceur tout en prenant soin de votre peau grâce à leurs ingrédients naturels. Choisissez parmi une variété de parfums pour une expérience sensorielle agréable sous la douche.",
@@ -432,17 +438,18 @@
       }
     }
   },
-  {
+  "ambiancemist": {
     "id": "3",
     "name": "Brumes d'Ambiance",
-    "path": "brumes-ambiance",
-    "intro": "Créez une atmosphère envoûtante avec nos",
-    "phrase": "Brumes d’ambiance <span>apaisante</span> et <span>envoûtante.</span>",
     "category": "Brumes",
     "origine": "Turquie",
     "brand": "Ultra Compact",
     "color1": "#321C3D",
     "color2": "#F1D4EE",
+    "logocolor1": "#321C3D",
+    "logocolor2": "#321C3D",
+    "landingcolor1": "#321C3D",
+    "landingcolor2": "#321C3D",
     "background": "#FFEEFA",
     "preview": "/catalogue/ambiancemist.png",
     "description": "Transformez votre maison en un véritable havre de paix avec nos brumes d'ambiance. Choisissez parmi une vaste sélection de parfums pour créer une ambiance apaisante pour chaque pièce.",
@@ -497,17 +504,18 @@
       }
     }
   },
-  {
+  "bodymist": {
     "id": "4",
     "name": "Brumes Corporelle",
-    "path": "brumes-corporelles",
-    "intro": "Parfumez-vous subtilement avec nos",
-    "phrase": "Brumes corporelles <span>légères</span> et <span>enivrante.</span>",
     "category": "Brumes",
     "origine": "Turquie",
     "brand": "Ultra Compact",
     "color1": "#33302D",
     "color2": "#F7F7FF",
+    "logocolor1": "#33302D",
+    "logocolor2": "#33302D",
+    "landingcolor1": "#33302D",
+    "landingcolor2": "#33302D",
     "background": "#F7F7FF",
     "preview": "/catalogue/bodymist.png",
     "description": "Rafraîchissez-vous et parfumez votre peau avec nos brumes corporelles. Formulées avec des ingrédients naturels, elles hydratent votre peau tout en lui apportant une senteur délicate.",
@@ -562,4 +570,4 @@
       }
     }
   }
-]
+}

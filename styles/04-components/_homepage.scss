@@ -1,6 +1,4 @@
 .category {
-  padding-bottom: 44px;
-  padding-top: 70px;
   &__title {
     font-size: 52px;
     text-align: center;
@@ -10,7 +8,7 @@
     padding: 8rem;
   }
   &__list {
-    padding: 0 8px;
+    padding: 8px;
     row-gap: 8px;
     display: flex;
     align-items: center;

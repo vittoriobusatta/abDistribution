@@ -1,6 +1,5 @@
 import gsap from "gsap";
 import Link from "next/link";
-// import Link from "next/link";
 import React, { useEffect, useRef, useState, openMenu } from "react";
 
 function Menu({
@@ -86,20 +85,20 @@ function Menu({
       id: 1,
       pages: {
         airfreshener: {
-          title: "Parfumeurs d'Air",
-          path: "5",
+          title: "Désodorisants",
+          path: "desodorisants",
         },
         handwash: {
           title: "Lave-Mains",
-          path: "6",
+          path: "laves-mains",
         },
         showergel: {
           title: "Gels Douches",
-          path: "7",
+          path: "gels-douches",
         },
         antibacterial: {
           title: "Anti-Bactérien",
-          path: "8",
+          path: "anti-bacterien",
         },
       },
     },
@@ -109,11 +108,11 @@ function Menu({
       pages: {
         ambiancemist: {
           title: "Brume Corporelle",
-          path: "4",
+          path:"brumes-corporelles",
         },
         bodymist: {
           title: "Brume d'Ambiance",
-          path: "3",
+          path: "brumes-ambiance",
         },
       },
     },
@@ -123,11 +122,11 @@ function Menu({
       pages: {
         coffee: {
           title: "Cafés",
-          path: "1",
+          path: "cafes",
         },
         grocery: {
           title: "Épicerie",
-          path: "2",
+          path: "epicerie",
         },
       },
     },

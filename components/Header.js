@@ -3,7 +3,7 @@ import { useEffect, useCallback, useState, useRef } from "react";
 import { AbLogo } from "../utils/icons";
 import Menu from "./Menu";
 
-function Header({ logocolor1, logocolor2, color1, color2, backgroundColor }) {
+function Header({ logocolor, color1, color2, backgroundColor }) {
   const [openMenu, setOpenMenu] = useState(false);
   const menuContainer = useRef(null);
 
@@ -30,7 +30,7 @@ function Header({ logocolor1, logocolor2, color1, color2, backgroundColor }) {
     function onScroll() {
       let currentPosition = window.pageYOffset;
       if (currentPosition > scrollTop) {
-        navBar.current.style.top = "-100px";
+        navBar.current.style.top = "-120px";
       } else {
         navBar.current.style.top = "0";
       }
@@ -46,14 +46,14 @@ function Header({ logocolor1, logocolor2, color1, color2, backgroundColor }) {
       <header ref={navBar} style={{ background: backgroundColor }}>
         <Link aria-label="Retourner à l'accueil" href="/">
           <AbLogo
-            color1={logocolor1}
-            color2={logocolor2}
+            color1={logocolor}
+            color2={logocolor}
             onClick={handleCloseMenu}
           />
         </Link>
         <button aria-label="menu" className={`burger`} onClick={ClickMenu}>
-          <div style={{ background: logocolor1 }} className="bar"></div>
-          <div style={{ background: logocolor1 }} className="bar"></div>
+          <div style={{ background: logocolor }} className="bar"></div>
+          <div style={{ background: logocolor }} className="bar"></div>
         </button>
       </header>
       <Menu

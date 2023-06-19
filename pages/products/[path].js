@@ -1,6 +1,4 @@
 import Head from "next/head";
-import fs from "fs";
-import path from "path";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
@@ -13,6 +11,7 @@ import {
 import Header from "../../components/Header";
 import { useRouter } from "next/router";
 import { easeOut, motion } from "framer-motion";
+import data from "../../public/db.json";
 
 export default function Product({ product }) {
   let newArray = Object.values(product.products);
@@ -255,6 +254,15 @@ export default function Product({ product }) {
     };
   }, []);
 
+  const StringToHTML = ({ text }) => {
+    const transformedText = text.replace(
+      /<span>(.*?)<\/span>/g,
+      '<span className="highlight">$1</span>'
+    );
+
+    return <h1 dangerouslySetInnerHTML={{ __html: transformedText }} />;
+  };
+
   return (
     <>
       <Head>
@@ -274,11 +282,14 @@ export default function Product({ product }) {
         transition={{ duration: 0.75, ease: "easeOut" }}
         onAnimationComplete={() => setAnimating(true)}
         className="container"
-        style={{ backgroundColor: product.background }}
+        style={{
+          "--color-primary": product.color1,
+          "--color-secondary": product.color2,
+          backgroundColor: product.background,
+        }}
       >
         <Header
-          logocolor1={product.logocolor1}
-          logocolor2={product.logocolor2}
+          logocolor={product.color1}
           color2={product.color2}
           color1={product.color1}
           backgroundColor={product.background}
@@ -286,182 +297,21 @@ export default function Product({ product }) {
 
         <div className="landing">
           <div className="landing_inner">
-            <div className="hidden">
-              <motion.h1
-                initial={{
-                  opacity: 0,
-                  y: "100%",
-                  skewY: 10,
-                }}
-                animate={
-                  animating
-                    ? {
-                        opacity: 1,
-                        y: 0,
-                        skewY: 0,
-
-                        transition: {
-                          duration: 0.35,
-                          ease: "easeOut",
-                        },
-
-                        exit: {
-                          opacity: 0,
-                          y: "100%",
-                        },
-
-                        onAnimationComplete: () => setAnimating(false),
-                      }
-                    : {
-                        opacity: 0,
-                        y: "100%",
-                        skewY: 10,
-                      }
-                }
-                style={{ color: product.color1 }}
-              >
-                {product.name}
-              </motion.h1>
-            </div>
-            <ul className="landing_content">
-              {landingdata.map((item, index) => {
-                return (
-                  <li key={item.id} className="landing_informations">
-                    <div className="hidden">
-                      <motion.h3
-                        initial={{
-                          opacity: 0,
-                          y: "100%",
-                        }}
-                        animate={
-                          animating
-                            ? {
-                                opacity: 1,
-                                y: 0,
-
-                                transition: {
-                                  duration: 0.45,
-                                  ease: [0, 0.87, 0.58, 1],
-                                  delay: 0.4 * (index + 1),
-                                },
-
-                                onAnimationComplete: () => setAnimating(false),
-                              }
-                            : {
-                                opacity: 0,
-                                y: "100%",
-                              }
-                        }
-                        style={{ color: product.landingcolor1 }}
-                      >
-                        {item.title}
-                      </motion.h3>
-                    </div>
-                    <div className="hidden">
-                      <motion.p
-                        initial={{
-                          opacity: 0,
-                          y: "100%",
-                        }}
-                        animate={
-                          animating
-                            ? {
-                                opacity: 1,
-                                y: 0,
-
-                                transition: {
-                                  duration: 0.45,
-                                  ease: easeOut,
-                                  delay: 0.5 * (index + 1),
-                                },
-
-                                onAnimationComplete: () => setAnimating(false),
-                              }
-                            : {
-                                opacity: 0,
-                                y: "100%",
-                              }
-                        }
-                        style={{ color: product.landingcolor2 }}
-                      >
-                        {item.paragraph}
-                      </motion.p>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
+            <h3>{product.intro}</h3>
+            <StringToHTML text={product.phrase} />
           </div>
         </div>
 
         <div className="details">
           <div className="details_content">
-            <motion.h2
-              initial={{
-                opacity: 0,
-                y: "100%",
-                skewY: 10,
-              }}
-              animate={
-                animating
-                  ? {
-                      opacity: 1,
-                      y: 0,
-                      skewY: 0,
-
-                      transition: {
-                        duration: 0.35,
-                        ease: "easeOut",
-                        delay: 0.5,
-                      },
-
-                      exit: {
-                        opacity: 0,
-                        y: "100%",
-                      },
-                    }
-                  : {
-                      opacity: 0,
-                      y: "100%",
-                      skewY: 10,
-                    }
-              }
-              style={{ color: product.color1 }}
+            <h2
             >
               <span>Nos</span>
               <span>Produits</span>
-            </motion.h2>
-            <motion.p
-              initial={{
-                opacity: 0,
-                clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-              }}
-              animate={
-                animating
-                  ? {
-                      opacity: 1,
-                      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-
-                      transition: {
-                        duration: 0.35,
-                        ease: "easeOut",
-                        delay: 0.7,
-                      },
-
-                      exit: {
-                        opacity: 0,
-                        y: "100%",
-                      },
-                    }
-                  : {
-                      opacity: 0,
-                      clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-                    }
-              }
-              style={{ color: product.color1 }}
-            >
+            </h2>
+            <p>
               {product.description}
-            </motion.p>
+            </p>
           </div>
         </div>
 
@@ -470,33 +320,32 @@ export default function Product({ product }) {
             return (
               <div className="product__item" key={item.id}>
                 <div
-                className="product__container"
-                onClick={() => openPreview(index)}
-              >
-                <div className="product__content">
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={200}
-                    height={200}
-                    ref={(el) => (imageRef.current[index] = el)}
-                    priority
-                    as="image"
-                    className="product__image"
-                  />
-                </div>
-                <div className="product__details">
-                  <h3 style={{ color: product.color1, opacity: 0.6 }}>
-                    {landingdata[0].paragraph}
-                  </h3>
-                  <h2 style={{ color: product.color1 }}>{item.title}</h2>
-                  <div className="product__details__viewmore hidden">
-                    <p style={{ color: product.color1 }}>Voir le produit</p>
+                  className="product__container"
+                  onClick={() => openPreview(index)}
+                >
+                  <div className="product__content">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      width={200}
+                      height={200}
+                      ref={(el) => (imageRef.current[index] = el)}
+                      priority
+                      as="image"
+                      className="product__image"
+                    />
+                  </div>
+                  <div className="product__details">
+                    <h3 style={{ color: product.color1, opacity: 0.6 }}>
+                      {landingdata[0].paragraph}
+                    </h3>
+                    <h2 style={{ color: product.color1 }}>{item.title}</h2>
+                    <div className="product__details__viewmore hidden">
+                      <p style={{ color: product.color1 }}>Voir le produit</p>
+                    </div>
                   </div>
                 </div>
               </div>
-              </div>
-              
             );
           })}
         </div>
@@ -528,33 +377,32 @@ export default function Product({ product }) {
               >
                 <div className="preview__content">
                   <div className="preview__head">
-                    <button className="preview__head__close" onClick={closePreview}>
+                    <button
+                      className="preview__head__close"
+                      onClick={closePreview}
+                    >
                       <ArrowBack color={item.color2} />
                     </button>
                     <Logo color1={item.color1} color2={item.color2} />
                   </div>
                   <div className="preview__product">
                     <div className="preview__product__title hidden">
-                      <h1
+                      {/* <h1
                         style={{
-                          // background: item.gradient,
-                          // backgroundClip: "text",
-                          // WebkitBackgroundClip: "text",
-                          // color: "transparent",
                           color: item.color1,
                         }}
                         ref={(el) => (productTitle.current[index] = el)}
                       >
                         {item.name}
-                      </h1>
+                      </h1> */}
                     </div>
                     <div className="hidden">
                       <Image
-                      className="preview__product__image"
+                        className="preview__product__image"
                         src={item.image}
                         alt={item.name}
-                        width={100}
-                        height={100}
+                        width={600}
+                        height={600}
                         ref={(el) => (imagePreview.current[index] = el)}
                         rel="preload"
                         as="image"
@@ -562,7 +410,7 @@ export default function Product({ product }) {
                     </div>
                   </div>
 
-                  <div className="preview__product__information">
+                  {/* <div className="preview__product__information">
                     <div className="preview__product__description">
                       <div className="hidden">
                         <h2
@@ -593,7 +441,7 @@ export default function Product({ product }) {
                         {item.ingredient}
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             );
@@ -605,32 +453,14 @@ export default function Product({ product }) {
 }
 
 export async function getStaticProps({ params }) {
-  const data = await fs.promises.readFile(
-    path.join(process.cwd(), "/public/db.json")
-  );
-  const appData = JSON.parse(data);
-  let productsData = Object.entries(appData[0]).map(([key, value]) => value);
-  const product = productsData.find((item) => item.id === params.id);
-
-  return {
-    props: {
-      productsData,
-      product,
-    },
-  };
+  const { path } = params;
+  let product = data.find((item) => item.path === path);
+  return { props: { product } };
 }
 
 export async function getStaticPaths() {
-  const data = await fs.promises.readFile(
-    path.join(process.cwd(), "/public/db.json")
-  );
-  const appData = JSON.parse(data);
-  let productsData = Object.entries(appData[0]).map(([key, value]) => value);
-
-  return {
-    paths: productsData.map((item) => ({
-      params: { id: item.id.toString() },
-    })),
-    fallback: false,
-  };
+  const paths = data.map((item) => ({
+    params: { path: item.path.toString() },
+  }));
+  return { paths, fallback: false };
 }

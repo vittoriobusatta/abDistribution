@@ -1,27 +1,19 @@
 import Head from "next/head";
 import Link from "next/link";
-import fs from "fs";
-import path from "path";
 import Header from "../components/Header";
 import Image from "next/image";
 import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
 
-export async function getStaticProps() {
-  const data = fs.readFileSync(path.join(process.cwd(), "/public/db.json"));
+export default function Home() {
+  const [data, setData] = useState([]);
 
-  const appData = JSON.parse(data);
-
-  let newArray = Object.entries(appData[0]).map(([key, value]) => value);
-
-  return {
-    props: {
-      newArray,
-    },
-  };
-}
-
-export default function Home({ newArray }) {
-  console.log(" Designed and built by Vittorio - 2023 ");
+  useEffect(() => {
+    fetch("/db.json")
+      .then((response) => response.json())
+      .then((resdata) => setData(resdata))
+      .catch((err) => setErreur(err.message));
+  }, []);
 
   return (
     <>
@@ -32,12 +24,25 @@ export default function Home({ newArray }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header logocolor1="#000" logocolor2="#000" />
+      <Header logocolor="#F35029" />
 
       <main className="category">
-        <h1 className="category__title">Catalogue</h1>
+        <div
+          className="landing"
+          style={{
+            "--color-primary": "#F35029",
+            "--color-secondary": "#FAF7EE",
+          }}
+        >
+          <div className="landing_inner">
+            <h3>Explorez notre catalogue comprenant</h3>
+            <h1>
+              Une variété de produits <span>exceptionnels.</span>
+            </h1>
+          </div>
+        </div>
         <ul className="category__list">
-          {newArray.map((item) => (
+          {data.map((item) => (
             <li
               style={{
                 backgroundColor: item.color1,
@@ -45,9 +50,7 @@ export default function Home({ newArray }) {
               key={item.id}
               className="category__items"
             >
-              <Link
-                href={`/products/${item.id}`}
-              >
+              <Link href={`/products/${item.path}`}>
                 <h1
                   style={{
                     color: item.color2,
