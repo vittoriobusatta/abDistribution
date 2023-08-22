@@ -8,9 +8,9 @@ import {
   LogoUltraCompact,
   LogoNescafe,
 } from "../../utils/icons";
-import Header from "../../components/Header";
+import Header from "../components/Layout/Header";
 import { useRouter } from "next/router";
-import { easeOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import data from "../../public/db.json";
 
 export default function Product({ product }) {
@@ -304,14 +304,11 @@ export default function Product({ product }) {
 
         <div className="details">
           <div className="details_content">
-            <h2
-            >
+            <h2>
               <span>Nos</span>
               <span>Produits</span>
             </h2>
-            <p>
-              {product.description}
-            </p>
+            <p>{product.description}</p>
           </div>
         </div>
 

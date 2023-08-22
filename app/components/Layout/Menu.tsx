@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import Link from "next/link";
-import React, { useEffect, useRef, useState, openMenu } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function Menu({
   color1,
