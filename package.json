@@ -11,11 +11,14 @@
     "build:sitemap": "npm run build && npm run generate-sitemap"
   },
   "dependencies": {
+    "@apollo/client": "^3.8.1",
+    "@graphql-tools/webpack-loader": "^7.0.0",
     "@next/font": "13.1.1",
     "axios": "^1.4.0",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
     "framer-motion": "^8.4.7",
+    "graphql-tag": "^2.12.6",
     "gsap": "^3.11.4",
     "next": "^13.1.1",
     "next-sitemap": "^3.1.47",

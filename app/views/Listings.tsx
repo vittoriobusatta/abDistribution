@@ -1,12 +1,13 @@
 "use client";
-import Card from "./Card";
-import { Product } from "../../types";
+import Card from "../components/Card";
 
 export default function Listings({ data }) {
+  console.log(data);
+
   return (
     <>
       <section>
-        {data.map((item: Product, index: number) => (
+        {data.map((item: any, index: number) => (
           <Card key={index} item={item} />
         ))}
       </section>
