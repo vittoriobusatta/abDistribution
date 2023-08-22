@@ -7,7 +7,7 @@ export async function getAllProducts() {
       query: ALL_PRODUCTS_QUERY,
     });
 
-    return response.data.products.edges.map((edge: any) => edge.node);
+    return response.data?.products?.edges?.map((edge: any) => edge.node);
   } catch (err) {
     console.error(err);
     return [];

@@ -25,7 +25,8 @@
       "@app/*": ["app/*"],
       "@graphql/*": ["graphql/*"],
       "@utils/*": ["utils/*"],
-      "@types/*": ["types/*"]
+      "@types/*": ["types/*"],
+      "@actions/*": ["actions/*"]
     }
   },
 

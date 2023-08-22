@@ -1,4 +1,4 @@
-import getCollectionById from "../../../actions/getCollectionById";
+import getCollectionById from "@actions/getCollectionById";
 
 interface IParams {
   collectionId?: string;

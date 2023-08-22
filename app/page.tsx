@@ -6,7 +6,6 @@ import Listings from "./views/Listings";
 
 async function Page() {
   const data = await getAllProducts();
-
   return (
     <>
       <Landing />
