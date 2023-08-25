@@ -1,26 +1,26 @@
 import { storefrontClient } from "@app/libs/storefront";
-import UPDATE_CART_MUTATION from "@graphql/cart/update-cart.graphql";
+import ADD_TO_CART_MUTATION from "@graphql/cart/add-to-cart.graphql";
 
-export async function updateCart(
+export async function useAddToCart(
   cartId: string,
-  lineId: string,
+  merchandiseId: string,
   quantity: number
 ) {
   try {
     const response = await storefrontClient.mutate({
-      mutation: UPDATE_CART_MUTATION,
+      mutation: ADD_TO_CART_MUTATION,
       variables: {
         cartId,
         lines: [
           {
             quantity,
-            lineId,
+            merchandiseId,
           },
         ],
       },
     });
 
-    return response.data?.cartLinesUpdate?.cart;
+    return response.data?.cartLinesAdd?.cart;
   } catch (err) {
     console.error(err);
     return [];

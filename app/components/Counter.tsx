@@ -1,8 +1,5 @@
 "use client";
 
-import { addToCart } from "@actions/cart/addToCart";
-import { createCart } from "@actions/cart/createCart";
-import { removeToCart } from "@actions/cart/removeToCart";
 
 const item = {
   cart_id: "gid://shopify/Cart/c1-907adf1103af952e1e146bb668f7afde",
