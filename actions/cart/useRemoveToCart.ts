@@ -1,7 +1,11 @@
 import { storefrontClient } from "@app/libs/storefront";
 import REMOVE_CART_MUTATION from "@graphql/cart/remove-to-cart.graphql";
+import { RemoveToCartItem } from "@typage/cart";
 
-export async function useRemoveToCart(cartId: string, lineId: string) {
+export async function useRemoveToCart({
+  cartId,
+  lineId,
+}): Promise<RemoveToCartItem> {
   try {
     const response = await storefrontClient.mutate({
       mutation: REMOVE_CART_MUTATION,
@@ -14,6 +18,6 @@ export async function useRemoveToCart(cartId: string, lineId: string) {
     return response.data?.cartLinesRemove?.cart;
   } catch (err) {
     console.error(err);
-    return [];
+    return err;
   }
 }
