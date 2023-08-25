@@ -1,3 +1,5 @@
+import { ADD_TODO, TOGGLE_TODO } from "@redux/constants/todos";
+
 export interface Product {
   id: string;
   name: string;
@@ -26,4 +28,23 @@ export interface Collection {
   preview: string;
   description: string;
   products: Product[];
+}
+
+interface AddTodoAction {
+  type: typeof ADD_TODO;
+  id: number;
+  text: string;
+}
+
+interface ToggleTodoAction {
+  type: typeof TOGGLE_TODO;
+  id: number;
+}
+
+export type TodoActionTypes = AddTodoAction | ToggleTodoAction;
+
+export interface Todo {
+  id: number;
+  text: string;
+  completed?: boolean;
 }

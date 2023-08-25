@@ -1,4 +1,4 @@
-import { getProductByHandle } from "@actions/getProductByHandle";
+import { getProductByHandle } from "@actions/product/getProductByHandle";
 
 type CollectionPageProps = {
   params: {
@@ -10,15 +10,16 @@ const CollectionPage = async ({ params }: CollectionPageProps) => {
   if (!params) {
     return <div>Invalid collection ID</div>;
   }
-  console.log(params.handle);
 
   const product = await getProductByHandle(params.handle);
-  console.log(product);
+
+  const variant = product.variants.edges[0].node
+  console.log(variant);
 
   return (
     <>
       <div>
-        {product.productType} 
+        {product.productType}
         {product.title}
       </div>
     </>

@@ -1,0 +1,59 @@
+mutation updateCart($cartId: ID!, $lines: [CartLineUpdateInput!]!) {
+  cartLinesUpdate(cartId: $cartId, lines: $lines) {
+    cart {
+      id
+      lines {
+        id
+        quantity
+        variant {
+          id
+          name
+          pricing {
+            price {
+              net {
+                amount
+              }
+            }
+          }
+          product {
+            id
+            name
+            thumbnail {
+              url
+            }
+          }
+        }
+      }
+      subtotal {
+        gross {
+          amount
+        }
+      }
+      totalTax {
+        amount
+      }
+      shippingPrice {
+        gross {
+          amount
+        }
+      }
+      discount {
+        amount
+      }
+      discountName
+      voucherCode
+      isShippingRequired
+      availableShippingMethods {
+        id
+        name
+        price {
+          amount
+        }
+      }
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}

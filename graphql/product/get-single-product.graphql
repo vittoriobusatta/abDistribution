@@ -22,5 +22,25 @@ query ProductByHandle($handle: String!) {
         }
       }
     }
+    variants(first: 250) {
+      edges {
+        node {
+          id
+          title
+          quantityAvailable
+          availableForSale
+          price {
+            amount
+          }
+          compareAtPrice {
+            amount
+          }
+          image {
+            url
+            altText
+          }
+        }
+      }
+    }
   }
 }

@@ -1,5 +1,5 @@
 import { storefrontClient } from "@app/libs/storefront";
-import SINGLE_PRODUCT_QUERY from "@graphql/getSingleProduct.graphql";
+import SINGLE_PRODUCT_QUERY from "@graphql/product/get-single-product.graphql";
 
 export async function getProductByHandle(handle: string) {
   try {

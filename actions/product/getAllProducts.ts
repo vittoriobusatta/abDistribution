@@ -1,5 +1,5 @@
 import { storefrontClient } from "@app/libs/storefront";
-import ALL_PRODUCTS_QUERY from "@graphql/getAllProducts.graphql";
+import ALL_PRODUCTS_QUERY from "@graphql/product/get-all-products.graphql";
 
 export async function getAllProducts() {
   try {

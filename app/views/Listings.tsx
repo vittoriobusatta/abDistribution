@@ -2,7 +2,6 @@
 import Card from "../components/Card";
 
 export default function Listings({ data }) {
-  
   return (
     <>
       <section>

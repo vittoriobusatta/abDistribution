@@ -25,8 +25,9 @@
       "@app/*": ["app/*"],
       "@graphql/*": ["graphql/*"],
       "@utils/*": ["utils/*"],
-      "@types/*": ["types/*"],
-      "@actions/*": ["actions/*"]
+      "@typage/*": ["typage/*"],
+      "@actions/*": ["actions/*"],
+      "@redux/*": ["redux/*"]
     }
   },
 

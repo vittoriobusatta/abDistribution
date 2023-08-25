@@ -1,3 +1,6 @@
+import React from "react";
+import ReduxProvider from "../redux/ReduxProvider";
+
 export const metadata = {
   title: "Accueil | AB Distribution",
   description: "Airbnb Clone",
@@ -12,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body suppressHydrationWarning={true}>{children}</body>
+      <body suppressHydrationWarning={true}>
+        <ReduxProvider>{children}</ReduxProvider>
+      </body>
     </html>
   );
 }
