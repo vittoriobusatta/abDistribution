@@ -21,26 +21,21 @@ export const cartReducer = createSlice({
   extraReducers: (builder) => {
     builder.addCase(createCart.fulfilled, (state, action) => {
       const { item, cartCreated } = action.payload;
-      updateCartInfo({
-        state,
-        cartInfo: cartCreated,
-        item,
-        cartId: cartCreated.id,
-      });
+      updateCartInfo(state, cartCreated, item, cartCreated.id);
     });
     builder.addCase(createCart.rejected, (_, action) => {
       console.error(action.payload);
     });
     builder.addCase(addToCart.fulfilled, (state, action) => {
       const { item, cartAdded } = action.payload;
-      updateCartInfo({ state, cartInfo: cartAdded, item });
+      updateCartInfo(state, cartAdded, item);
     });
     builder.addCase(addToCart.rejected, (_, action) => {
       console.error(action.payload);
     });
     builder.addCase(removeToCart.fulfilled, (state, action) => {
       const { item, cartRemoved } = action.payload;
-      updateCartInfo({ state, cartInfo: cartRemoved, item });
+      updateCartInfo(state, cartRemoved, item);
     });
     builder.addCase(removeToCart.rejected, (_, action) => {
       console.error(action.payload);

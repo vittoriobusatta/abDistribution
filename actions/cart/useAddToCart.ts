@@ -1,12 +1,11 @@
 import { storefrontClient } from "@app/libs/storefront";
 import ADD_TO_CART_MUTATION from "@graphql/cart/add-to-cart.graphql";
-import { AddToCartItem } from "@typage/cart";
 
 export async function useAddToCart({
   cartId,
   merchandiseId,
   quantity,
-}): Promise<AddToCartItem> {
+}): Promise<any> {
   try {
     const response = await storefrontClient.mutate({
       mutation: ADD_TO_CART_MUTATION,
@@ -24,6 +23,6 @@ export async function useAddToCart({
     return response.data?.cartLinesAdd?.cart;
   } catch (err) {
     console.error(err);
-    return err;
+    return [];
   }
 }

@@ -8,6 +8,7 @@ export type CartLineInput = {
 export type CreateCartItem = {
   merchandiseId: string;
   variantQuantity: number;
+  cartId?: string;
 };
 
 export type AddToCartItem = {

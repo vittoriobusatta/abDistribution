@@ -1,16 +1,9 @@
-type updateCartInfo = {
-  state: any;
-  cartInfo: any;
-  item: any;
-  cartId?: string;
-};
-
-export function updateCartInfo({
-  state,
-  cartInfo,
-  item,
-  cartId,
-}: updateCartInfo) {
+export function updateCartInfo(
+  state: any,
+  cartInfo: any,
+  item: any,
+  cartId?: string
+) {
   state.products = cartInfo.lines.edges.map((line) => {
     return {
       line: line,
