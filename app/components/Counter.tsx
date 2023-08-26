@@ -2,6 +2,7 @@
 
 import { addToCart, createCart, removeToCart } from "@redux/actions/cart";
 import { useAppDispatch, useAppSelector } from "@redux/hooks";
+import { clearCart } from "@redux/reducers/cart";
 import Image from "next/image";
 
 const item = {
@@ -70,6 +71,13 @@ export default function Home() {
               }}
             >
               Remove to Cart
+            </button>
+            <button
+              onClick={() => {
+                dispatch(clearCart());
+              }}
+            >
+              Clear Cart
             </button>
           </>
         );
