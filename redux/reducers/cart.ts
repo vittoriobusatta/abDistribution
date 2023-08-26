@@ -2,6 +2,7 @@ import { addToCart, createCart, removeToCart } from "@redux/actions/cart";
 import { createSlice } from "@reduxjs/toolkit";
 import {
   addItemToProducts,
+  optimisticallyCreateCart,
   removeItemFromProducts,
   updateCartInfo,
 } from "@utils/functions";
@@ -19,15 +20,23 @@ export const cartReducer = createSlice({
   initialState: initialState,
   reducers: {
     clearCart: () => initialState,
-    optimisticRemoveToCart: (state, action) => {
-      state.products = removeItemFromProducts(
-        state.products,
-        action.payload.item.id
-      );
+    optimisticCreateCart: (state, action) => {
+      const { item } = action.payload;
+      optimisticallyCreateCart(state, item);
     },
-    cancelOptimisticRemoveToCart: (state, action) => {
-      state.products = addItemToProducts(state.products, action.payload.item);
+    optimisticAddToCart: (state, action) => {
+      const { item } = action.payload;
+      state.products = addItemToProducts(state, item);
     },
+    // optimisticRemoveToCart: (state, action) => {
+    //   state.products = removeItemFromProducts(
+    //     state.products,
+    //     action.payload.item.id
+    //   );
+    // },
+    // cancelOptimisticRemoveToCart: (state, action) => {
+    //   state.products = addItemToProducts(state.products, action.payload.item);
+    // },
   },
   extraReducers: (builder) => {
     builder.addCase(createCart.fulfilled, (state, action) => {
@@ -39,6 +48,7 @@ export const cartReducer = createSlice({
     });
     builder.addCase(addToCart.fulfilled, (state, action) => {
       const { item, result } = action.payload;
+      console.log("result", result);
       updateCartInfo(state, result, item);
     });
     builder.addCase(addToCart.rejected, (_, action) => {
@@ -58,6 +68,8 @@ export const {
   clearCart,
   optimisticRemoveToCart,
   cancelOptimisticRemoveToCart,
+  optimisticAddToCart,
+  optimisticCreateCart,
 } = cartReducer.actions;
 
 export default cartReducer.reducer;

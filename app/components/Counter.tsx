@@ -2,14 +2,16 @@
 
 import { addToCart, createCart, removeToCart } from "@redux/actions/cart";
 import { useAppDispatch, useAppSelector } from "@redux/hooks";
-import { clearCart } from "@redux/reducers/cart";
+import { optimisticAddToCart, optimisticCreateCart } from "@redux/reducers/cart";
 import { ItemToSent } from "@typage/cart";
+import { productExistsInCart } from "@utils/functions";
 import Image from "next/image";
 import { useMemo } from "react";
 
 export default function Home({ product }) {
   const dispatch = useAppDispatch();
   const { cartId, products } = useAppSelector((state) => state.cart);
+  const cart = useAppSelector((state) => state.cart);
 
   const variants: any = [];
   product.variants.edges.map((item: any) => {
@@ -38,46 +40,50 @@ export default function Home({ product }) {
     [variant, product, cartId]
   );
 
-  console.log(products);
+  console.log("products", products);
+
+  const handleAddToCart = (item) => {
+    dispatch(optimisticCreateCart({ item }));
+
+    // if (productExistsInCart(item, products)) {
+    dispatch(createCart(item));
+    // }
+  };
 
   return (
     <div>
       <h1>{product.title}</h1>
       <button
         onClick={() => {
-          dispatch(createCart(item));
+          handleAddToCart(item);
         }}
       >
         Create Cart
       </button>
       <button
         onClick={() => {
-          dispatch(addToCart(item));
+          dispatch(optimisticAddToCart({ item }));
+          // dispatch(addToCart(item));
         }}
       >
         Add to Cart
       </button>
       {products?.map((item: any, index) => {
-        const { id, merchandise, quantity } = item.line?.node;
-        const { title, image } = merchandise;
-
+        const { image, title, variantQuantity, price } = item.item;
+        const { id } = item?.line ?? {};
         return (
           <div key={index}>
             <h2>{title}</h2>
-            <Image
-              src={image.url}
-              alt={image.altText}
-              width={120}
-              height={300}
-            />
-            <p>{quantity}</p>
+            <Image src={image.src} alt={image.alt} width={120} height={300} />
+            <p>{variantQuantity}</p>
+            <p>{price}</p>
             <button
               onClick={() => {
                 dispatch(
                   removeToCart({
                     cartId,
                     lineId: id,
-                    item
+                    item,
                   })
                 );
               }}
