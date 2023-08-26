@@ -15,6 +15,8 @@ export default function Home() {
   const dispatch = useAppDispatch();
   const { cartId, products } = useAppSelector((state) => state.cart);
 
+  console.log("cartId", cartId);
+
   return (
     <div>
       <h1>Home</h1>

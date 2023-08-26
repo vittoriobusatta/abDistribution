@@ -6,8 +6,8 @@ import {
   CREATE_CART,
   REMOVE_TO_CART,
 } from "@redux/constants/cart";
-import { createAsyncThunk } from "@reduxjs/toolkit";
 import { AddToCartItem, CreateCartItem, RemoveToCartItem } from "@typage/cart";
+import { genericCartAction } from "@utils/functions";
 
 export type CreateCartItemOutput = {
   merchandiseId: string;
@@ -15,53 +15,33 @@ export type CreateCartItemOutput = {
   cardId: string;
 };
 
-export const createCart = createAsyncThunk(
+export const createCart = genericCartAction(
   CREATE_CART,
-  async (item: CreateCartItem, { rejectWithValue }) => {
-    try {
-      const cartCreated = await useCreateCart({
-        merchandiseId: item.merchandiseId,
-        quantity: item.variantQuantity,
-      });
-      console.log("cartCreated", cartCreated);
-      return { item, cartCreated };
-    } catch (err) {
-      console.error(err);
-      return rejectWithValue(err.message);
-    }
+  (item: CreateCartItem) => {
+    return useCreateCart({
+      merchandiseId: item.merchandiseId,
+      quantity: item.variantQuantity,
+    });
   }
 );
 
-export const addToCart = createAsyncThunk(
+export const addToCart = genericCartAction(
   ADD_TO_CART,
-  async (item: AddToCartItem, { rejectWithValue }) => {
-    console.log("item", item);
-    try {
-      const cartAdded = await useAddToCart({
-        cartId: item.cartId,
-        merchandiseId: item.merchandiseId,
-        quantity: item.variantQuantity,
-      });
-      return { item, cartAdded };
-    } catch (err) {
-      console.error(err);
-      return rejectWithValue(err.message);
-    }
+  (item: AddToCartItem) => {
+    return useAddToCart({
+      cartId: item.cartId,
+      merchandiseId: item.merchandiseId,
+      quantity: item.variantQuantity,
+    });
   }
 );
 
-export const removeToCart = createAsyncThunk(
+export const removeToCart = genericCartAction(
   REMOVE_TO_CART,
-  async (item: RemoveToCartItem, { rejectWithValue }) => {
-    try {
-      const cartRemoved = await useRemoveToCart({
-        cartId: item.cartId,
-        lineId: item.lineId,
-      });
-      return { item, cartRemoved };
-    } catch (err) {
-      console.error(err);
-      return rejectWithValue(err.message);
-    }
+  (item: RemoveToCartItem) => {
+    return useRemoveToCart({
+      cartId: item.cartId,
+      lineId: item.lineId,
+    });
   }
 );

@@ -1,3 +1,24 @@
+import { createAsyncThunk } from "@reduxjs/toolkit";
+type CartActionFunction = (item: any) => Promise<any>;
+
+export const genericCartAction = (
+  type: string,
+  actionFunction: CartActionFunction
+) => {
+  return createAsyncThunk(type, async (item: any, { rejectWithValue }) => {
+    try {
+      const result = await actionFunction(item);
+      return {
+        item,
+        result,
+      };
+    } catch (err) {
+      console.error(err);
+      return rejectWithValue(err.message);
+    }
+  });
+};
+
 export function updateCartInfo(
   state: any,
   cartInfo: any,
