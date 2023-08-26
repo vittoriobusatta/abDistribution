@@ -14,7 +14,7 @@ export const cartReducer = createSlice({
   name: "cart",
   initialState: initialState,
   reducers: {
-    clearCart: () => initialState,
+    useClearCart: () => initialState,
   },
   extraReducers: (builder) => {
     builder.addCase(createCart.fulfilled, (state, action) => {
@@ -41,6 +41,6 @@ export const cartReducer = createSlice({
   },
 });
 
-export const { clearCart } = cartReducer.actions;
+export const { useClearCart } = cartReducer.actions;
 
 export default cartReducer.reducer;

@@ -1,5 +1,5 @@
 import { getProductByHandle } from "@actions/product/getProductByHandle";
-
+import Counter from "@app/components/Counter";
 type CollectionPageProps = {
   params: {
     handle: string;
@@ -13,14 +13,13 @@ const CollectionPage = async ({ params }: CollectionPageProps) => {
 
   const product = await getProductByHandle(params.handle);
 
-  const variant = product.variants.edges[0].node
+  const variant = product.variants.edges[0].node;
   console.log(variant);
 
   return (
     <>
       <div>
-        {product.productType}
-        {product.title}
+        <Counter product={product} />
       </div>
     </>
   );

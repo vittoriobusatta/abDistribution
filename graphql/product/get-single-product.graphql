@@ -4,6 +4,7 @@ query ProductByHandle($handle: String!) {
     title
     productType
     description
+    handle
     priceRange {
       minVariantPrice {
         amount

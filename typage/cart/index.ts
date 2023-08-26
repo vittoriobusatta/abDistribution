@@ -20,4 +20,19 @@ export type AddToCartItem = {
 export type RemoveToCartItem = {
   cartId: string | null;
   lineId: string;
+  item: any;
+};
+
+export type ItemToSent = {
+  merchandiseId: string;
+  title: string;
+  handle: string;
+  productType: string;
+  variantQuantity: number;
+  cartId: string | null;
+  image: {
+    src: string;
+    alt: string;
+  };
+  price: number;
 };

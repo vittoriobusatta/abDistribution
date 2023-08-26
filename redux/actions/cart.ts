@@ -9,12 +9,6 @@ import {
 import { AddToCartItem, CreateCartItem, RemoveToCartItem } from "@typage/cart";
 import { genericCartAction } from "@utils/functions";
 
-export type CreateCartItemOutput = {
-  merchandiseId: string;
-  variantQuantity: number;
-  cardId: string;
-};
-
 export const createCart = genericCartAction(
   CREATE_CART,
   (item: CreateCartItem) => {
