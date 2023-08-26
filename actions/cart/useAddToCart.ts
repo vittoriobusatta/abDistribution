@@ -6,23 +6,18 @@ export async function useAddToCart({
   merchandiseId,
   quantity,
 }): Promise<any> {
-  try {
-    const response = await storefrontClient.mutate({
-      mutation: ADD_TO_CART_MUTATION,
-      variables: {
-        cartId,
-        lines: [
-          {
-            quantity,
-            merchandiseId,
-          },
-        ],
-      },
-    });
+  const response = await storefrontClient.mutate({
+    mutation: ADD_TO_CART_MUTATION,
+    variables: {
+      cartId,
+      lines: [
+        {
+          quantity,
+          merchandiseId,
+        },
+      ],
+    },
+  });
 
-    return response.data?.cartLinesAdd?.cart;
-  } catch (err) {
-    console.error(err);
-    return [];
-  }
+  return response.data?.cartLinesAdd?.cart;
 }

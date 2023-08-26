@@ -1,6 +1,10 @@
 import { addToCart, createCart, removeToCart } from "@redux/actions/cart";
 import { createSlice } from "@reduxjs/toolkit";
-import { updateCartInfo } from "@utils/functions";
+import {
+  addItemToProducts,
+  removeItemFromProducts,
+  updateCartInfo,
+} from "@utils/functions";
 
 const initialState = {
   products: [],
@@ -14,7 +18,16 @@ export const cartReducer = createSlice({
   name: "cart",
   initialState: initialState,
   reducers: {
-    useClearCart: () => initialState,
+    clearCart: () => initialState,
+    optimisticRemoveToCart: (state, action) => {
+      state.products = removeItemFromProducts(
+        state.products,
+        action.payload.item.id
+      );
+    },
+    cancelOptimisticRemoveToCart: (state, action) => {
+      state.products = addItemToProducts(state.products, action.payload.item);
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(createCart.fulfilled, (state, action) => {
@@ -41,6 +54,10 @@ export const cartReducer = createSlice({
   },
 });
 
-export const { useClearCart } = cartReducer.actions;
+export const {
+  clearCart,
+  optimisticRemoveToCart,
+  cancelOptimisticRemoveToCart,
+} = cartReducer.actions;
 
 export default cartReducer.reducer;

@@ -6,23 +6,18 @@ export async function useUpdateCart(
   lineId: string,
   quantity: number
 ) {
-  try {
-    const response = await storefrontClient.mutate({
-      mutation: UPDATE_CART_MUTATION,
-      variables: {
-        cartId,
-        lines: [
-          {
-            quantity,
-            lineId,
-          },
-        ],
-      },
-    });
+  const response = await storefrontClient.mutate({
+    mutation: UPDATE_CART_MUTATION,
+    variables: {
+      cartId,
+      lines: [
+        {
+          quantity,
+          lineId,
+        },
+      ],
+    },
+  });
 
-    return response.data?.cartLinesUpdate?.cart;
-  } catch (err) {
-    console.error(err);
-    return [];
-  }
+  return response.data?.cartLinesUpdate?.cart;
 }
