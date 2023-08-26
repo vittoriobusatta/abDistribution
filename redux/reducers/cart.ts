@@ -7,6 +7,7 @@ const initialState = {
   chargeAmount: 0,
   totalQuantity: 0,
   cartId: null,
+  checkoutUrl: null,
 };
 
 export const cartReducer = createSlice({

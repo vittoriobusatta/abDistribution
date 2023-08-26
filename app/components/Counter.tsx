@@ -14,9 +14,9 @@ const item = {
 
 export default function Home() {
   const dispatch = useAppDispatch();
-  const { cartId, products } = useAppSelector((state) => state.cart);
-
-  console.log("cartId", cartId);
+  const { cartId, products } = useAppSelector(
+    (state) => state.cart
+  );
 
   return (
     <div>

@@ -43,4 +43,5 @@ export function updateCartInfo(
 
   state.totalQuantity = cartInfo.totalQuantity;
   state.chargeAmount = cartInfo.cost.checkoutChargeAmount.amount;
+  state.checkoutUrl = cartInfo.checkoutUrl;
 }
