@@ -1,5 +1,5 @@
 import React from "react";
-import ReduxProvider from "../redux/ReduxProvider";
+import ReduxProvider from "../redux/providers/ReduxProvider";
 
 export const metadata = {
   title: "Accueil | AB Distribution",

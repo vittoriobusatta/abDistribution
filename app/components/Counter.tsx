@@ -1,10 +1,12 @@
 "use client";
-
-import { addToCart, createCart, removeToCart } from "@redux/actions/cart";
 import { useAppDispatch, useAppSelector } from "@redux/hooks";
-import { optimisticAddToCart, optimisticCreateCart } from "@redux/reducers/cart";
+import {
+  clearCart,
+  optimisticAddToCart,
+  optimisticCreateCart,
+  optimisticRemoveToCart,
+} from "@redux/reducers/cart";
 import { ItemToSent } from "@typage/cart";
-import { productExistsInCart } from "@utils/functions";
 import Image from "next/image";
 import { useMemo } from "react";
 
@@ -40,34 +42,46 @@ export default function Home({ product }) {
     [variant, product, cartId]
   );
 
-  console.log("products", products);
+  console.log("cart", cart);
 
   const handleAddToCart = (item) => {
     dispatch(optimisticCreateCart({ item }));
-
-    // if (productExistsInCart(item, products)) {
-    dispatch(createCart(item));
-    // }
+    // dispatch(createCart(item));
   };
 
   return (
     <div>
       <h1>{product.title}</h1>
+      {products.length > 0 ? (
+        <>
+          <h1>Cart</h1>
+          <button
+            onClick={() => {
+              dispatch(optimisticAddToCart({ item }));
+              // dispatch(addToCart(item));
+            }}
+          >
+            Add to Cart
+          </button>
+        </>
+      ) : (
+        <button
+          onClick={() => {
+            handleAddToCart(item);
+          }}
+        >
+          Create Cart
+        </button>
+      )}
+
       <button
         onClick={() => {
-          handleAddToCart(item);
+          dispatch(clearCart());
         }}
       >
-        Create Cart
+        Clear Cart
       </button>
-      <button
-        onClick={() => {
-          dispatch(optimisticAddToCart({ item }));
-          // dispatch(addToCart(item));
-        }}
-      >
-        Add to Cart
-      </button>
+      <h1>{cart.chargeAmount} €</h1>
       {products?.map((item: any, index) => {
         const { image, title, variantQuantity, price } = item.item;
         const { id } = item?.line ?? {};
@@ -79,10 +93,15 @@ export default function Home({ product }) {
             <p>{price}</p>
             <button
               onClick={() => {
+                // dispatch(
+                //   removeToCart({
+                //     cartId,
+                //     lineId: id,
+                //     item,
+                //   })
+                // );
                 dispatch(
-                  removeToCart({
-                    cartId,
-                    lineId: id,
+                  optimisticRemoveToCart({
                     item,
                   })
                 );
